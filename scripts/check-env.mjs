@@ -1,4 +1,5 @@
 // scripts/check-env.mjs
+<<<<<<< HEAD
 import { config } from 'dotenv';
 import { existsSync } from 'fs';
 
@@ -41,3 +42,14 @@ if (missingRecommended.length) {
 }
 
 console.log("\n✅ Variables de entorno OK");
+=======
+const required = ["DATABASE_URL"];
+const missing = required.filter(k => !process.env[k]);
+if (missing.length) {
+  console.error(`❌ Faltan variables de entorno: ${missing.join(", ")}`);
+  console.error("Crea .env (o define Codespaces/Vercel secrets). Ejemplo en .env.example");
+  process.exit(1);
+} else {
+  console.log("✅ Variables de entorno OK");
+}
+>>>>>>> 68bff7b924ecf91be37b4416b61edb52aac487e6
