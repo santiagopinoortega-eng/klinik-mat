@@ -6,15 +6,15 @@ import { useEffect, useMemo, useState } from 'react';
 
 type Props = {
   id: string;
-  titulo: string;
-  area: string | number | null;
-  dificultad: number | null;
-  resumen?: string | null;
+  title: string;
+  area: string | null;
+  difficulty: number | null;
+  summary?: string | null;
   createdAt?: string;
 };
 
 export default function CaseCard({
-  id, titulo, area, dificultad, resumen, createdAt,
+  id, title, area, difficulty, summary, createdAt,
 }: Props) {
   // Progreso local (no rompe si no existe)
   const [progress, setProgress] = useState<number | null>(null);
@@ -58,7 +58,7 @@ export default function CaseCard({
           {area ? String(area) : 'General'}
         </span>
         <span className="inline-flex items-center rounded-md bg-secondary-200/70 text-secondary-800 px-2 py-0.5 text-xs font-medium">
-          Dificultad {dificultad ?? 1}
+          Dificultad {difficulty ?? 1}
         </span>
         {fecha && (
           <span className="ml-auto text-xs text-secondary-500">{fecha}</span>
@@ -67,13 +67,13 @@ export default function CaseCard({
 
       {/* Título */}
       <h3 className="text-ink-800 text-lg font-semibold leading-snug group-hover:text-ink-900">
-        {titulo}
+        {title}
       </h3>
 
       {/* Resumen corto */}
-      {resumen && (
+      {summary && (
         <p className="mt-2 text-sm text-secondary-600 line-clamp-3">
-          {resumen}
+          {summary}
         </p>
       )}
 
