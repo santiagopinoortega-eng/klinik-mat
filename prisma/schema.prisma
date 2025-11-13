@@ -5,29 +5,26 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql" // ⬅️ CORRECCIÓN: Añadir la clave "provider"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 // ------------------------------------------------------------------
 // 1. Modelos de Autenticación (Auth.js / NextAuth.js)
 // ------------------------------------------------------------------
 model User {
-  id              String          @id @default(cuid())
-  email           String          @unique // Campo de login
-  name            String?
-  passwordHash    String?         // Hash de la contraseña (para login por credenciales)
-  role            Role            @default(STUDENT)
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String?
+  passwordHash String?
+  role         Role      @default(STUDENT)
   
-  // Relaciones de Auth.js
-  sessions        Session[]
-  accounts        Account[]
+  sessions     Session[]
+  accounts     Account[]
+  results      StudentResult[]
 
-  // Relaciones de KLINIK-MAT
-  results         StudentResult[] // Futuro modelo para guardar el historial de puntajes
-
-  createdAt       DateTime        @default(now()) @map("created_at")
-  updatedAt       DateTime        @updatedAt @map("updated_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
 
   @@map("users")
 }
@@ -75,76 +72,78 @@ model VerificationToken {
 // 2. Modelos de Contenido Educativo (KLINIK-MAT)
 // ------------------------------------------------------------------
 model Case {
-  id              String         @id @default(cuid())
-  title           String         // Nombre del caso (Ej: Embarazo Ectópico)
-  area            String         // (Ej: Obstetricia, Ginecología)
-  difficulty      Int            // 1 (Fácil) - 5 (Difícil)
-  summary         String?        
-  isPublic        Boolean        @default(false)
-  vignette        String?        // Descripción narrativa larga
+  id           String       @id @default(cuid())
+  title        String
+  area         String
+  difficulty   Int
+  summary      String?
+  isPublic     Boolean      @default(false)
+  vignette     String?
 
-  questions       Question[]     @relation("CaseQuestions")
-  norms           MinsalNorm[]   @relation("CaseNorms")
+  questions    Question[]   @relation("CaseQuestions")
+  norms        MinsalNorm[] @relation("CaseNorms")
 
-  createdAt       DateTime       @default(now()) @map("created_at")
-  updatedAt       DateTime       @updatedAt @map("updated_at")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
 
   @@map("cases")
 }
 
 model Question {
-  id              String         @id @default(cuid())
-  order           Int            // Orden de aparición dentro del caso
-  text            String         // Texto de la pregunta
+  id     String   @id @default(cuid())
+  order  Int
+  text   String
 
-  case            Case           @relation("CaseQuestions", fields: [caseId], references: [id])
-  caseId          String
+  // CORRECCIÓN: Añadido onDelete: Cascade
+  case   Case     @relation("CaseQuestions", fields: [caseId], references: [id], onDelete: Cascade)
+  caseId String
   
-  options         Option[]       @relation("QuestionOptions")
+  options Option[] @relation("QuestionOptions")
 
   @@map("questions")
 }
 
 model Option {
-  id              String         @id @default(cuid())
-  text            String
-  isCorrect       Boolean        @default(false) // La clave para el grading
-  feedback        String?        // Explicación para el razonamiento clínico
+  id         String   @id @default(cuid())
+  text       String
+  isCorrect  Boolean  @default(false)
+  feedback   String?
 
-  question        Question       @relation("QuestionOptions", fields: [questionId], references: [id])
-  questionId      String
+  // CORRECCIÓN: Añadido onDelete: Cascade
+  question   Question @relation("QuestionOptions", fields: [questionId], references: [id], onDelete: Cascade)
+  questionId String
 
   @@map("options")
 }
 
 model MinsalNorm {
-  id              String         @id @default(cuid())
-  name            String         
-  code            String         @unique 
-  cases           Case[]         @relation("CaseNorms")
+  id    String @id @default(cuid())
+  name  String
+  code  String @unique
+  cases Case[] @relation("CaseNorms")
 
   @@map("minsal_norms")
 }
 
 // ------------------------------------------------------------------
-// 3. ENUMS y Modelo de Resultados (Para Futuras Tareas)
+// 3. ENUMS y Modelo de Resultados
 // ------------------------------------------------------------------
 enum Role {
-  STUDENT // Puede resolver casos
-  EDITOR  // Puede crear y editar casos
-  ADMIN   // Acceso total
+  STUDENT
+  EDITOR
+  ADMIN
 }
 
-// Modelo futuro para almacenar el resultado de un estudiante en un caso
 model StudentResult {
-    id        String   @id @default(cuid())
-    userId    String
-    caseId    String
-    score     Int      // Puntaje final (ej: 8/10)
-    completedAt DateTime @default(now())
+  id          String   @id @default(cuid())
+  userId      String
+  caseId      String
+  score       Int
+  completedAt DateTime @default(now())
 
-    user User @relation(fields: [userId], references: [id])
+  // CORRECCIÓN: Añadido onDelete: Cascade
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-    @@unique([userId, caseId])
-    @@map("student_results")
+  @@unique([userId, caseId])
+  @@map("student_results")
 }
