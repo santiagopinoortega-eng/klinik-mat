@@ -19,7 +19,6 @@ export default function CasosPageClient({ data }: { data: CasoListItem[] }) {
 
       (!s || d.title.toLowerCase().includes(s) || (d.summary ?? '').toLowerCase().includes(s))
 
-      (!s || d.titulo.toLowerCase().includes(s) || (d.resumen ?? '').toLowerCase().includes(s))
 
     );
   }, [data, q, area]);
