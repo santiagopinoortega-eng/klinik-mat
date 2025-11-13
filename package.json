@@ -12,7 +12,7 @@
     "db:seed": "node -r dotenv/config node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts",
     "typecheck": "tsc --noEmit",
     "typecheck:paths": "tsc --noEmit --traceResolution",
-    "db:push": "dotenv -e .env -- npx prisma db push"
+    "db:push": "node -r dotenv/config node_modules/.bin/prisma db push"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -33,6 +33,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.21",
     "dotenv": "^17.2.3",
+    "dotenv-cli": "^7.4.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "json5": "^2.2.3",
