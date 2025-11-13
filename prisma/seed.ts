@@ -35,7 +35,7 @@ async function main() {
       role: Role.ADMIN, // Le asignamos el rol de administrador
     },
   });
-  console.log(👤 Creado usuario administrador: ${adminUser.email} (Contraseña: ${ADMIN_PASSWORD}));
+  console.log(`👤 Creado usuario administrador: ${adminUser.email} (Contraseña: ${ADMIN_PASSWORD})`);
 
 
   // 3. Crear Normas MINSAL
@@ -84,7 +84,7 @@ async function main() {
       },
     },
   });
-  console.log(🏥 Creado caso clínico: "${casoMigrana.title}");
+  console.log(`🏥 Creado caso clínico: "${casoMigrana.title}"`);
 
   console.log('✅ Seeding completado exitosamente.');
 }
