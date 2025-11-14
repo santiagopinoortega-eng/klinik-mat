@@ -1,14 +1,15 @@
 // app/api/auth/[...nextauth]/route.ts
-// VERSIÓN CORREGIDA Y SIMPLIFICADA
+// VERSIÓN CORREGIDA (V4)
 
 import NextAuth, { NextAuthOptions } from 'next-auth';
-import { PrismaAdapter } from '@auth/prisma-adapter';
+// ¡ESTA ES LA LÍNEA CORREGIDA!
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import EmailProvider from 'next-auth/providers/email';
 import { prisma } from '@/lib/prisma';
 import { Role } from '@prisma/client'; // Importar tu Enum 'Role'
 
 export const authOptions: NextAuthOptions = {
-  // 1. Adaptador de Prisma
+  // 1. Adaptador de Prisma (Ahora usa el paquete V4 correcto)
   adapter: PrismaAdapter(prisma),
 
   // 2. Providers
@@ -31,14 +32,13 @@ export const authOptions: NextAuthOptions = {
     strategy: 'database',
   },
 
-  // 4. Callbacks (Aquí es donde los errores 3 y 4 desaparecerán)
+  // 4. Callbacks (Tus callbacks están correctos)
+  // (Estos errores desaparecerán una vez que 'next-auth.d.ts' se lea)
   callbacks: {
     async session({ session, user }) {
-      // 'user' viene de la DB (Adapter)
-      // 'session.user' es lo que irá al cliente
       if (session.user) {
-        session.user.id = user.id; // OK (si .d.ts existe)
-        session.user.role = user.role as Role; // OK (si .d.ts existe)
+        session.user.id = user.id;
+        session.user.role = user.role as Role;
       }
       return session;
     },
