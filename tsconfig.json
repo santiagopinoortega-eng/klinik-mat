@@ -1,0 +1,45 @@
+// tsconfig.json (La Versión Correcta y Definitiva)
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "Bundler", // Clave para Next.js 14
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Tus alias de paths
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"] // Mantenemos tu alias original
+    },
+    
+    // Plugin de Next.js
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "incremental": true
+  },
+
+  // LA CORRECCIÓN CLAVE ESTÁ AQUÍ
+  "include": [
+    "next-env.d.ts",
+    "next-auth.d.ts", // Le decimos que incluya el archivo de tipos de Auth
+    ".next/types/**/*.ts",
+    // Le decimos que busque TODOS los archivos .ts y .tsx en TODO el proyecto
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
