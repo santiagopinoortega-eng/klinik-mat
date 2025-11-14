@@ -1,5 +1,10 @@
 // auth.config.ts
-import type { NextAuthConfig } from 'next-auth';
+
+// ¡ESTA ES LA LÍNEA CORREGIDA!
+// Importamos el tipo desde @auth/core/types, NO desde next-auth
+import type { NextAuthConfig } from '@auth/core/types';
+// --- FIN DEL CAMBIO ---
+
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from '@/lib/prisma';
 import EmailProvider from 'next-auth/providers/email';
@@ -7,6 +12,7 @@ import { Role } from '@prisma/client';
 
 // 'authOptions' ahora se llama 'NextAuthConfig' en V5
 export const authConfig: NextAuthConfig = {
+  // ... (El resto de tu archivo estaba perfecto)
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: 'database',
@@ -30,7 +36,6 @@ export const authConfig: NextAuthConfig = {
     error: '/login/error',
   },
   callbacks: {
-    // V5: 'user' viene del adapter, 'session' es lo que se devuelve
     async session({ session, user }) {
       if (session.user && user) {
         session.user.id = user.id;
