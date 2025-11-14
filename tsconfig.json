@@ -1,10 +1,11 @@
+// tsconfig.json (La Versión Correcta y Definitiva)
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"], // Añadido DOM.Iterable por si acaso
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "preserve",
     "module": "esnext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Bundler", // Clave para Next.js 14
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -14,13 +15,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     
-    // 1. PATHS CORREGIDO
-    // El alias estándar para un proyecto "raíz" (sin src/)
+    // Tus alias de paths
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"] // Tu alias original está bien, lo mantenemos.
+      "@/*": ["./*"] // Mantenemos tu alias original
     },
     
+    // Plugin de Next.js
     "plugins": [
       {
         "name": "next"
@@ -29,20 +30,14 @@
     "incremental": true
   },
 
-  // 2. INCLUDE CORREGIDO
-  // Aquí le decimos a TS que busque explícitamente los archivos .ts y .tsx
-  // en todas las subcarpetas de 'app', 'lib', y 'services'.
+  // LA CORRECCIÓN CLAVE ESTÁ AQUÍ
   "include": [
-    "next-auth.d.ts", // El archivo de tipos de Auth
-    "next-env.d.ts", // El archivo de tipos de Next
-    ".next/types/**/*.ts", // Tipos generados por Next
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "lib/**/*.ts",
-    "lib/**/*.tsx",
-    "services/**/*.ts",
-    "services/**/*.tsx",
-    "prisma/seed.ts" // Asumo que este es el único archivo TS en /prisma
+    "next-env.d.ts",
+    "next-auth.d.ts", // Le decimos que incluya el archivo de tipos de Auth
+    ".next/types/**/*.ts",
+    // Le decimos que busque TODOS los archivos .ts y .tsx en TODO el proyecto
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"

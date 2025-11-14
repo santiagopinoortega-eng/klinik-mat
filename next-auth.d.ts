@@ -1,17 +1,14 @@
 // types/next-auth.d.ts o en la raíz del proyecto
 
-import { Role } from '@prisma/client';
-import NextAuth, { DefaultSession, DefaultUser } from 'next-auth';
-
 // Extiende el tipo User para incluir 'id' y 'role'
 declare module 'next-auth' {
   /**
    * El objeto User que se devuelve en los callbacks (jwt, session)
-   * y que se pasa al adaptador.
+   * y que se pasa al adaptador. Importamos Role aquí dentro.
    */
-  interface User extends DefaultUser {
-    role: Role;
-    id: string; // Asegúrate que el tipo coincida con tu base de datos
+  interface User {
+    role: import('@prisma/client').Role;
+    id: string;
   }
 
   /**
@@ -19,8 +16,20 @@ declare module 'next-auth' {
    */
   interface Session {
     user: {
-      id: string;
-      role: Role;
-    } & DefaultSession['user']; // Mantiene las propiedades por defecto (name, email, image)
+      id: string; // id del usuario
+      role: import('@prisma/client').Role; // rol del usuario
+    } & {
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+    };
+  }
+}
+
+// Extiende el tipo JWT para incluir 'id' y 'role'
+declare module 'next-auth/jwt' {
+  interface JWT {
+    id: string;
+    role: import('@prisma/client').Role;
   }
 }
