@@ -1,18 +1,15 @@
 // auth.config.ts
 
-// ¡ESTA ES LA LÍNEA CORREGIDA!
-// Importamos el tipo desde @auth/core/types, NO desde next-auth
-import type { NextAuthConfig } from '@auth/core/types';
-// --- FIN DEL CAMBIO ---
+// 1. CORRECCIÓN: Importamos 'AuthConfig' (el tipo correcto de V5)
+import type { AuthConfig } from '@auth/core/types';
 
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from '@/lib/prisma';
 import EmailProvider from 'next-auth/providers/email';
 import { Role } from '@prisma/client';
 
-// 'authOptions' ahora se llama 'NextAuthConfig' en V5
-export const authConfig: NextAuthConfig = {
-  // ... (El resto de tu archivo estaba perfecto)
+// 2. CORRECCIÓN: Usamos el tipo 'AuthConfig'
+export const authConfig: AuthConfig = {
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: 'database',
@@ -36,6 +33,9 @@ export const authConfig: NextAuthConfig = {
     error: '/login/error',
   },
   callbacks: {
+    // 3. CORRECCIÓN: Al usar 'AuthConfig' (el tipo correcto),
+    // TypeScript ahora entiende qué son 'session' y 'user',
+    // eliminando los errores de 'any'.
     async session({ session, user }) {
       if (session.user && user) {
         session.user.id = user.id;
