@@ -1,18 +1,50 @@
 // auth.config.ts
-
-// 1. CORRECCIÓN: Importamos 'AuthConfig' (el tipo correcto de V5)
 import type { AuthConfig } from '@auth/core/types';
-
-import { PrismaAdapter } from '@auth/prisma-adapter';
-import { prisma } from '@/lib/prisma';
-import EmailProvider from 'next-auth/providers/email';
 import { Role } from '@prisma/client';
+import EmailProvider from 'next-auth/providers/email';
+import { PrismaAdapter } from '@auth/prisma-adapter';
 
-// 2. CORRECCIÓN: Usamos el tipo 'AuthConfig'
+// 'authOptions' ahora se llama 'NextAuthConfig' en V5
 export const authConfig: AuthConfig = {
-  adapter: PrismaAdapter(prisma),
-  session: {
-    strategy: 'database',
+  
+  // 1. MOVIMIENTO CRÍTICO: 'authorized' va a la raíz de la configuración.
+  authorized({ auth, request: { nextUrl } }) {
+    // Si la sesión existe, el token existe.
+    const isLoggedIn = !!auth?.user;
+    const pathname = nextUrl.pathname;
+
+    // Aquí definimos qué rutas están protegidas
+    if (pathname.startsWith('/admin') || pathname.startsWith('/casos')) {
+        if (!isLoggedIn) return false; // Si no está logueado, redirige a /login
+
+        // Lógica de rol específica para admin
+        if (pathname.startsWith('/admin') && auth.user.role !== Role.ADMIN) {
+            return false; // Denegar acceso
+        }
+    }
+    
+    // Permitir acceso a todas las rutas públicas (como /login, /)
+    return true; 
+  },
+  
+  // 2. El objeto 'callbacks' solo contiene funciones de ciclo de vida (session, signIn, etc.)
+  callbacks: {
+    // Este callback inyecta id y rol en la sesión
+    async session({ session, user }) {
+      if (session.user && user) {
+        session.user.id = user.id;
+        session.user.role = user.role as Role;
+      }
+      return session;
+    },
+    // El callback 'authorized' SE QUITA de aquí
+  },
+
+  // ... El resto de la configuración es correcta ...
+  pages: {
+    signIn: '/login',
+    verifyRequest: '/login/verificar',
+    error: '/login/error',
   },
   providers: [
     EmailProvider({
@@ -27,21 +59,4 @@ export const authConfig: AuthConfig = {
       from: process.env.EMAIL_FROM,
     }),
   ],
-  pages: {
-    signIn: '/login',
-    verifyRequest: '/login/verificar',
-    error: '/login/error',
-  },
-  callbacks: {
-    // 3. CORRECCIÓN: Al usar 'AuthConfig' (el tipo correcto),
-    // TypeScript ahora entiende qué son 'session' y 'user',
-    // eliminando los errores de 'any'.
-    async session({ session, user }) {
-      if (session.user && user) {
-        session.user.id = user.id;
-        session.user.role = user.role as Role;
-      }
-      return session;
-    },
-  },
 };

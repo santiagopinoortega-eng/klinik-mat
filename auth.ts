@@ -1,16 +1,22 @@
 // auth.ts
-import NextAuth from 'next-auth';
-// 1. Importa la configuración (como ya lo tenías)
+// VERSIÓN FINAL Y DEFINITIVA (BURLANDO EL CONFLICTO LOCAL)
+
+// 1. CAMBIO CLAVE: Importamos el módulo completo como NextAuth (wildcard import)
+//    Esto evita que el compilador se confunda.
+import * as NextAuth from 'next-auth'; 
+
 import { authConfig } from './auth.config';
-// 2. Importa el TIPO que acabamos de corregir (para ser explícitos)
 import type { AuthConfig } from '@auth/core/types';
 
-// Aquí es donde V5 separa los handlers
-export const {
-  handlers: { GET, POST },
-  auth,
-  signIn,
-  signOut,
-  // 3. CAMBIO: Hacemos un "cast" explícito a AuthConfig
-  //    Esto le asegura a TypeScript que authConfig tiene el tipo correcto.
-} = NextAuth(authConfig as AuthConfig);
+// 2. CORRECCIÓN: Llamamos explícitamente a la función 'default' del objeto NextAuth.
+//    Esto es la función que queremos llamar.
+const NextAuthInstance = NextAuth.default({
+  secret: process.env.AUTH_SECRET, // 👈 Ya tienes el secret en el .env
+  ...authConfig 
+} as AuthConfig);
+
+// 3. Exporta cada propiedad clave que queremos exponer al resto de la aplicación.
+export const handlers = NextAuthInstance.handlers; 
+export const auth = NextAuthInstance.auth;
+export const signIn = NextAuthInstance.signIn;
+export const signOut = NextAuthInstance.signOut;

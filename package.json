@@ -16,16 +16,15 @@
     "test:env": "node -r dotenv/config -e 'console.log(`DATABASE_URL is: ${process.env.DATABASE_URL}`)'"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "@auth/prisma-adapter": "^2.4.1",
-    "next-auth": "5.0.0-beta.19",
-    "nodemailer": "^6.9.14",
     "@auth/core": "0.34.1",
+    "@auth/prisma-adapter": "^2.4.1",
+    "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.19.0",
-    "bcryptjs": "^2.4.3",
+    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "jose": "^6.1.1",
     "next": "^14.2.33",
+    "next-auth": "5.0.0-beta.19",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -35,7 +34,6 @@
     "@tailwindcss/typography": "^0.5.19",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
-    "@types/nodemailer": "^6.4.15", 
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.21",
@@ -54,5 +52,4 @@
   "overrides": {
     "@auth/core": "0.34.1"
   }
-  
 }
