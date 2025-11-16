@@ -27,6 +27,17 @@ if (!process.env.DATABASE_URL && process.env.DATABASE_URL_DEV) {
   process.env.DATABASE_URL = process.env.DATABASE_URL_DEV;
 }
 
+// Seguridad: prevenir que el seed se ejecute contra la DB central sin confirmación explícita.
+// Si DATABASE_URL está definido y es distinto a DATABASE_URL_DEV, requerimos CONFIRM_SEED_TO_PROD=1
+if (process.env.DATABASE_URL && process.env.DATABASE_URL_DEV && process.env.DATABASE_URL !== process.env.DATABASE_URL_DEV) {
+  if (process.env.CONFIRM_SEED_TO_PROD !== '1') {
+    console.error('SECURITY: Estás a punto de ejecutar el seed contra `DATABASE_URL` (posible producción).');
+    console.error('Si realmente querés ejecutar el seed en esa BD, reintentalo estableciendo la variable de entorno:');
+    console.error('  CONFIRM_SEED_TO_PROD=1 npx dotenv -e .env.local -- npm run seed:cases');
+    process.exit(1);
+  }
+}
+
 if (!process.env.DATABASE_URL) {
   console.error('ERROR: la variable de entorno `DATABASE_URL` no está definida. Define `DATABASE_URL` o `DATABASE_URL_DEV` en .env.local o en el entorno.');
   process.exit(1);
