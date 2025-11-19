@@ -3,32 +3,30 @@ import { config } from 'dotenv';
 import { existsSync } from 'fs';
 
 // Carga de entorno (si existe localmente)
-// Esto asegura que podemos leer las variables definidas en .env.local
 if (existsSync('.env.local')) {
   config({ path: '.env.local' });
 } else {
   config();
 }
 
-// 1. Definir los requerimientos CLAVE (El proyecto no funciona sin ellas)
+// Variables requeridas para el proyecto con Clerk
 const required = [
-  "DATABASE_URL", // Conexión a Neon.tech
-  "NEXTAUTH_SECRET", // Clave de seguridad para la gestión de sesiones (Auth.js)
+  "DATABASE_URL", // Conexión a Neon con pooler
+  "CLERK_SECRET_KEY", // Clave secreta de Clerk
+  "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY", // Clave pública de Clerk
 ];
 
-// 2. Definir los requerimientos CONDICIONALES (Recomendados para escalabilidad/arquitectura)
+// Variables recomendadas
 const recommended = [
-  "DATABASE_URL_READONLY", // Opcional para la réplica de lectura (prismaRO)
+  "CLERK_WEBHOOK_SECRET", // Para sincronización de usuarios
 ];
-
-// --- Lógica de Validación ---
 
 // Verificar las variables requeridas
 const missingRequired = required.filter(k => !process.env[k]);
 
 if (missingRequired.length) {
-  console.error(\n❌ ERROR CRÍTICO: Faltan variables esenciales: ${missingRequired.join(", ")});
-  console.error("   La compilación se detiene. Asegúrate de que las tienes en .env.local o Vercel Secrets.");
+  console.error(`\n❌ ERROR CRÍTICO: Faltan variables esenciales: ${missingRequired.join(", ")}`);
+  console.error("   La compilación se detiene. Asegúrate de que las tienes en .env.local o Vercel.");
   process.exit(1);
 }
 
@@ -36,8 +34,8 @@ if (missingRequired.length) {
 const missingRecommended = recommended.filter(k => !process.env[k]);
 
 if (missingRecommended.length) {
-  console.warn(\n⚠️ Advertencia: Faltan variables recomendadas: ${missingRecommended.join(", ")});
-  console.warn("   Considera definir DATABASE_URL_READONLY para mejorar la escalabilidad en producción (prismaRO usará DATABASE_URL como fallback).");
+  console.warn(`\n⚠️ Advertencia: Faltan variables recomendadas: ${missingRecommended.join(", ")}`);
+  console.warn("   El webhook de Clerk no funcionará sin CLERK_WEBHOOK_SECRET.");
 }
 
 console.log("\n✅ Variables de entorno OK");
