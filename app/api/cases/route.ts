@@ -10,7 +10,7 @@ export async function GET() {
   try {
     const data = await prismaRO.case.findMany({
       orderBy: { createdAt: 'desc' },
-      select: { id: true, titulo: true, area: true, dificultad: true, createdAt: true },
+      select: { id: true, title: true, area: true, difficulty: true, createdAt: true },
       take: 200,
     });
 
