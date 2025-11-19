@@ -4289,1025 +4289,1169 @@
   ]
 },
 
+ 
   {
-    "id": "antico-01-adolescente-primera-consulta",
+    "id": "mod-anticoncepcion-01-adolescente",
+    "modulo": "Anticoncepción",
+    "dificultad": "Media",
+    "titulo": "Primera consulta en adolescente: Confidencialidad y Criterios",
+    "vigneta": "Javiera, 16 años, acude sola al box de matrona en el CESFAM. Se nota nerviosa. Refiere que inició actividad sexual hace 3 meses con su pololo (única pareja) y usan condón 'a veces'. Quiere cuidarse con pastillas porque le da miedo que sus padres se enteren si usa otro método. Antecedentes: Menarquia 12 años, ciclos regulares. IMC 28. Antecedente de cefaleas tensionales ocasionales sin aura. Niega tabaco. Su madre se atiende en el mismo centro.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es la primera acción prioritaria antes de prescribir un método?",
+        "opciones": [
+          { "id": "a", "texto": "Solicitar el asentimiento de Javiera y llamar a la madre para el consentimiento informado legal.", "esCorrecta": false, "explicacion": "Incorrecto. Esto es un error legal grave. La Ley 20.418 otorga el derecho a la confidencialidad y atención sin necesidad de representante legal en salud sexual." },
+          { "id": "b", "texto": "Realizar consejería en confidencialidad, descartar embarazo y evaluar riesgo biopsicosocial.", "esCorrecta": true, "explicacion": "Correcto. El marco legal protege su privacidad. Clínicamente, el uso inconsistente de condón obliga a descartar embarazo antes de iniciar hormonas." },
+          { "id": "c", "texto": "Indicar doble protección (Condón + ACO) y citar a control con adulto responsable.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque la doble protección es ideal, condicionar el control a la presencia de un adulto vulnera sus derechos y genera barreras de acceso." },
+          { "id": "d", "texto": "Iniciar anticonceptivos orales combinados (ACO) de inmediato (Quick Start) para asegurar adherencia.", "esCorrecta": false, "explicacion": "Incorrecto. El 'Quick Start' es bueno, pero sin anamnesis completa ni test de embarazo previo (ante el riesgo reportado) es negligente." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Respecto a su solicitud de ACO y el antecedente de cefalea, ¿cuál es el criterio MEC (OMS) y conducta adecuada?",
+        "opciones": [
+          { "id": "a", "texto": "MEC 4: Contraindicación absoluta. Debe usar solo progestágenos.", "esCorrecta": false, "explicacion": "Incorrecto. La cefalea tensional no es vascular. Solo la migraña CON aura es MEC 4." },
+          { "id": "b", "texto": "MEC 1/2: Se pueden usar sin restricción, vigilando cambios en el patrón del dolor.", "esCorrecta": true, "explicacion": "Correcto. La cefalea tensional simple no contraindica estrógenos, pero la vigilancia es una buena práctica clínica." },
+          { "id": "c", "texto": "MEC 3: Los riesgos superan los beneficios. Requiere evaluación por neurólogo.", "esCorrecta": false, "explicacion": "Incorrecto. Clasificarla como MEC 3 es una sobre-restricción injustificada que limita las opciones de la usuaria." },
+          { "id": "d", "texto": "MEC 2: Iniciar ACO con dosis bajas de estrógenos (15-20 mcg) por precaución.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque es una conducta prudente, la clasificación formal es MEC 1 para cefalea tensional, no requiere restricción de dosis 'per se'." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Javiera olvida las cosas fácilmente. ¿Qué alternativa sería la MEJOR recomendación clínica (Gold Standard) si desiste de las pastillas?",
+        "opciones": [
+          { "id": "a", "texto": "Anillo vaginal combinado.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque es mensual, requiere manipulación genital y privacidad para el recambio, lo que le preocupa por sus padres." },
+          { "id": "b", "texto": "Implante subdérmico (Etonogestrel).", "esCorrecta": true, "explicacion": "Correcto. Los LARC (Implante/DIU) son la recomendación de primera línea para adolescentes (ACOG/MINSAL) por su independencia de la usuaria." },
+          { "id": "c", "texto": "DIU T de Cobre.", "esCorrecta": false, "explicacion": "Plausible, pero menos ideal. Es LARC y efectivo, pero el perfil de sangrado aumentado y el procedimiento pélvico invasivo suele tener menor aceptación inicial en adolescentes nulíparas." },
+          { "id": "d", "texto": "Inyectable mensual combinado.", "esCorrecta": false, "explicacion": "Incorrecto. Requiere acudir al centro mensualmente (visibilidad) y no resuelve el problema del olvido de la cita." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Javiera elige el Implante. Redacta los 3 pilares de la consejería para asegurar la continuidad del método.",
+        "guia": "• Patrón de sangrado: Explicar claramente la posibilidad de amenorrea o sangrado impredecible (no es daño). \n• Doble Protección: El implante no previene ITS. \n• Reversibilidad y Efectos Secundarios: Dolor local, hematoma leve, retorno inmediato de fertilidad al retiro."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "A los 3 meses vuelve. Tiene sangrado irregular (spotting) molesto todos los días. Sin anemia. ¿Conducta clínica más adecuada?",
+        "opciones": [
+          { "id": "a", "texto": "Retirar el implante inmediatamente ante la insatisfacción de la usuaria.", "esCorrecta": false, "explicacion": "Incorrecto. Es una conducta reactiva. Se debe intentar manejo médico primero antes de retirar un método de alta eficacia." },
+          { "id": "b", "texto": "Tranquilizar, explicar benignidad y ofrecer AINES (ej: Ibuprofeno) o Ácido Tranexámico por 5 días.", "esCorrecta": true, "explicacion": "Correcto. Es el manejo de primera línea validado para el sangrado por progestágenos." },
+          { "id": "c", "texto": "Indicar una dosis de estrógenos conjugados endovenosos.", "esCorrecta": false, "explicacion": "Incorrecto. Medida desproporcionada y hospitalaria para un spotting en APS." },
+          { "id": "d", "texto": "Iniciar ACO combinados de forma permanente sobre el implante ('Add-back therapy').", "esCorrecta": false, "explicacion": "Incorrecto. El uso de ACO se recomienda por ciclos cortos (1-3 meses) para estabilizar endometrio, no permanente (aumenta carga hormonal innecesariamente)." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Javiera menciona que empezó a fumar 5 cigarrillos al día hace un mes. ¿Cambia el manejo del Implante?",
+        "opciones": [
+          { "id": "a", "texto": "Sí, se debe retirar por riesgo de trombosis venosa profunda.", "esCorrecta": false, "explicacion": "Incorrecto. Confusión clásica. El riesgo trombótico del tabaco se potencia con estrógenos, no con progestágenos solos." },
+          { "id": "b", "texto": "No, el implante sigue siendo Categoría 1, pero se debe realizar consejería antitabaco.", "esCorrecta": true, "explicacion": "Correcto. Desde el punto de vista anticonceptivo no hay cambios (MEC 1), pero como salud integral se aborda el tabaquismo." },
+          { "id": "c", "texto": "Cambia a Categoría 2: Se mantiene pero con controles más frecuentes de presión arterial.", "esCorrecta": false, "explicacion": "Incorrecto. Sigue siendo Categoría 1. No se requiere vigilancia extra por esta interacción." },
+          { "id": "d", "texto": "Sí, debe cambiar a DIU T de Cobre para eliminar toda hormona.", "esCorrecta": false, "explicacion": "Incorrecto. No hay justificación médica para retirar el implante." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Colega, este caso reveló falencias importantes. Confundir la legalidad de la atención adolescente o los criterios de manejo de sangrado puede llevar a demandas o abandono del método. Es URGENTE que repases la 'Ley 20.418' y las 'Normas de Regulación de Fertilidad'.",
+      "medio": "Vas por buen camino, pero caíste en algunos distractores. Tal vez dudaste en el manejo del sangrado o en la clasificación exacta de la cefalea. Afina el ojo clínico: no todo dolor de cabeza es migraña y no todo sangrado requiere retiro.",
+      "alto": "¡Impecable! 🌟 Manejaste la confidencialidad y la farmacología con precisión de experto. Distinguiste perfectamente entre mitos y evidencia científica. Estás listo para guiar a adolescentes en la vida real."
+    },
+    "referencias": ["Norma Nacional Regulación de la Fertilidad 2018", "Ley 20.418"]
+  },
+  {
+    "id": "mod-its-01-sifilis-gestante",
+    "modulo": "ITS",
+    "dificultad": "Alta",
+    "titulo": "Sífilis en el Embarazo: Manejo y Complejidades",
+    "vigneta": "Claudia, 28 años, cursando embarazo de 24 semanas. Control prenatal en CESFAM. Asintomática. Trae exámenes de ingreso tardíos: VDRL reactivo 1:32. Confirmación ISP pendiente. No recuerda antecedentes de sífilis previa. Alérgica a la 'Penicilina' (dice que de niña se hinchó entera). Pareja actual estable, no ha venido a controles.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "Ante VDRL 1:32 en gestante, ¿cuál es la conducta inmediata CORRECTA según norma MINSAL?",
+        "opciones": [
+          { "id": "a", "texto": "Esperar el resultado MHA-TP (confirmatorio) del ISP para evitar tratamiento innecesario.", "esCorrecta": false, "explicacion": "Incorrecto y peligroso. En gestantes, la norma exige tratar con la primera serología reactiva. Esperar aumenta el riesgo de transmisión vertical." },
+          { "id": "b", "texto": "Tratar de inmediato como Sífilis Latente Indeterminada: Penicilina Benzatina 2.4M UI x 3 dosis (semanal).", "esCorrecta": true, "explicacion": "Correcto. Al no haber antecedentes claros ni clínica de sífilis primaria/secundaria, se maneja como latente indeterminada para cubrir todos los escenarios." },
+          { "id": "c", "texto": "Solicitar un segundo VDRL para descartar efecto prozona o error de laboratorio.", "esCorrecta": false, "explicacion": "Incorrecto. Retrasa la primera dosis. El VDRL 1:32 es un título alto, muy sugerente de infección activa." },
+          { "id": "d", "texto": "Tratar como Sífilis Primaria: Penicilina Benzatina 2.4M UI dosis única.", "esCorrecta": false, "explicacion": "Incorrecto. Dosis insuficiente. Al no ver el chancro ni saber la fecha de contagio, una sola dosis no asegura la cura si es una fase latente." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Respecto a la alergia a la Penicilina referida (historia sugerente de anafilaxia). ¿Qué corresponde hacer en APS?",
+        "opciones": [
+          { "id": "a", "texto": "Administrar Eritromicina 500mg cada 6 horas por 14 días.", "esCorrecta": false, "explicacion": "Incorrecto. Trampa clásica. La Eritromicina cura a la madre pero tiene pésimo paso placentario. El feto no se trata y nacerá con sífilis congénita." },
+          { "id": "b", "texto": "Derivar urgente a Nivel Secundario para desensibilización a Penicilina.", "esCorrecta": true, "explicacion": "Correcto. No existe alternativa a la Penicilina para prevenir sífilis congénita. La desensibilización es obligatoria." },
+          { "id": "c", "texto": "Administrar Ceftriaxona 1g IM diario por 10 días.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque efectiva en adultos, no hay evidencia suficiente para validarla como prevención de sífilis congénita según norma chilena." },
+          { "id": "d", "texto": "Realizar test cutáneo (Prick Test) en el CESFAM para confirmar alergia.", "esCorrecta": false, "explicacion": "Incorrecto. El Prick Test debe hacerse en ambiente controlado hospitalario por riesgo de anafilaxia. No es resorte de APS." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Mientras gestionas la derivación, ¿qué haces con la pareja (contacto sexual)?",
+        "opciones": [
+          { "id": "a", "texto": "No intervenir hasta que él venga por su cuenta a solicitar hora.", "esCorrecta": false, "explicacion": "Incorrecto. Actitud pasiva que perpetúa la cadena de transmisión." },
+          { "id": "b", "texto": "Citar, solicitar VDRL y tratar SOLO si el examen sale positivo.", "esCorrecta": false, "explicacion": "Incorrecto. Podría estar en periodo de ventana incubando la enfermedad." },
+          { "id": "c", "texto": "Tratamiento epidemiológico inmediato con Penicilina Benzatina 2.4M UI (1 dosis) y solicitud de exámenes.", "esCorrecta": true, "explicacion": "Correcto. Se trata presuntivamente a los contactos para cortar la reinfección." },
+          { "id": "d", "texto": "Entregar receta a la paciente para que se la lleve a su pareja.", "esCorrecta": false, "explicacion": "Incorrecto. El tratamiento debe ser supervisado y notificado (ENO). No se puede recetar a terceros sin evaluación." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Redacta la explicación a Claudia sobre la 'Desensibilización' para lograr su adherencia al traslado hospitalario.",
+        "guia": "• Riesgo Fetal: Explicar que sin penicilina el bebé tiene altísimo riesgo de daño severo. \n• Seguridad: El procedimiento es controlado, empiezan con dosis micro y van subiendo. \n• Única opción: No hay pastillas que logren curar al bebé."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Claudia vuelve tratada. En control mensual, VDRL bajó de 1:32 a 1:16. ¿Cómo interpretas este resultado?",
+        "opciones": [
+          { "id": "a", "texto": "Falla de tratamiento: Debería haber negativizado o bajado a 1:4.", "esCorrecta": false, "explicacion": "Incorrecto. La serología demora meses en bajar. Negativizar en un mes es imposible." },
+          { "id": "b", "texto": "Respuesta serológica adecuada y esperable.", "esCorrecta": true, "explicacion": "Correcto. La caída de títulos es lenta. Mantenerse o bajar una dilución al mes es signo de éxito inicial." },
+          { "id": "c", "texto": "Reinfección: El título debería haber bajado más rápido.", "esCorrecta": false, "explicacion": "Incorrecto. Para sospechar reinfección se requiere un AUMENTO de 2 diluciones (ej: de 1:32 a 1:128)." },
+          { "id": "d", "texto": "Efecto de memoria inmunológica, no requiere más seguimiento.", "esCorrecta": false, "explicacion": "Incorrecto. El seguimiento mensual es obligatorio hasta el parto." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "La pareja confiesa relaciones con otras personas y no usa condón. ¿Ajuste de manejo en Claudia?",
+        "opciones": [
+          { "id": "a", "texto": "Ninguno, ella ya recibió sus 3 dosis de penicilina, está inmunizada.", "esCorrecta": false, "explicacion": "Incorrecto. La sífilis NO deja inmunidad. Se puede contagiar mil veces." },
+          { "id": "b", "texto": "Considerar reinfección probable y repetir esquema completo en el tercer trimestre.", "esCorrecta": true, "explicacion": "Correcto. Ante riesgo continuo de reinfección, la norma sugiere repetir el tratamiento para asegurar que el feto nazca sano." },
+          { "id": "c", "texto": "Solicitar PCR de líquido amniótico.", "esCorrecta": false, "explicacion": "Incorrecto. Procedimiento invasivo (amniocentesis) con riesgos que no se justifica si se puede re-tratar a la madre." },
+          { "id": "d", "texto": "Adelantar el parto a las 37 semanas para evitar contagio.", "esCorrecta": false, "explicacion": "Incorrecto. El tratamiento antibiótico es la solución, no la interrupción del embarazo." }
+        ]
+      },
+      {
+        "id": "p7",
+        "tipo": "mcq",
+        "enunciado": "Escenario Rural: Hospital a 6 horas, sin dinero. ¿Conducta ética/pragmática ante la alergia?",
+        "opciones": [
+          { "id": "a", "texto": "Dar Eritromicina y dejar registro en ficha de que paciente no pudo viajar.", "esCorrecta": false, "explicacion": "Incorrecto. Éticamente insuficiente. Estás condenando al feto a sífilis congénita sin agotar recursos." },
+          { "id": "b", "texto": "Gestionar activamente traslado (Ambulancia, Asistente Social, Municipalidad) como caso prioritario.", "esCorrecta": true, "explicacion": "Correcto. El rol profesional incluye la gestión de redes. La sífilis congénita es una patología prevenible y su tratamiento está garantizado." },
+          { "id": "c", "texto": "Administrar Penicilina en CESFAM con adrenalina a mano.", "esCorrecta": false, "explicacion": "Incorrecto e Imprudente. Si tiene historia de edema generalizado (anafilaxia), el riesgo de muerte materna en un lugar sin UCI es inaceptable." },
+          { "id": "d", "texto": "Enviar a la paciente sola en bus rural.", "esCorrecta": false, "explicacion": "Incorrecto. Si sufre una reacción en el camino o no llega por dinero, el sistema falló." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "¡Alerta! 🚨 Este caso no permite errores. Usar Eritromicina en gestantes o no tratar a la pareja son fallos que resultan en un recién nacido con daño neurológico o muerte. Necesitas estudiar la 'Norma de Transmisión Vertical' con urgencia.",
+      "medio": "Desempeño aceptable. Entiendes la gravedad, pero los detalles del tratamiento (dosis de latente vs primaria) o el manejo de la alergia te confundieron. Recuerda: Penicilina es insustituible para el feto.",
+      "alto": "¡Excelente Manejo! 🦠 Enfrentaste un escenario clínico, social y logístico complejo con claridad. Priorizaste al binomio madre-hijo y gestionaste la red asistencial correctamente. Un orgullo para la salud pública."
+    },
+    "referencias": ["Norma Conjunta Prevención Transmisión Vertical VIH y Sífilis"]
+  },
+  {
+    "id": "mod-consejeria-01-postparto",
+    "modulo": "Consejería",
+    "dificultad": "Baja",
+    "titulo": "Anticoncepción Postparto y Lactancia",
+    "vigneta": "Camila, 24 años, 6 semanas postparto vaginal. Lactancia materna exclusiva (LME) a libre demanda, sin suplementos. Amenorrea. Desea un método seguro pero 'que no le corte la leche'. Su vecina le dijo que la inyección de 3 meses engorda mucho.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿En qué situación de fertilidad se encuentra Camila hoy?",
+        "opciones": [
+          { "id": "a", "texto": "Protegida por MELA, pero debe iniciar método complementario a los 3 meses.", "esCorrecta": false, "explicacion": "Incorrecto. El MELA protege hasta los 6 meses, no 3, siempre que se cumplan los requisitos." },
+          { "id": "b", "texto": "Protegida totalmente por MELA (Método de Amenorrea de Lactancia).", "esCorrecta": true, "explicacion": "Correcto. Cumple triada estricta: <6 meses postparto + Amenorrea + LME (día y noche sin suplementos)." },
+          { "id": "c", "texto": "En riesgo de embarazo, ya que la ovulación precede a la primera menstruación.", "esCorrecta": false, "explicacion": "Incorrecto. Si cumple MELA estricto, la anovulación está garantizada en un 98%. No está en riesgo inmediato hoy." },
+          { "id": "d", "texto": "Protegida solo si el bebé no usa chupete.", "esCorrecta": false, "explicacion": "Incorrecto. El chupete puede interferir, pero no es un criterio absoluto de exclusión si la frecuencia de mamadas es alta." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Camila quiere pastillas. ¿Qué formulación es la adecuada y por qué?",
+        "opciones": [
+          { "id": "a", "texto": "Combinados de baja dosis (15mcg Etinilestradiol) para no afectar la leche.", "esCorrecta": false, "explicacion": "Incorrecto. Cualquier dosis de estrógenos antes de los 6 meses de lactancia interfiere con la producción láctea (MEC 3)." },
+          { "id": "b", "texto": "Progestágeno solo (Linestrenol o Desogestrel).", "esCorrecta": true, "explicacion": "Correcto. Los progestágenos puros no afectan la cantidad ni calidad de la leche y son seguros para el lactante." },
+          { "id": "c", "texto": "Cualquier anticonceptivo oral, ya que la hormona no pasa a la leche.", "esCorrecta": false, "explicacion": "Incorrecto. Las hormonas esteroidales SÍ pasan a la leche materna." },
+          { "id": "d", "texto": "No puede usar pastillas, solo métodos de barrera hasta el destete.", "esCorrecta": false, "explicacion": "Incorrecto. Existen opciones hormonales seguras (progestágenos)." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Si Camila optara por la T de Cobre (DIU), ¿es buen momento para insertarlo?",
+        "opciones": [
+          { "id": "a", "texto": "No, debe esperar el retorno de la menstruación para facilitar la inserción.", "esCorrecta": false, "explicacion": "Incorrecto. Esperar la regla aumenta el riesgo de embarazo no planificado y pérdida de seguimiento." },
+          { "id": "b", "texto": "Sí, pero requiere test de embarazo previo obligatorio.", "esCorrecta": false, "explicacion": "Incorrecto. Si cumple criterios MELA, el embarazo está descartado clínicamente. Pedir test es una barrera innecesaria." },
+          { "id": "c", "texto": "Sí, se puede insertar hoy. El útero está involucionado y el riesgo de expulsión es bajo.", "esCorrecta": true, "explicacion": "Correcto. A las 6 semanas (puerperio tardío) es un momento ideal para inserción de DIU intervalo." },
+          { "id": "d", "texto": "No, el útero está muy blando por la lactancia y se va a perforar.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque hay un riesgo teórico levemente mayor, no es contraindicación. Manos expertas lo realizan con seguridad." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Realiza una consejería breve desmitificando el aumento de peso por anticonceptivos.",
+        "guia": "• Evidencia: Pastillas (progestágeno solo) y DIU NO están asociados a ganancia de peso clínica. \n• Excepción: La inyección (DMPA) es la única asociada a aumento de apetito/peso. \n• Contexto: El postparto implica cambios metabólicos naturales, no culpar al método."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "A los 6 meses, Camila deja de dar pecho y vuelve a tener reglas. Sigue con Desogestrel. ¿Conducta?",
+        "opciones": [
+          { "id": "a", "texto": "Debe cambiar obligatoriamente a combinado para tener mejor control del ciclo.", "esCorrecta": false, "explicacion": "Incorrecto. Si la usuaria está satisfecha y adhiere bien, no hay razón médica para cambiar el fármaco." },
+          { "id": "b", "texto": "Mantener Desogestrel, reforzando la adherencia horaria estricta.", "esCorrecta": true, "explicacion": "Correcto. Sin el efecto anovulatorio de la lactancia, el olvido de la píldora de progestágeno solo es menos perdonable." },
+          { "id": "c", "texto": "Duplicar la dosis de Desogestrel para asegurar anovulación.", "esCorrecta": false, "explicacion": "Incorrecto. No tiene base farmacológica." },
+          { "id": "d", "texto": "Suspender método y descansar un mes.", "esCorrecta": false, "explicacion": "Incorrecto. Los 'descansos' son mitos peligrosos que resultan en embarazos." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Necesitas reforzar conceptos básicos. El MELA y la lactancia son periodos delicados. Indicar estrógenos por error puede acabar con la lactancia materna, lo cual es un daño nutricional e inmunológico para el bebé. Revisa los Criterios MEC para Lactancia.",
+      "medio": "Bien, manejas la generalidad. Pero ojo con las 'barreras' que pones (pedir test de embarazo innecesarios, esperar la regla). En anticoncepción, facilitar el acceso es clave.",
+      "alto": "¡Excelente trabajo! 🤱 Protegiste la lactancia y ofreciste métodos seguros y efectivos sin burocracia. Tienes claro que la oportunidad de atención es AHORA. Sigue así."
+    },
+    "referencias": ["MEC OMS 2015"]
+  },
+  {
+    "id": "mod-anticoncepcion-02-perimenopausia",
+    "modulo": "Anticoncepción",
+    "dificultad": "Media",
+    "titulo": "Perimenopausia y Factores de Riesgo Cardiovascular",
+    "vigneta": "Mónica, 47 años, fumadora crónica (10 cig/día). Hipertensa en tratamiento con Losartán, controlada. Consulta por anticoncepción. Refiere reglas irregulares 'se le atrasan', pero sigue teniendo actividad sexual y teme embarazo.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es la clasificación MEC para Anticonceptivos Combinados (ACO) en este caso?",
+        "opciones": [
+          { "id": "a", "texto": "MEC 2: Se pueden usar controlando la presión arterial mensualmente.", "esCorrecta": false, "explicacion": "Incorrecto. Subestimación grave del riesgo." },
+          { "id": "b", "texto": "MEC 4: Contraindicación Absoluta.", "esCorrecta": true, "explicacion": "Correcto. La combinación de Edad > 35 años + Tabaquismo + Hipertensión eleva el riesgo de infarto y ACV a niveles inaceptables para el uso de estrógenos." },
+          { "id": "c", "texto": "MEC 3: Usar solo si no hay otra opción disponible.", "esCorrecta": false, "explicacion": "Incorrecto. Con múltiples factores de riesgo cardiovascular, es MEC 4." },
+          { "id": "d", "texto": "MEC 1: Si la presión está controlada con Losartán, el riesgo se anula.", "esCorrecta": false, "explicacion": "Incorrecto. El fármaco controla la PA, pero no elimina el daño endotelial ni el riesgo pro-trombótico del estrógeno + tabaco." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "¿Qué método hormonal sistémico sería seguro (MEC 1 o 2) para Mónica?",
+        "opciones": [
+          { "id": "a", "texto": "Inyectable mensual (Estradiol/Noretisterona).", "esCorrecta": false, "explicacion": "Incorrecto. Contiene estrógenos y tiene metabolismo de primer paso hepático. Mismo riesgo." },
+          { "id": "b", "texto": "Progestágeno solo (Oral, Implante o Inyección Trimestral).", "esCorrecta": true, "explicacion": "Correcto. Los progestágenos puros no tienen impacto significativo en la coagulación ni presión arterial, siendo seguros en perfil cardiovascular." },
+          { "id": "c", "texto": "Parche transdérmico.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque evita el paso hepático, tiene carga estrogénica sistémica significativa. Riesgo de trombosis persiste." },
+          { "id": "d", "texto": "Anillo Vaginal.", "esCorrecta": false, "explicacion": "Incorrecto. Es un método combinado (Etinilestradiol)." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Mónica pregunta: '¿Hasta cuándo tengo que cuidarme?'.",
+        "opciones": [
+          { "id": "a", "texto": "Hasta que los bochornos sean muy intensos.", "esCorrecta": false, "explicacion": "Incorrecto. Los síntomas vasomotores no confirman esterilidad." },
+          { "id": "b", "texto": "Hasta cumplir 50 años, legalmente.", "esCorrecta": false, "explicacion": "Incorrecto. Muchas mujeres ovulan pasados los 50." },
+          { "id": "c", "texto": "Hasta completar 1 año de amenorrea (si >50 años) o 2 años (si <50 años).", "esCorrecta": true, "explicacion": "Correcto. Es el criterio clínico estándar para diagnosticar menopausia y suspender anticoncepción." },
+          { "id": "d", "texto": "Hasta que el examen de FSH salga elevado una vez.", "esCorrecta": false, "explicacion": "Incorrecto. La FSH fluctúa en la perimenopausia. Un solo valor no confirma menopausia definitiva." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Mónica elige DIU T de Cobre. Consejería sobre cambios en el patrón de sangrado en su edad.",
+        "guia": "• Volumen: El DIU aumenta el sangrado, lo que puede confundirse con patología endometrial. \n• Vigilancia: Si presenta sangrado intermenstrual o postcoital, debe consultar (descartar Ca Endometrio/Cérvix). \n• Anemia: Vigilar hematocrito dado que ya puede tener reglas abundantes por perimenopausia."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "En la inserción del DIU, no logras pasar el orificio cervical interno (OCI).",
+        "opciones": [
+          { "id": "a", "texto": "Forzar con el histerómetro aplicando presión firme.", "esCorrecta": false, "explicacion": "Incorrecto. En postmenopáusicas/perimenopáusicas el útero es frágil. Riesgo alto de perforación." },
+          { "id": "b", "texto": "Pinzar el labio anterior con Pozzi y traccionar para rectificar el ángulo uterino.", "esCorrecta": true, "explicacion": "Correcto. La maniobra de tracción corrige la ante/retroversión y alinea el canal, facilitando el paso sin fuerza." },
+          { "id": "c", "texto": "Usar misoprostol intravaginal y citar otro día.", "esCorrecta": false, "explicacion": "Plausible, pero segunda línea. Primero se intenta la maniobra mecánica correcta (tracción). El misoprostol no es rutinario en inserción." },
+          { "id": "d", "texto": "Suspender el procedimiento y contraindicar DIU de por vida.", "esCorrecta": false, "explicacion": "Incorrecto. Es una dificultad técnica superable, no una contraindicación del método." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Factor extra: Trae una mamografía con un nódulo BIRADS 4 (sospecha malignidad).",
+        "opciones": [
+          { "id": "a", "texto": "Suspender inserción de DIU T Cobre por riesgo de metástasis.", "esCorrecta": false, "explicacion": "Incorrecto. El DIU de Cobre NO es hormonal y no afecta el cáncer de mama. Es la opción ideal." },
+          { "id": "b", "texto": "Contraindicar cualquier hormona (incluso progestágenos) hasta aclarar biopsia.", "esCorrecta": true, "explicacion": "Correcto. Ante sospecha actual de cáncer hormono-dependiente, se suspende toda carga hormonal (MEC 4) por precaución." },
+          { "id": "c", "texto": "Iniciar Tamoxifeno preventivo.", "esCorrecta": false, "explicacion": "Incorrecto. Eso lo decide el oncólogo con biopsia en mano." },
+          { "id": "d", "texto": "Puede usar implante, ya que no tiene estrógenos.", "esCorrecta": false, "explicacion": "Incorrecto. En Cáncer de Mama actual (o sospecha alta), los progestágenos también están contraindicados (MEC 4)." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Peligroso. No identificar una contraindicación absoluta (MEC 4) en una paciente cardiovascular puede terminar en un ACV iatrogénico. Además, desconocer el manejo ante sospecha de cáncer es grave. Repasa urgente la tabla del MEC OMS.",
+      "medio": "Bien, identificas los riesgos cardiovasculares. Pero cuidado con los criterios de retiro de método (menopausia) y el manejo de procedimientos difíciles. La perimenopausia requiere fineza clínica.",
+      "alto": "¡Excelente! 🫀 Navegaste un campo minado (Tabaco, HTA, Cáncer) con seguridad y evidencia. Elegiste la opción más segura (No hormonal/Progestágeno) y manejaste la técnica de inserción correctamente."
+    },
+    "referencias": ["MEC OMS", "Guía Cáncer de Mama"]
+  },
+  {
+    "id": "mod-its-02-uretritis",
+    "modulo": "ITS",
+    "dificultad": "Baja",
+    "titulo": "Síndrome de Descarga Uretral y Manejo de Pareja",
+    "vigneta": "Felipe, 22 años. Consulta por disuria y secreción uretral purulenta ('le sale pus') desde hace 2 días. Pareja nueva hace 10 días sin protección.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "Diagnóstico sindromático más probable y agentes causales.",
+        "opciones": [
+          { "id": "a", "texto": "Infección Urinaria (ITU) por E. Coli.", "esCorrecta": false, "explicacion": "Incorrecto. En hombre joven, la secreción purulenta es ITS hasta demostrar lo contrario. La ITU es rara y da síntomas irritativos sin tanta secreción." },
+          { "id": "b", "texto": "Uretritis Gonocócica o No Gonocócica (Neisseria gonorrhoeae / Chlamydia trachomatis).", "esCorrecta": true, "explicacion": "Correcto. Cuadro clínico de libro. Se asume coinfección y se trata sindromáticamente para ambos." },
+          { "id": "c", "texto": "Balanitis micótica por Candida.", "esCorrecta": false, "explicacion": "Incorrecto. La balanitis afecta el glande (rojo, picazón), no genera descarga uretral purulenta profusa." },
+          { "id": "d", "texto": "Sífilis Primaria.", "esCorrecta": false, "explicacion": "Incorrecto. La sífilis da una úlcera (chancro) limpia, no secreción purulenta." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Tratamiento antibiótico de elección según norma MINSAL (Manejo Sindromático).",
+        "opciones": [
+          { "id": "a", "texto": "Ciprofloxacino 500mg VO dosis única.", "esCorrecta": false, "explicacion": "Incorrecto. Era el estándar hace años, pero hoy la resistencia de Neisseria a quinolonas es altísima. No usar." },
+          { "id": "b", "texto": "Ceftriaxona 250mg IM + Azitromicina 1g VO (Dosis Únicas).", "esCorrecta": true, "explicacion": "Correcto. Ceftriaxona mata al Gonococo y Azitromicina a la Chlamydia. Es el 'gold standard' sindromático." },
+          { "id": "c", "texto": "Penicilina Benzatina 2.4M IM.", "esCorrecta": false, "explicacion": "Incorrecto. Solo sirve para Sífilis. El Gonococo es resistente a penicilina." },
+          { "id": "d", "texto": "Doxiciclina 100mg c/12h por 7 días solamente.", "esCorrecta": false, "explicacion": "Incorrecto. Cubre Chlamydia muy bien, pero deja descubierta la Gonorrea (resistente a tetraciclinas)." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "¿Qué exámenes solicitas obligatoriamente además del tratamiento?",
+        "opciones": [
+          { "id": "a", "texto": "Urocultivo y Sedimento de orina.", "esCorrecta": false, "explicacion": "Incorrecto. Bajo rendimiento en uretritis ITS. No cambia la conducta inmediata." },
+          { "id": "b", "texto": "Serología para Sífilis (VDRL/RPR) y VIH (Test Rápido/ELISA).", "esCorrecta": true, "explicacion": "Correcto. El comportamiento sexual de riesgo expone a múltiples patógenos. Siempre tamizar el 'pack completo'." },
+          { "id": "c", "texto": "Antígeno Prostático Específico.", "esCorrecta": false, "explicacion": "Incorrecto. Sin indicación en joven de 22 años con cuadro infeccioso agudo." },
+          { "id": "d", "texto": "Hemograma y PCR.", "esCorrecta": false, "explicacion": "Incorrecto. Innecesario. El diagnóstico es clínico y el tratamiento es ambulatorio." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Consejería: ¿Qué indicación le das sobre su pareja sexual?",
+        "guia": "• Tratamiento Espejo: La pareja debe tratarse AUNQUE sea asintomática (portador sano). \n• Abstinencia: No tener relaciones hasta 7 días post-tratamiento de AMBOS. \n• Notificación: Responsabilidad de avisar a otras parejas recientes."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Felipe es alérgico severo a la Azitromicina (macrólidos). ¿Alternativa para cubrir Chlamydia?",
+        "opciones": [
+          { "id": "a", "texto": "Doxiciclina 100mg c/12h por 7 días.", "esCorrecta": true, "explicacion": "Correcto. Es la alternativa de primera línea cuando no se puede usar Azitromicina." },
+          { "id": "b", "texto": "Amoxicilina 500mg c/8h por 7 días.", "esCorrecta": false, "explicacion": "Incorrecto. Baja eficacia intracelular para Chlamydia." },
+          { "id": "c", "texto": "Metronidazol 2g dosis única.", "esCorrecta": false, "explicacion": "Incorrecto. Eso es para Tricomoniasis/Vaginosis, no cubre Chlamydia." },
+          { "id": "d", "texto": "Repetir Ceftriaxona en doble dosis.", "esCorrecta": false, "explicacion": "Incorrecto. Ceftriaxona no sirve para Chlamydia, por más dosis que des." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Insuficiente. Confundir ITS con ITU o recetar Ciprofloxacino (resistencia) demuestra falta de actualización. Estás dejando al paciente con una infección activa transmisible. Revisa la 'Norma de Manejo de ITS' hoy mismo.",
+      "medio": "Bien. Reconoces el síndrome y el tratamiento estándar. Fallaste en detalles como las alergias o la solicitud de exámenes complementarios. Recuerda que en ITS, el tratamiento de la pareja es el 50% del éxito.",
+      "alto": "¡Correcto! 🦠 Manejas el esquema sindromático a la perfección, incluyendo alternativas y visión de salud pública (VIH/Sífilis). Cortaste la cadena de transmisión eficazmente."
+    },
+    "referencias": ["Norma Manejo de ITS MINSAL"]
+  },
+  
+  {
+    "id": "mod-anticoncepcion-03-pae",
     "modulo": "Anticoncepción",
     "dificultad": "Baja",
-    "titulo": "Adolescente de 16 años que solicita su primer método",
-    "vigneta": "Adolescente de 16 años consulta en el CESFAM acompañada de una amiga. Vida sexual activa hace 8 meses, 3 parejas sexuales en el último año, uso de condón 'a veces'. Ciclos regulares cada 30 días, sin antecedentes mórbidos, IMC normal, no fuma, no migraña. Niega uso de drogas inyectables. No desea contar a sus padres por miedo a juicio. Pide 'algo que no tenga que tomar todos los días'. En el box se garantiza confidencialidad según normativa vigente.",
+    "titulo": "Anticoncepción de Emergencia (PAE) y Mitos",
+    "vigneta": "Sofía, 19 años. Acude al SAPU un domingo por la mañana. Refiere relación sexual no protegida (rotura de condón) la noche anterior (hace 12 horas). Está en día 14 de su ciclo menstrual regular. Teme estar embarazada.",
     "pasos": [
       {
         "id": "p1",
         "tipo": "mcq",
-        "enunciado": "Pensando en eficacia, seguridad y adherencia en adolescentes, ¿cuál es la mejor opción anticonceptiva a ofrecer en APS?",
+        "enunciado": "Fisiológicamente, ¿cuál es el mecanismo de acción principal del Levonorgestrel 1.5mg en este momento del ciclo?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Métodos de abstinencia periódica explicados en detalle",
-            "esCorrecta": false,
-            "explicacion": "Tienen alta tasa de falla en uso típico y requieren alta motivación y registro; no son primera línea en adolescentes de alto riesgo."
-          },
-          {
-            "id": "b",
-            "texto": "Anticonceptivo oral combinado diario más condón ocasional",
-            "esCorrecta": false,
-            "explicacion": "Podría servir, pero la paciente ya expresa dificultad con toma diaria y uso inconsistente de condón; hay alternativas de larga duración más adecuadas."
-          },
-          {
-            "id": "c",
-            "texto": "Implante subdérmico de progestágeno solo, asociado a consejería en uso de condón",
-            "esCorrecta": true,
-            "explicacion": "Es un método de larga duración, muy efectivo, reversible y recomendado como primera línea en adolescentes, complementable con condón para ITS."
-          },
-          {
-            "id": "d",
-            "texto": "Coito interrumpido más 'tomar la pastilla del día después si algo falla'",
-            "esCorrecta": false,
-            "explicacion": "El coito interrumpido tiene altísima tasa de falla y la AE es de uso ocasional, no un método regular."
-          }
-        ],
-        "feedbackDocente": "Se espera que prioricen métodos de larga duración y alta eficacia (LARC) en adolescentes, complementando siempre con condón para prevención de ITS."
+          { "id": "a", "texto": "Es abortivo: altera el endometrio impidiendo la implantación del óvulo fecundado.", "esCorrecta": false, "explicacion": "Incorrecto. Este es el mito más persistente. La evidencia actual demuestra que el LNG no impide la implantación de un embrión ya formado." },
+          { "id": "b", "texto": "Inhibe o retrasa la ovulación al impedir el pico de LH.", "esCorrecta": true, "explicacion": "Correcto. Su ventana de eficacia es pre-ovulatoria. Si se administra antes del pico de LH, la ovulación no ocurre o se pospone 5-7 días." },
+          { "id": "c", "texto": "Genera un tapón mucoso impermeable a los espermatozoides inmediatamente.", "esCorrecta": false, "explicacion": "Incorrecto. Ese es mecanismo de progestágenos de uso continuo, pero no es el mecanismo primario ni inmediato de la dosis de emergencia." },
+          { "id": "d", "texto": "Es espermicida directo en el tracto vaginal.", "esCorrecta": false, "explicacion": "Incorrecto. No mata espermatozoides." }
+        ]
       },
       {
         "id": "p2",
-        "tipo": "short",
-        "enunciado": "Redacta 3 mensajes clave de consejería que deberías entregar antes de colocar el implante.",
-        "guia": "Incluye: derechos (confidencialidad, acceso), eficacia y reversibilidad del método, posibles alteraciones del patrón de sangrado, necesidad de condón para ITS y acuerdo sobre controles."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Anticoncepción en adolescentes, UDD 2025"
-    ]
-  },
-  {
-    "id": "antico-02-fumadora-mayor-35",
-    "modulo": "Anticoncepción",
-    "dificultad": "Media",
-    "titulo": "Mujer de 39 años fumadora que busca espaciar embarazos",
-    "vigneta": "Mujer de 39 años, G3P3, consulta en APS por deseo de 'cuidarse mejor' hasta decidir si tener otro hijo. Fuma 15 cigarrillos/día desde los 20 años. PA 130/80 mmHg, IMC 31 kg/m². Sin antecedentes de trombosis ni migraña. Ciclos regulares. Actualmente usa condón en forma irregular. No tiene pareja estable. Desea un método 'que no tenga hormonas fuertes' y 'no engordar más'.",
-    "pasos": [
-      {
-        "id": "p1",
         "tipo": "mcq",
-        "enunciado": "Según criterios médicos de elegibilidad (OMS/MINSAL), ¿cuál es la opción MÁS apropiada?",
+        "enunciado": "Sofía pesa 85 kg (IMC > 30). Según evidencia farmacológica reciente, ¿qué consideracion aplica?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Anticonceptivo oral combinado con etinilestradiol + desogestrel",
-            "esCorrecta": false,
-            "explicacion": "En mujeres ≥35 años fumadoras intensas, los combinados son categoría 3-4 por aumento del riesgo cardiovascular."
-          },
-          {
-            "id": "b",
-            "texto": "Inyectable mensual combinado",
-            "esCorrecta": false,
-            "explicacion": "También contiene estrógenos, por lo tanto comparte las mismas restricciones que los ACO combinados."
-          },
-          {
-            "id": "c",
-            "texto": "DIU de cobre (T Cu 380A)",
-            "esCorrecta": true,
-            "explicacion": "Método de larga duración, muy efectivo, sin estrógenos y sin riesgo cardiovascular adicional; buena opción si no tiene contraindicaciones para DIU."
-          },
-          {
-            "id": "d",
-            "texto": "Píldora solo progestágeno (levonorgestrel 30 mcg/día)",
-            "esCorrecta": false,
-            "explicacion": "Es una alternativa segura, pero menos efectiva en uso típico y más dependiente de adherencia diaria que un DIU."
-          }
-        ],
-        "feedbackDocente": "La clave es identificar el riesgo cardiovascular asociado a estrógenos en mayores de 35 años fumadoras y priorizar métodos sin estrógenos."
+          { "id": "a", "texto": "La dosis estándar de 1.5mg es igualmente efectiva, el peso no influye.", "esCorrecta": false, "explicacion": "Incorrecto. Existe evidencia sólida de que en obesidad la eficacia del LNG disminuye significativamente (dilución/metabolismo)." },
+          { "id": "b", "texto": "Se debe aumentar la dosis a 3.0mg (Doble Dosis) obligatoriamente.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque algunas guías lo sugieren, no es la recomendación oficial MINSAL universal todavía y no supera al DIU." },
+          { "id": "c", "texto": "La opción más efectiva (Gold Standard) sería la inserción de un DIU T de Cobre.", "esCorrecta": true, "explicacion": "Correcto. El DIU de cobre es el método de emergencia más efectivo (>99%) y no se afecta por el peso corporal." },
+          { "id": "d", "texto": "Está contraindicada la AE hormonal, no se puede hacer nada.", "esCorrecta": false, "explicacion": "Incorrecto. Nunca se niega el método, se aconseja sobre la eficacia reducida o se busca alternativa (DIU)." }
+        ]
       },
       {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona 3 contraindicaciones absolutas (categoría 4) para uso de anticonceptivos hormonales combinados.",
-        "guia": "Incluye ejemplos clásicos: TEV/EP actual, migraña con aura, enfermedad hepática grave, entre otros."
-      }
-    ],
-    "referencias": [
-      "OMS — Criterios Médicos de Elegibilidad para el uso de anticonceptivos, 2015",
-      "MINSAL — Normas sobre Regulación de la Fertilidad, 2018"
-    ]
-  },
-  {
-    "id": "antico-03-posparto-lactancia",
-    "modulo": "Anticoncepción",
-    "dificultad": "Media",
-    "titulo": "Mujer en puerperio con lactancia exclusiva",
-    "vigneta": "Mujer de 24 años, puérpera de 4 semanas, parto vaginal sin complicaciones. Lactancia materna exclusiva cada 3 horas, amenorrea posparto. Sin antecedentes mórbidos. Vive con pareja estable. Consulta en el control de puerperio en APS por método anticonceptivo 'seguro para la leche' y que no implique 'estar recordando todos los días'.",
-    "pasos": [
-      {
-        "id": "p1",
+        "id": "p3",
         "tipo": "mcq",
-        "enunciado": "Considerando lactancia exclusiva y 4 semanas posparto, ¿qué método es MÁS adecuado iniciar hoy?",
+        "enunciado": "¿Cuál es el plazo legal y técnico para entregar la PAE en el sistema público?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Anticonceptivo oral combinado de baja dosis",
-            "esCorrecta": false,
-            "explicacion": "Los estrógenos en las primeras semanas posparto pueden afectar la lactancia y aumentar el riesgo trombótico."
-          },
-          {
-            "id": "b",
-            "texto": "DIU de cobre",
-            "esCorrecta": true,
-            "explicacion": "Puede colocarse desde 4 semanas posparto según CME, no afecta la lactancia y ofrece protección de larga duración."
-          },
-          {
-            "id": "c",
-            "texto": "Ningún método, porque con lactancia exclusiva no hay riesgo de embarazo",
-            "esCorrecta": false,
-            "explicacion": "La amenorrea de lactancia tiene criterios estrictos y no es suficiente por sí sola si no se cumple todo o si la usuaria desea mayor seguridad."
-          },
-          {
-            "id": "d",
-            "texto": "Coito interrumpido más condón solo si 'fallan'",
-            "esCorrecta": false,
-            "explicacion": "Métodos con alta tasa de falla; no se recomiendan cuando la mujer desea alta eficacia anticonceptiva."
-          }
-        ],
-        "feedbackDocente": "Es importante recordar las ventanas de inicio seguro de métodos posparto y reforzar los criterios de amenorrea de lactancia como método."
+          { "id": "a", "texto": "Hasta las 72 horas post coito, después de eso está prohibido entregarla.", "esCorrecta": false, "explicacion": "Incorrecto. 72 horas es el ideal de eficacia, pero las guías permiten uso 'off-label' informado hasta las 120 horas." },
+          { "id": "b", "texto": "Solo en horario hábil con matrona, ya que requiere consejería extensa.", "esCorrecta": false, "explicacion": "Incorrecto. Es una urgencia. Debe estar disponible en SAPU/SUR fuera de horario hábil." },
+          { "id": "c", "texto": "Inmediatamente a solicitud de la usuaria, disponible las 24hrs (Ley 20.418).", "esCorrecta": true, "explicacion": "Correcto. El acceso no puede tener barreras horarias ni burocráticas." },
+          { "id": "d", "texto": "Hasta 5 días, pero requiere receta retenida de médico.", "esCorrecta": false, "explicacion": "Incorrecto. La matrona/ón está facultado para prescribir y entregar sin receta médica retenida en el sistema público." }
+        ]
       },
       {
-        "id": "p2",
+        "id": "p4",
         "tipo": "short",
-        "enunciado": "Enumera los tres criterios que deben cumplirse para considerar la amenorrea de lactancia como método anticonceptivo eficaz.",
-        "guia": "Edad del lactante, tipo de lactancia y estado menstrual materno."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Anticoncepción sólo progestágenos y DIU, UDD 2025"
-    ]
-  },
-  {
-    "id": "antico-04-ae-lng",
-    "modulo": "Anticoncepción",
-    "dificultad": "Baja",
-    "titulo": "Uso de anticoncepción de emergencia con levonorgestrel",
-    "vigneta": "Joven de 20 años consulta 36 horas después de una relación sexual sin protección. Ciclos regulares cada 28 días, última menstruación hace 10 días. Niega antecedentes mórbidos. Ha usado AE una vez hace un año. Solicita 'la pastilla del día después' y pregunta si eso es abortivo.",
-    "pasos": [
+        "enunciado": "Explica a Sofía qué esperar después de tomar la pastilla (Efectos adversos y ciclo).",
+        "guia": "• Náuseas/Vómitos (si vomita <2h debe repetir dosis).\n• Adelanto o retraso de la próxima regla (alteración del eje).\n• No protege para relaciones futuras (necesidad de MAC regular)."
+      },
       {
-        "id": "p1",
+        "id": "p5",
         "tipo": "mcq",
-        "enunciado": "Respecto al mecanismo de acción de la anticoncepción de emergencia con levonorgestrel (1,5 mg), ¿cuál es la afirmación MÁS correcta?",
+        "enunciado": "3 semanas después, Sofía vuelve. No le ha llegado la regla. Test de orina positivo. ¿Qué ocurrió?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Evita la implantación del embrión alterando irreversiblemente el endometrio",
-            "esCorrecta": false,
-            "explicacion": "La evidencia muestra que su principal efecto es preovulatorio; no se considera abortivo."
-          },
-          {
-            "id": "b",
-            "texto": "Retrasa o inhibe la ovulación si aún no ha ocurrido",
-            "esCorrecta": true,
-            "explicacion": "El principal mecanismo es postergar/inhibir el peak de LH y la ovulación durante la ventana de sobrevida espermática."
-          },
-          {
-            "id": "c",
-            "texto": "Produce una hemorragia uterina que 'bota' cualquier embarazo",
-            "esCorrecta": false,
-            "explicacion": "No corresponde al mecanismo; no interrumpe un embarazo ya instalado."
-          },
-          {
-            "id": "d",
-            "texto": "Tiene efecto permanente sobre la fertilidad",
-            "esCorrecta": false,
-            "explicacion": "No afecta la fertilidad futura; es de uso ocasional."
-          }
-        ],
-        "feedbackDocente": "Se busca que el estudiante maneje el mecanismo de acción real de la AE para entregar consejería basada en evidencia y disminuir mitos."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona 3 mensajes de consejería que debes entregar al indicar anticoncepción de emergencia con levonorgestrel.",
-        "guia": "Plazo de uso, posibles efectos secundarios, necesidad de método regular, qué hacer ante retraso menstrual."
+          { "id": "a", "texto": "La pastilla causó malformaciones al feto.", "esCorrecta": false, "explicacion": "Incorrecto. No hay evidencia de teratogenicidad con progestágenos." },
+          { "id": "b", "texto": "Probablemente Sofía ya había ovulado antes de tomar la pastilla o su IMC afectó la eficacia.", "esCorrecta": true, "explicacion": "Correcto. Es una falla del método. Si la LH ya había subido, el LNG no puede detener la ovulación." },
+          { "id": "c", "texto": "El test es un falso positivo por efecto del medicamento.", "esCorrecta": false, "explicacion": "Incorrecto. El LNG no contiene HCG, no altera el test de embarazo." },
+          { "id": "d", "texto": "Sofía tomó alcohol con la pastilla y la inactivó.", "esCorrecta": false, "explicacion": "Incorrecto. El alcohol no anula el efecto hormonal, aunque puede aumentar las náuseas." }
+        ]
       }
     ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Anticoncepción sólo progestágenos y AE, UDD 2025"
-    ]
-  },
-  {
-    "id": "antico-05-migraña-con-aura",
-    "modulo": "Anticoncepción",
-    "dificultad": "Alta",
-    "titulo": "Mujer con migraña con aura en búsqueda de método seguro",
-    "vigneta": "Mujer de 30 años, nuligesta, con diagnóstico de migraña con aura visual desde la adolescencia, en control por neurología. No fuma, PA normal, IMC 24 kg/m². Vida sexual activa con pareja estable. Actualmente usa ACO combinado por indicación antigua de un médico particular. Refiere aumento en la frecuencia de las crisis el último año. Acude a APS para 'cambiar de pastillas porque me hacen mal a la cabeza'.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "Según CME de la OMS, ¿cuál es la recomendación respecto a anticonceptivos hormonales combinados en esta paciente?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Categoría 1: puede seguir usando ACO sin restricciones",
-            "esCorrecta": false,
-            "explicacion": "La migraña con aura aumenta el riesgo de evento vascular cerebral con estrógenos; no es categoría 1."
-          },
-          {
-            "id": "b",
-            "texto": "Categoría 2: se puede usar, pero con controles más frecuentes",
-            "esCorrecta": false,
-            "explicacion": "En migraña con aura, los combinados suelen ser categoría 4 (riesgo inaceptable)."
-          },
-          {
-            "id": "c",
-            "texto": "Categoría 3: se puede usar sólo si no hay otra alternativa disponible",
-            "esCorrecta": false,
-            "explicacion": "El riesgo de ACV es suficientemente alto como para considerarlo categoría 4."
-          },
-          {
-            "id": "d",
-            "texto": "Categoría 4: contraindicado por aumento de riesgo vascular",
-            "esCorrecta": true,
-            "explicacion": "La migraña con aura es contraindicación para estrógenos; se debe suspender el AHC y ofrecer métodos sin estrógenos."
-          }
-        ],
-        "feedbackDocente": "Este caso entrena la identificación de condiciones que transforman un método en categoría 4, evitando indicaciones potencialmente dañinas."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Propón dos alternativas anticonceptivas seguras para esta paciente y justifica brevemente cada una.",
-        "guia": "Piensa en DIU Cu, DIU-LNG, implante, PSP, siempre considerando mecanismo, eficacia y perfil de seguridad."
-      }
-    ],
-    "referencias": [
-      "OMS — Criterios Médicos de Elegibilidad, 2015",
-      "Anticonceptivos hormonales combinados y riesgos vasculares, UDD 2025"
-    ]
-  },
-  {
-    "id": "antico-06-posaborto-primero-trimestre",
-    "modulo": "Anticoncepción",
-    "dificultad": "Media",
-    "titulo": "Inicio de anticoncepción en posaborto de primer trimestre",
-    "vigneta": "Mujer de 22 años consulta en control posaborto espontáneo de 9 semanas, resuelto médicamente hace 10 días. Sin antecedentes mórbidos. No planificaba embarazo, refiere uso irregular de condón. Desea 'salir con algo puesto hoy'. No hay signos de infección, sangrado escaso, útero involucionando.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "Respecto al inicio de un método anticonceptivo en este contexto, ¿cuál es la afirmación MÁS correcta?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Debe esperar su próxima menstruación para colocar un DIU",
-            "esCorrecta": false,
-            "explicacion": "Puede colocarse DIU inmediatamente posaborto si no hay infección y se descarta embarazo en curso."
-          },
-          {
-            "id": "b",
-            "texto": "Se puede colocar un DIU de cobre hoy mismo, si no hay sospecha de infección",
-            "esCorrecta": true,
-            "explicacion": "Los métodos de larga duración pueden iniciarse inmediatamente posaborto, optimizando la oportunidad de APS."
-          },
-          {
-            "id": "c",
-            "texto": "Sólo se recomienda anticoncepción de emergencia en este control",
-            "esCorrecta": false,
-            "explicacion": "La AE no reemplaza un método regular; además ya ocurrió el evento."
-          },
-          {
-            "id": "d",
-            "texto": "Está contraindicada cualquier anticoncepción hormonal por 6 meses",
-            "esCorrecta": false,
-            "explicacion": "No existe tal contraindicación en una mujer sana en posaborto de primer trimestre."
-          }
-        ],
-        "feedbackDocente": "Entrena el uso de 'ventanas de oportunidad' para iniciar anticoncepción inmediatamente después de un evento reproductivo."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Redacta 2 elementos clave de consejería que no puedes omitir en una mujer en posaborto que inicia DIU.",
-        "guia": "Aborda signos de alarma, cambios en sangrado, control, posibilidad de retiro cuando lo desee."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Manual práctico sobre uso de DIU, SOCHEG 2022"
-    ]
-  },
-  {
-    "id": "antico-07-adolescente-dmpa",
-    "modulo": "Anticoncepción",
-    "dificultad": "Alta",
-    "titulo": "Adolescente con DMPA y preocupación por el peso y los huesos",
-    "vigneta": "Adolescente de 17 años, G0, usuaria de inyectable trimestral de medroxiprogesterona desde hace 18 meses, colocado en APS. Consulta porque ha subido 6 kg en un año y escuchó en redes sociales que 'ese anticonceptivo da osteoporosis'. No tiene otras comorbilidades. Refiere sangrado escaso y esporádico. No fuma, hace poco ejercicio, consumo bajo de lácteos.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "Según recomendaciones OMS para adolescentes, ¿qué es lo MÁS apropiado?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Suspender de inmediato el DMPA porque está absolutamente contraindicado en menores de 18 años",
-            "esCorrecta": false,
-            "explicacion": "En adolescentes es categoría 2 por impacto óseo, pero no contraindicación absoluta."
-          },
-          {
-            "id": "b",
-            "texto": "Mantener el DMPA sin discutir riesgos porque el aumento de peso es 'normal en la adolescencia'",
-            "esCorrecta": false,
-            "explicacion": "Minimizar las preocupaciones sin entregar información puede afectar la adherencia y vulnerar su derecho a información."
-          },
-          {
-            "id": "c",
-            "texto": "Explorar preferencias y ofrecer alternativa LARC (DIU o implante), explicando riesgos/beneficios del DMPA",
-            "esCorrecta": true,
-            "explicacion": "Respeta su autonomía, aborda dudas y ofrece métodos igualmente efectivos sin potencial impacto en densidad ósea."
-          },
-          {
-            "id": "d",
-            "texto": "Indicar calcio y vitamina D pero mantener el método sin más discusión",
-            "esCorrecta": false,
-            "explicacion": "Las medidas generales pueden ayudar, pero no reemplazan la evaluación crítica del método en este grupo etario."
-          }
-        ],
-        "feedbackDocente": "El foco es integrar CME, salud ósea adolescente y consejería participativa, sin alarmar ni minimizar."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona dos puntos clave que debes explicar sobre DMPA y salud ósea en adolescentes.",
-        "guia": "Habla de efecto potencialmente reversible en densidad ósea, clasificación OMS y alternativas si le preocupa."
-      }
-    ],
-    "referencias": [
-      "Anticoncepción en adolescentes en Chile, UDD 2025",
-      "OMS — Criterios Médicos de Elegibilidad, 2015"
-    ]
-  },
-  {
-    "id": "antico-08-diu-sangrado-abundante",
-    "modulo": "Anticoncepción",
-    "dificultad": "Media",
-    "titulo": "Sangrado abundante en usuaria de DIU de cobre",
-    "vigneta": "Mujer de 27 años, usuaria de DIU de cobre TCu 380A hace 8 meses. Consulta por aumento del sangrado menstrual (pasa de 3 a 6-7 días, con coágulos pequeños) y dismenorrea moderada. Hb 11,3 g/dL. Niega metrorragias intermenstruales, flujo fétido o dolor pélvico persistente. Ecografía transvaginal previa muestra DIU bien ubicado, sin miomas significativos.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "¿Cuál es la conducta MÁS adecuada en APS en este momento?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Retirar el DIU de inmediato y dejarla sin método",
-            "esCorrecta": false,
-            "explicacion": "Hay opciones de manejo conservador y/o cambio a otro método sin dejarla sin protección."
-          },
-          {
-            "id": "b",
-            "texto": "Explicar que es esperable, ofrecer AINE durante la menstruación y control de Hb",
-            "esCorrecta": true,
-            "explicacion": "El aumento de sangrado es un efecto conocido del DIU Cu y muchas veces se maneja con AINE y seguimiento."
-          },
-          {
-            "id": "c",
-            "texto": "Indicar anticonceptivo combinado además del DIU para 'ordenar el sangrado'",
-            "esCorrecta": false,
-            "explicacion": "No es la primera opción y aumenta exposición hormonal sin necesidad; podría considerarse otras alternativas."
-          },
-          {
-            "id": "d",
-            "texto": "Sospechar inmediatamente EPI y derivar de urgencia",
-            "esCorrecta": false,
-            "explicacion": "No hay datos clínicos de infección pélvica (fiebre, dolor continuo, flujo patológico)."
-          }
-        ],
-        "feedbackDocente": "Entrena la capacidad de diferenciar efectos esperables del método versus signos de alarma que requieren cambio de conducta."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Si la usuaria no tolera el patrón de sangrado y solicita cambio, ¿qué alternativa de método podrías ofrecer que mejore su sangrado?",
-        "guia": "Considera DIU-LNG y explica su efecto endometrial."
-      }
-    ],
-    "referencias": [
-      "Manual práctico sobre uso de DIU, SOCHEG 2022",
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018"
-    ]
-  },
-  {
-    "id": "antico-09-its-y-diu",
-    "modulo": "Anticoncepción",
-    "dificultad": "Alta",
-    "titulo": "DIU en usuaria con cervicitis sospechosa de ITS",
-    "vigneta": "Mujer de 23 años, sin hijos, consulta por anticoncepción. Vida sexual activa con 2 parejas en los últimos 6 meses, uso irregular de condón. Desea DIU de cobre. Al examen especular se observa flujo endocervical purulento, cuello friable. Refiere disuria leve y coito algo doloroso. No fiebre, PA y FC normales.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "Según CME y normas nacionales, ¿cuál es la mejor conducta respecto al DIU hoy?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Colocar el DIU de todas formas y tratar la posible ITS en paralelo",
-            "esCorrecta": false,
-            "explicacion": "La cervicitis purulenta es categoría 4 para inicio de DIU; aumenta el riesgo de EPI posinserción."
-          },
-          {
-            "id": "b",
-            "texto": "Posponer la inserción de DIU, tratar la ITS y ofrecer un método transitorio",
-            "esCorrecta": true,
-            "explicacion": "Se debe tratar primero la infección y ofrecer anticonceptivos alternativos mientras tanto (p.ej., PSP o implante si no hay contraindicación)."
-          },
-          {
-            "id": "c",
-            "texto": "Contraindicar DIU de por vida en esta paciente",
-            "esCorrecta": false,
-            "explicacion": "Tras el tratamiento y resolución de la ITS puede reevaluarse la elegibilidad para DIU."
-          },
-          {
-            "id": "d",
-            "texto": "Derivar de inmediato a urgencias por EPI grave",
-            "esCorrecta": false,
-            "explicacion": "No hay criterios de gravedad ni cuadro compatible con EPI aguda complicada."
-          }
-        ],
-        "feedbackDocente": "Se integran criterios de elegibilidad para DIU y manejo inicial sindrómico de ITS en APS."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona dos métodos anticonceptivos que podrías ofrecer mientras se trata la ITS, justificando brevemente.",
-        "guia": "Piensa en métodos sin riesgo aumentado de EPI posinserción, de alta eficacia y que no dependan mucho de la usuaria."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Manual práctico sobre uso de DIU, SOCHEG 2022"
-    ]
-  },
-  {
-    "id": "antico-10-usuario-despistado-aco",
-    "modulo": "Anticoncepción",
-    "dificultad": "Baja",
-    "titulo": "Olvido frecuente de anticonceptivos orales combinados",
-    "vigneta": "Mujer de 19 años, estudiante universitaria, nuligesta. Usa ACO combinado hace 1 año, pero refiere que 'siempre se me olvida, me la tomo cuando me acuerdo'. Ha tenido 2 sustos de posible embarazo y ha usado AE en esas ocasiones. Vida sexual activa con pareja estable, además de relaciones ocasionales en fiestas, con uso irregular de condón. Desea algo 'menos dependiente de mi memoria'.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "¿Qué estrategia anticonceptiva se alinea mejor con su perfil?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Reforzar el uso de alarmas en el celular para seguir con ACO combinado",
-            "esCorrecta": false,
-            "explicacion": "Puede ayudar, pero ya demostró mala adherencia sostenida, con uso repetido de AE."
-          },
-          {
-            "id": "b",
-            "texto": "Sugerir métodos naturales para que 'conozca mejor su ciclo'",
-            "esCorrecta": false,
-            "explicacion": "En su contexto de riesgo y baja adherencia, los métodos naturales tienen alta tasa de falla."
-          },
-          {
-            "id": "c",
-            "texto": "Ofrecer un método LARC (implante o DIU) más consejería en uso de condón",
-            "esCorrecta": true,
-            "explicacion": "LARC reduce el error de uso, aumenta eficacia y puede combinarse con condón para ITS."
-          },
-          {
-            "id": "d",
-            "texto": "Suspender todo método para que 'aprenda con la experiencia'",
-            "esCorrecta": false,
-            "explicacion": "Contradice los principios de salud sexual y reproductiva y el rol profesional."
-          }
-        ],
-        "feedbackDocente": "Entrena la capacidad de identificar problemas de adherencia y ajustar la estrategia hacia métodos menos dependientes de la usuaria."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Propón 2 preguntas de exploración que harías para entender mejor los motivos de su baja adherencia.",
-        "guia": "Enfócate en rutina diaria, creencias sobre las pastillas, consumo de alcohol u otras sustancias, organización de estudios."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas Nacionales sobre Regulación de la Fertilidad, 2018",
-      "Planificación familiar: manual mundial para proveedores, OMS"
-    ]
+    "feedback_dinamico": {
+      "bajo": "Cuidado. Confundir el mecanismo de acción (abortivo vs anovulatorio) o no ajustar por peso en pacientes con obesidad implica una atención deficiente. La PAE es la última línea de defensa antes de un embarazo no planificado. Revisa la 'Guía Clínica de Anticoncepción de Emergencia'.",
+      "medio": "Vas bien. Tienes claros los plazos legales y el acceso, pero quizás fallaste en la farmacología (peso) o fisiología (pico de LH). Afina esos detalles técnicos para asegurar la eficacia del método.",
+      "alto": "¡Muy bien! 💊 Manejas la Anticoncepción de Emergencia con base científica sólida, desmitificando creencias erróneas y considerando variables farmacocinéticas como el IMC. Excelente consejería."
+    },
+    "referencias": ["Guía Clínica Anticoncepción de Emergencia MINSAL"]
   },
 
   {
-    "id": "its-01-uretritis-masculina",
-    "modulo": "ITS",
-    "dificultad": "Media",
-    "titulo": "Joven con secreción uretral y disuria",
-    "vigneta": "Varón de 19 años consulta en SAPU por disuria y secreción uretral blanquecina de 3 días de evolución. Refiere nueva pareja hace 2 semanas, sexo vaginal sin condón. Niega fiebre, dolor testicular o lesiones cutáneas. No antecedentes mórbidos. Quiere 'algo rápido porque tiene que ir a trabajar'.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "En APS, ¿cuál es la conducta inicial MÁS adecuada frente a este cuadro?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Esperar resultados de cultivo antes de iniciar cualquier tratamiento",
-            "esCorrecta": false,
-            "explicacion": "En el enfoque sindrómico de ITS, la uretritis se trata empíricamente para reducir complicaciones y transmisión."
-          },
-          {
-            "id": "b",
-            "texto": "Tratar empíricamente para gonorrea y clamidia, más consejería y notificación de pareja(s)",
-            "esCorrecta": true,
-            "explicacion": "La uretritis requiere tratamiento empírico dirigido y abordaje de pareja para cortar cadena de transmisión."
-          },
-          {
-            "id": "c",
-            "texto": "Indicar sólo antiinflamatorios y abundante hidratación",
-            "esCorrecta": false,
-            "explicacion": "No trata la causa infecciosa ni previene complicaciones."
-          },
-          {
-            "id": "d",
-            "texto": "Derivar de inmediato a hospital por sospecha de sepsis",
-            "esCorrecta": false,
-            "explicacion": "No hay criterios de gravedad; se puede manejar en APS."
-          }
-        ],
-        "feedbackDocente": "Busca que el estudiante aplique el enfoque sindrómico en APS y recuerde la importancia de la notificación de pareja y consejería."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Redacta dos mensajes clave de consejería que le entregarías respecto a ITS y uso de condón.",
-        "guia": "Incluye abstinencia hasta completar tratamiento, uso de condón sistemático, necesidad de que la pareja se evalúe."
-      }
-    ],
-    "referencias": [
-      "MINSAL — Normas de manejo de ITS",
-      "Orientaciones técnicas para control integral de adolescentes, MINSAL 2021"
-    ]
-  },
-  {
-    "id": "its-02-ulcera-genital",
-    "modulo": "ITS",
-    "dificultad": "Media",
-    "titulo": "Úlcera genital dolorosa en adolescente",
-    "vigneta": "Adolescente de 18 años consulta por lesión en genitales externos dolorosa desde hace 4 días, asociada a disuria por roce. Refirió cuadro previo de malestar general y febrícula. Vida sexual activa con nueva pareja hace 1 mes. Al examen se observan vesículas y úlcera superficial dolorosa en labio mayor derecho, sin secreción purulenta. No hay adenopatías inguinales dolorosas francas.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "¿Cuál es el diagnóstico clínico más probable y la conducta inicial en APS?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Primoinfección por herpes genital; iniciar tratamiento antiviral y ofrecer consejería",
-            "esCorrecta": true,
-            "explicacion": "Lesiones vesiculosas-ulceradas dolorosas, con pródromo sistémico, son típicas de herpes simple genital."
-          },
-          {
-            "id": "b",
-            "texto": "Sífilis primaria; indicar penicilina benzatina IM",
-            "esCorrecta": false,
-            "explicacion": "El chancro sifilítico suele ser indoloro y de bordes indurados."
-          },
-          {
-            "id": "c",
-            "texto": "Condilomas acuminados; indicar podofilina",
-            "esCorrecta": false,
-            "explicacion": "Los condilomas son verrugas, no úlceras dolorosas."
-          },
-          {
-            "id": "d",
-            "texto": "Candidiasis vulvar; indicar sólo antimicótico tópico",
-            "esCorrecta": false,
-            "explicacion": "La candidiasis da prurito intenso y placas blanquecinas, no úlcera dolorosa con vesículas."
-          }
-        ],
-        "feedbackDocente": "Entrena el reconocimiento clínico básico de lesiones herpéticas y el inicio precoz de tratamiento para disminuir duración y contagio."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona 3 elementos de consejería importantes para una adolescente con primoinfección por herpes genital.",
-        "guia": "Habla de recurrencias, uso de condón, disclosure a parejas, impacto emocional y apoyo."
-      }
-    ],
-    "referencias": [
-      "Guías clínicas ITS, MINSAL",
-      "Guía de consejería en salud sexual y reproductiva para adolescentes, 2016"
-    ]
-  },
-  {
-    "id": "its-03-vaginitis",
-    "modulo": "ITS",
-    "dificultad": "Baja",
-    "titulo": "Flujo vaginal y prurito en usuaria joven",
-    "vigneta": "Mujer de 21 años consulta por flujo vaginal abundante, blanco grumoso, asociado a prurito intenso desde hace 5 días. Niega mal olor, dolor pélvico o fiebre. Usa ACO combinado, sin nuevos contactos sexuales en los últimos 3 meses. Hace 2 semanas recibió antibiótico por faringoamigdalitis.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "El cuadro clínico es más sugerente de:",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Vaginosis bacteriana",
-            "esCorrecta": false,
-            "explicacion": "La vaginosis se acompaña de flujo grisáceo y mal olor característico, con poco prurito."
-          },
-          {
-            "id": "b",
-            "texto": "Candidiasis vulvovaginal",
-            "esCorrecta": true,
-            "explicacion": "Flujo blanco grumoso y prurito intenso, posterior a uso de antibióticos, es típico de candidiasis."
-          },
-          {
-            "id": "c",
-            "texto": "Tricomoniasis",
-            "esCorrecta": false,
-            "explicacion": "Suele dar flujo amarillo-verdoso espumoso y mal olor, muchas veces ITS."
-          },
-          {
-            "id": "d",
-            "texto": "Neoplasia intraepitelial de alto grado",
-            "esCorrecta": false,
-            "explicacion": "No se presenta típicamente con esta clínica aislada."
-          }
-        ],
-        "feedbackDocente": "Entrena la capacidad de diferenciar síndromes de flujo vaginal frecuentes en APS."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Indica dos recomendaciones generales que darías para prevenir recurrencias de candidiasis vulvovaginal.",
-        "guia": "Considera ropa interior, humedad, jabones, automedicación con antibióticos."
-      }
-    ],
-    "referencias": [
-      "Guías clínicas ITS y vaginitis, MINSAL"
-    ]
-  },
-  {
-    "id": "its-04-screening-asintomatico",
-    "modulo": "ITS",
-    "dificultad": "Media",
-    "titulo": "Adolescente asintomática que solicita 'exámenes de ITS'",
-    "vigneta": "Adolescente de 17 años acude a control de salud integral. Vida sexual activa desde los 15 años, 4 parejas sexuales en el último año, uso de condón 'a veces'. No síntomas urogenitales. No consumo de sustancias inyectables. Refiere ansiedad por riesgo de ITS, quiere 'estar segura'.",
-    "pasos": [
-      {
-        "id": "p1",
-        "tipo": "mcq",
-        "enunciado": "En APS, ¿cuál de las siguientes acciones es MÁS pertinente?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Decirle que como no tiene síntomas, no requiere ningún examen",
-            "esCorrecta": false,
-            "explicacion": "Hay ITS asintomáticas frecuentes en adolescentes; el riesgo por conducta sexual es alto."
-          },
-          {
-            "id": "b",
-            "texto": "Realizar oferta de tamizaje para ITS prevalentes y reforzar uso de condón",
-            "esCorrecta": true,
-            "explicacion": "Se recomienda pesquisa oportuna en adolescentes con conductas de riesgo, junto con consejería."
-          },
-          {
-            "id": "c",
-            "texto": "Derivarla directamente a psiquiatría por 'ansiedad'",
-            "esCorrecta": false,
-            "explicacion": "Primero se aborda la demanda en APS; la ansiedad es esperable en este contexto."
-          },
-          {
-            "id": "d",
-            "texto": "Indicar sólo Papanicolaou",
-            "esCorrecta": false,
-            "explicacion": "El PAP no es un examen de ITS y su indicación depende de edad y normas de pesquisa de cáncer cervicouterino."
-          }
-        ],
-        "feedbackDocente": "Entrena la integración entre control adolescente, enfoque anticipatorio y oferta activa de tamizaje para ITS."
-      },
-      {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Escribe dos preguntas abiertas que te ayuden a explorar mejor su riesgo de ITS.",
-        "guia": "Incluye número de parejas, tipo de prácticas sexuales, uso de condón, historia de ITS previas."
-      }
-    ],
-    "referencias": [
-      "Orientaciones técnicas para control de salud integral de adolescentes, MINSAL 2021",
-      "Guías ITS MINSAL"
-    ]
-  },
-  {
-    "id": "its-05-its-y-embarazo",
+    "id": "mod-its-03-vih-prep",
     "modulo": "ITS",
     "dificultad": "Alta",
-    "titulo": "Gestante con ITS reciente en contexto de APS",
-    "vigneta": "Mujer de 19 años, gestante de 10 semanas, controlada en APS. En exámenes de rutina se informa VDRL reactivo con confirmación positiva, sin antecedentes previos. No tiene síntomas actuales. Refiere pareja estable, pero reconoce que él ha tenido otras parejas. Está angustiada y pregunta si 'su guagua se va a enfermar'.",
+    "titulo": "Solicitud de PrEP y Diagnóstico Diferencial",
+    "vigneta": "Lucas, 26 años, HSH. Acude a UNACESS solicitando PrEP. Refiere múltiples parejas sexuales, uso inconsistente de condón. Asintomático hoy. Trae un test rápido de VIH 'No Reactivo' de hace 2 días.",
     "pasos": [
       {
         "id": "p1",
         "tipo": "mcq",
-        "enunciado": "En relación al manejo inicial en APS, ¿qué es prioritario?",
+        "enunciado": "Desde la Salud Pública y Fisiopatología, ¿qué es crítico descartar ANTES de iniciar PrEP?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Repetir el examen en 6 meses para confirmar",
-            "esCorrecta": false,
-            "explicacion": "La sífilis en el embarazo requiere tratamiento inmediato para prevenir sífilis congénita."
-          },
-          {
-            "id": "b",
-            "texto": "Iniciar tratamiento con penicilina benzatina según estadio y gestionar control de pareja",
-            "esCorrecta": true,
-            "explicacion": "La penicilina es el tratamiento de elección en el embarazo y se debe abordar a la pareja sexual."
-          },
-          {
-            "id": "c",
-            "texto": "Suspender el control prenatal y derivar sólo a infectología",
-            "esCorrecta": false,
-            "explicacion": "El control prenatal continúa en APS coordinado con segundo nivel si es necesario."
-          },
-          {
-            "id": "d",
-            "texto": "Tranquilizarla explicando que 'la sífilis no afecta al feto'",
-            "esCorrecta": false,
-            "explicacion": "Es precisamente el riesgo fetal lo que hace urgente el tratamiento."
-          }
-        ],
-        "feedbackDocente": "Entrena la relación entre ITS y embarazo, la urgencia del tratamiento y la necesidad de trabajo con la pareja."
+          { "id": "a", "texto": "Solo confirmar que sea VIH negativo con el test rápido que trae.", "esCorrecta": false, "explicacion": "Incorrecto. El test rápido tiene ventana. No detecta infección aguda reciente." },
+          { "id": "b", "texto": "Hepatitis A y Colesterol total.", "esCorrecta": false, "explicacion": "Incorrecto. Son importantes, pero no contraindican el inicio inmediato de la misma forma que una falla renal o VIH agudo." },
+          { "id": "c", "texto": "Infección Aguda por VIH (Síndrome Retroviral Agudo) y función renal.", "esCorrecta": true, "explicacion": "Correcto. Iniciar PrEP (2 drogas) en alguien con VIH agudo (requiere 3 drogas) genera resistencia viral. La función renal es vital por toxicidad del TDF." },
+          { "id": "d", "texto": "Pedir PCR de carga viral a todos los pacientes asintomáticos.", "esCorrecta": false, "explicacion": "Incorrecto. No es costo-efectivo como tamizaje universal sin sospecha o ELISA reactivo." }
+        ]
       },
       {
         "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "El examen de Creatinina arroja un clearance de 45 ml/min. ¿Farmacología?",
+        "opciones": [
+          { "id": "a", "texto": "Iniciar esquema estándar (Tenofovir/Emtricitabina) y controlar en 1 mes.", "esCorrecta": false, "explicacion": "Incorrecto. El Tenofovir (TDF) es nefrotóxico. Con ClCr < 60 ml/min está contraindicado." },
+          { "id": "b", "texto": "Ajustar dosis a día por medio.", "esCorrecta": false, "explicacion": "Incorrecto. La PrEP diaria o a demanda requiere función renal normal para garantizar niveles protectores sin toxicidad." },
+          { "id": "c", "texto": "Contraindicado el esquema estándar TDF/FTC. Derivar a infectología para alternativas (TAF o inyectables).", "esCorrecta": true, "explicacion": "Correcto. Seguridad del paciente ante todo. Riesgo de falla renal aguda o crónica irreversible." },
+          { "id": "d", "texto": "Iniciar PrEP pero recomendar tomar mucha agua.", "esCorrecta": false, "explicacion": "Incorrecto. Medida insuficiente ante daño renal establecido." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Lucas admite que ayer tuvo sexo anal receptivo sin protección con alguien VIH+. ¿Cambia la conducta?",
+        "opciones": [
+          { "id": "a", "texto": "No, se inicia PrEP igual, pero se le pide abstinencia por 7 días.", "esCorrecta": false, "explicacion": "Incorrecto. La PrEP demora en alcanzar niveles en tejido rectal y no está diseñada para post-exposición inmediata de alto riesgo." },
+          { "id": "b", "texto": "Sí, cambia a PEP (Profilaxis POST-Exposición) urgencia.", "esCorrecta": true, "explicacion": "Correcto. Está en ventana de 72h. Requiere esquema triconjugado (TDF/FTC + Integrasa) por 28 días." },
+          { "id": "c", "texto": "Se inicia PrEP con doble dosis de carga (2 comprimidos).", "esCorrecta": false, "explicacion": "Incorrecto. Eso es el esquema 'PrEP a demanda' (2-1-1), pero ante una exposición confirmada con positivo, la PEP es más segura." },
+          { "id": "d", "texto": "Esperar 3 meses para ver si seroconvierte.", "esCorrecta": false, "explicacion": "Incorrecto. Negligencia médica." }
+        ]
+      },
+      {
+        "id": "p4",
         "tipo": "short",
-        "enunciado": "Redacta dos elementos centrales de la consejería que entregarías sobre riesgo fetal y la importancia del tratamiento.",
-        "guia": "Sé claro/a pero empático/a; incluye necesidad de adherencia, controles y tamizaje de pareja."
+        "enunciado": "Consejería: Explica a Lucas la diferencia entre 'Indetectable = Intransmisible' y el uso de condón.",
+        "guia": "• I=I aplica a VIH, pero NO protege de Sífilis, Gonorrea o Chlamydia.\n• PrEP protege de VIH, pero no de otras ITS.\n• Importancia del tamizaje trimestral."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Lucas inicia PEP. A los 10 días presenta ictericia franca y coluria. ¿Hipótesis fisiopatológica?",
+        "opciones": [
+          { "id": "a", "texto": "Es un efecto adverso común y transitorio del Dolutegravir.", "esCorrecta": false, "explicacion": "Incorrecto. Los inhibidores de integrasa son muy seguros hepáticamente. La ictericia franca sugiere otra causa." },
+          { "id": "b", "texto": "Coinfección por Hepatitis B (Reactiva) o Hepatitis A aguda.", "esCorrecta": true, "explicacion": "Correcto. El Tenofovir trata también la Hepatitis B. Al iniciar o suspender, o por la misma co-transmisión sexual, puede haber hepatitis aguda." },
+          { "id": "c", "texto": "Obstrucción biliar por cálculos (Coledocolitiasis).", "esCorrecta": false, "explicacion": "Incorrecto. Aunque posible, en contexto de ITS y HSH, la causa infecciosa es prioridad epidemiológica." },
+          { "id": "d", "texto": "Alergia alimentaria.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Escenario complejo: Lucas revela consumo problemático de 'Chemsex'.",
+        "opciones": [
+          { "id": "a", "texto": "Suspender atención y PrEP hasta que deje las drogas (abstinencia total).", "esCorrecta": false, "explicacion": "Incorrecto. Eso lo aleja del sistema y aumenta su riesgo de VIH." },
+          { "id": "b", "texto": "Enfoque de Reducción de Daños. Mantener vinculación y derivar a Salud Mental.", "esCorrecta": true, "explicacion": "Correcto. Priorizamos mantenerlo libre de VIH mientras se trabaja la adicción sin juzgar." },
+          { "id": "c", "texto": "Llamar a Carabineros por consumo de drogas ilícitas.", "esCorrecta": false, "explicacion": "Incorrecto. Rompe el secreto profesional y la confianza terapéutica." },
+          { "id": "d", "texto": "Ignorar el consumo y centrarse solo en los fármacos.", "esCorrecta": false, "explicacion": "Incorrecto. Se pierde la visión integral. El consumo afecta la adherencia a los fármacos." }
+        ]
+      },
+      {
+        "id": "p7",
+        "tipo": "mcq",
+        "enunciado": "Falta de insumos: No hay esquema PEP en tu CESFAM. Hospital a 3 horas.",
+        "opciones": [
+          { "id": "a", "texto": "Darle hora para mañana, 24 horas no hacen diferencia.", "esCorrecta": false, "explicacion": "Incorrecto. La eficacia cae drásticamente. Cada hora cuenta." },
+          { "id": "b", "texto": "Gestionar traslado inmediato (ambulancia/móvil) o envío de fármacos.", "esCorrecta": true, "explicacion": "Correcto. Es una urgencia epidemiológica garantizada." },
+          { "id": "c", "texto": "Darle solo Tenofovir si tienes PrEP y que busque el resto después.", "esCorrecta": false, "explicacion": "Incorrecto. La monoterapia o biterapia en PEP favorece resistencia." },
+          { "id": "d", "texto": "Decirle que compre los medicamentos en farmacia privada.", "esCorrecta": false, "explicacion": "Incorrecto. El costo es prohibitivo (cientos de miles de pesos) y es una prestación garantizada pública." }
+        ]
       }
     ],
-    "referencias": [
-      "Guías de sífilis y embarazo, MINSAL",
-      "Orientaciones técnicas de control prenatal"
-    ]
+    "feedback_dinamico": {
+      "bajo": "Alerta Roja. Confundir PrEP (Preventivo) con PEP (Urgencia) o no chequear función renal puede tener consecuencias fatales o de resistencia viral irreversible. Estás manejando fármacos potentes. Debes estudiar la 'Norma Técnica de VIH' antes de atender estos casos.",
+      "medio": "Bien en la distinción general, pero cuidado con los detalles de seguridad (Función renal, Hepatitis). El manejo de ITS en HSH requiere una visión sindémica (drogas, salud mental, coinfecciones). Sigue profundizando.",
+      "alto": "¡Excelente nivel! 🏳️‍🌈 Manejas la prevención combinada del VIH con una visión moderna, científica y sin estigma. Entiendes la farmacología y la importancia de la reducción de daños en Chemsex. Un aporte a la salud pública."
+    },
+    "referencias": ["Norma Técnica VIH/SIDA MINSAL", "Guía PrEP MINSAL"]
   },
 
   {
-    "id": "cons-01-confidencialidad-madre-presente",
-    "modulo": "Consejería",
-    "dificultad": "Baja",
-    "titulo": "Adolescente de 14 años que consulta con su madre",
-    "vigneta": "Adolescente de 14 años llega a control de salud integral con su madre. La madre responde a todas las preguntas, minimiza las respuestas de su hija y menciona que 'quiere que le den pastillas para que no quede embarazada como la prima'. La adolescente se mantiene callada, mira al suelo y sólo responde con monosílabos. Se atiende en un Espacio Amigable.",
+    "id": "mod-anticoncepcion-04-diu-complicado",
+    "modulo": "Anticoncepción",
+    "dificultad": "Media",
+    "titulo": "DIU No Visible y Dolor Pélvico",
+    "vigneta": "Marcela, 34 años. Usuaria de DIU T Cobre hace 2 años. Consulta por dolor pélvico hipogástrico intermitente hace 1 mes y dispareunia profunda. Al examen especular: No se visualizan guías del DIU.",
     "pasos": [
       {
         "id": "p1",
         "tipo": "mcq",
-        "enunciado": "Como profesional en APS, ¿cuál es el siguiente paso MÁS adecuado en términos de consejería y enfoque de derechos?",
+        "enunciado": "¿Cuál es la primera maniobra clínica en el box antes de pedir imágenes?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Continuar la entrevista sólo con la madre, ya que es menor de edad",
-            "esCorrecta": false,
-            "explicacion": "La adolescente es sujeto de derechos y debe tener espacio para expresarse en forma confidencial."
-          },
-          {
-            "id": "b",
-            "texto": "Pedir amablemente hablar unos minutos a solas con la adolescente y explicar el manejo de confidencialidad",
-            "esCorrecta": true,
-            "explicacion": "Se ajusta a orientaciones MINSAL: entrevista parte con cuidador, pero debe incluir un espacio privado con el/la adolescente."
-          },
-          {
-            "id": "c",
-            "texto": "Decirle a la adolescente que vuelva sola otro día porque 'así no se puede trabajar'",
-            "esCorrecta": false,
-            "explicacion": "Se desaprovecha la oportunidad de atención y vínculo."
-          },
-          {
-            "id": "d",
-            "texto": "Evitar hablar de sexualidad porque la madre podría molestarse",
-            "esCorrecta": false,
-            "explicacion": "La SSR es parte del control integral; se aborda con cuidado pero no se omite."
-          }
-        ],
-        "feedbackDocente": "Entrena el manejo de confidencialidad y participación adolescente en el control de salud, según enfoque de derechos."
+          { "id": "a", "texto": "Exploración de canal endocervical con pinza (si hay capacitación) o ecografía transvaginal.", "esCorrecta": true, "explicacion": "Correcto. A veces las guías se 'esconden' en el canal. Si no se palpan, la Eco TV es el estándar." },
+          { "id": "b", "texto": "Retirar a ciegas traccionando con pinza de anillos al azar.", "esCorrecta": false, "explicacion": "Peligroso. Procedimiento a ciegas causa dolor intenso y riesgo de lesiones." },
+          { "id": "c", "texto": "Solicitar Radiografía de Pelvis simple.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque el DIU es radiopaco, la Rx no dice si está intra o extrauterino con precisión. La Eco es superior." },
+          { "id": "d", "texto": "Asumir expulsión espontánea y poner otro DIU.", "esCorrecta": false, "explicacion": "Incorrecto. Si el DIU está adentro y pones otro, dejas a la paciente con dos dispositivos." }
+        ]
       },
       {
         "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "La Eco TV informa: 'Dispositivo en cavidad endometrial, normoinserto'. Guías no visibles. Marcela quiere retirárselo por el dolor.",
+        "opciones": [
+          { "id": "a", "texto": "Intentar retiro con pinza de Kelly o Pozzi bajo visión ecográfica o derivar.", "esCorrecta": true, "explicacion": "Correcto. Se requiere instrumental intrauterino fino (gancho o pinza). Si no tienes la experticia, se deriva." },
+          { "id": "b", "texto": "Decirle que si está normoinserto el dolor no es por el DIU, es psicológico.", "esCorrecta": false, "explicacion": "Incorrecto. Invalida a la paciente. El DIU puede causar dolor aunque esté bien puesto." },
+          { "id": "c", "texto": "Indicarle ACO para 'atrofiar' el endometrio y que caiga solo.", "esCorrecta": false, "explicacion": "Incorrecto. Fisiopatología errónea." },
+          { "id": "d", "texto": "Realizar Histerectomía.", "esCorrecta": false, "explicacion": "Incorrecto. Totalmente desproporcionado." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Si la Eco TV informara: 'Dispositivo miometrial (incrustado)'. ¿Fisiopatología del dolor?",
+        "opciones": [
+          { "id": "a", "texto": "Contracción uterina ante cuerpo extraño en pared muscular e inflamación local.", "esCorrecta": true, "explicacion": "Correcto. El miometrio reacciona al cuerpo extraño intentando expulsarlo." },
+          { "id": "b", "texto": "Irritación peritoneal por perforación completa.", "esCorrecta": false, "explicacion": "Incorrecto. Si es intramural (miometrial) no necesariamente toca peritoneo." },
+          { "id": "c", "texto": "Infección por E. Coli.", "esCorrecta": false, "explicacion": "Incorrecto. El dolor por incrustación es mecánico/inflamatorio estéril, no necesariamente infeccioso." },
+          { "id": "d", "texto": "Compresión de la vejiga.", "esCorrecta": false, "explicacion": "Incorrecto. Poco probable." }
+        ]
+      },
+      {
+        "id": "p4",
         "tipo": "short",
-        "enunciado": "Escribe una frase breve y clara para explicar a la madre y a la adolescente por qué tendrás un momento de conversación a solas con ella.",
-        "guia": "Usa lenguaje sencillo, sin confrontar, reforzando que es parte de la atención habitual."
+        "enunciado": "Marcela tiene miedo de quedar estéril por esto. Redacta tu explicación.",
+        "guia": "• El DIU no causa esterilidad permanente salvo infección grave (EIP) no tratada.\n• El retiro resolverá el problema mecánico.\n• La fertilidad retorna inmediatamente al retirar el dispositivo."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Se logra retirar el DIU. Se observa secreción purulenta saliendo del cérvix (Cervicitis mucopurulenta).",
+        "opciones": [
+          { "id": "a", "texto": "Solo tomar cultivo y esperar resultado.", "esCorrecta": false, "explicacion": "Incorrecto. Esperar implica riesgo de ascenso a endometritis/salpingitis." },
+          { "id": "b", "texto": "Tratamiento empírico inmediato (Doxiciclina/Ceftriaxona + Metronidazol) por sospecha de EIP.", "esCorrecta": true, "explicacion": "Correcto. Ante manipulación uterina + pus, se asume EIP y se trata agresivo para preservar fertilidad." },
+          { "id": "c", "texto": "Lavado vaginal con clorhexidina.", "esCorrecta": false, "explicacion": "Incorrecto. No trata la infección tisular." },
+          { "id": "d", "texto": "Solo dar AINES para la inflamación.", "esCorrecta": false, "explicacion": "Incorrecto. No mata bacterias." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Factor complejidad: Marcela es usuaria de anticoagulantes orales por trombosis previa.",
+        "opciones": [
+          { "id": "a", "texto": "El retiro debe ser en medio hospitalario por riesgo de hemorragia difícil de cohibir.", "esCorrecta": true, "explicacion": "Correcto. Manipular el útero (zona muy vascularizada) en paciente anticoagulada es de alto riesgo." },
+          { "id": "b", "texto": "Se puede retirar en CESFAM con presión local.", "esCorrecta": false, "explicacion": "Imprudente. No tienes herramientas (ej: balón hemostático, coagulación) en APS." },
+          { "id": "c", "texto": "Suspender el anticoagulante 1 día y retirar en box.", "esCorrecta": false, "explicacion": "Incorrecto. Suspender anticoagulación en paciente con trombosis previa es decisión de especialista (hematólogo), riesgo de re-trombosis." },
+          { "id": "d", "texto": "Administrar Vitamina K oral y retirar.", "esCorrecta": false, "explicacion": "Incorrecto. Manejo no especialista riesgoso." }
+        ]
       }
     ],
-    "referencias": [
-      "Orientaciones técnicas para control de salud integral de adolescentes, MINSAL 2021",
-      "Ley 20.418 — Regulación de la fertilidad"
-    ]
+    "feedback_dinamico": {
+      "bajo": "Cuidado. Intentar maniobras a ciegas o subestimar una infección pélvica (pus) puede dejar secuelas de infertilidad o dolor crónico. Además, ignorar la anticoagulación es un riesgo vital. Repasa 'Procedimientos Ginecológicos en APS'.",
+      "medio": "Buen enfoque. Sabes cómo abordar el DIU perdido, pero ojo con las complicaciones asociadas (EIP, Anticoagulación). No olvides que el retiro es un procedimiento invasivo que requiere evaluación integral de riesgos.",
+      "alto": "¡Excelente manejo! 🩺 Resolviste una complicación frecuente de LARC con criterio clínico y seguridad. Identificaste correctamente cuándo derivar (anticoagulada) y cuándo tratar agresivamente (sospecha de infección). Muy profesional."
+    },
+    "referencias": ["Manual de Procedimientos en Ginecología MINSAL"]
   },
+
   {
-    "id": "cons-02-ae-y-miedo-a-padres",
+    "id": "mod-consejeria-02-climaterio",
     "modulo": "Consejería",
     "dificultad": "Media",
-    "titulo": "Solicitud de anticoncepción de emergencia con temor a revelarlo",
-    "vigneta": "Adolescente de 16 años llega sola al CESFAM, visiblemente ansiosa. Refiere relación sexual desprotegida hace 24 horas con su pololo. Pide 'la pastilla del día después' pero insiste en que 'mis papás no pueden saber nada, me matan'. No antecedentes mórbidos conocidos.",
+    "titulo": "Sintomatología Climatérica y Calidad de Vida",
+    "vigneta": "Carmen, 52 años. FUM hace 11 meses. Consulta por 'bochornos insoportables' que no la dejan dormir, irritabilidad y sequedad vaginal. IMC 24. PA 120/80. Sin antecedentes de cáncer de mama ni trombosis. No fuma.",
     "pasos": [
       {
         "id": "p1",
         "tipo": "mcq",
-        "enunciado": "En el marco de la legislación chilena y las orientaciones MINSAL, ¿qué corresponde hacer?",
+        "enunciado": "Fisiología: ¿A qué se deben sus síntomas vasomotores (bochornos)?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Negarse a entregar AE porque es menor de 18 años",
-            "esCorrecta": false,
-            "explicacion": "La Ley 20.418 garantiza acceso a información y prestaciones en regulación de la fertilidad a adolescentes."
-          },
-          {
-            "id": "b",
-            "texto": "Entregar AE con consejería adecuada y explicar el alcance de la confidencialidad",
-            "esCorrecta": true,
-            "explicacion": "Se respeta su derecho a la atención, información y confidencialidad, salvo riesgo vital o vulneración grave."
-          },
-          {
-            "id": "c",
-            "texto": "Llamar de inmediato a los padres antes de cualquier indicación",
-            "esCorrecta": false,
-            "explicacion": "Vulnera la confidencialidad sin fundamento en este contexto."
-          },
-          {
-            "id": "d",
-            "texto": "Derivarla a urgencia por 'riesgo social'",
-            "esCorrecta": false,
-            "explicacion": "Su demanda se puede resolver en APS con enfoque de derechos."
-          }
-        ],
-        "feedbackDocente": "Integra normativa legal, enfoque de derechos y consejería en SSR para adolescentes."
+          { "id": "a", "texto": "Aumento de Progesterona y Cortisol.", "esCorrecta": false, "explicacion": "Incorrecto. La progesterona cae drásticamente." },
+          { "id": "b", "texto": "Hipoestrogenismo que altera el centro termorregulador hipotalámico.", "esCorrecta": true, "explicacion": "Correcto. La caída de estrógenos reduce el rango de termoneutralidad en el hipotálamo." },
+          { "id": "c", "texto": "Aumento de la hormona Tiroidea (Hipertiroidismo).", "esCorrecta": false, "explicacion": "Incorrecto. Aunque los síntomas se parecen (calor), en contexto de amenorrea de 11 meses a los 52 años, la causa es climatérica." },
+          { "id": "d", "texto": "Exceso de FSH circulante actuando en la piel.", "esCorrecta": false, "explicacion": "Incorrecto. La FSH sube, pero no causa el bochorno directamente en la piel." }
+        ]
       },
       {
         "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona 3 temas que debes abordar en la consejería con esta adolescente además de la entrega de AE.",
-        "guia": "Incluye prevención de ITS, opciones de anticoncepción regular, emociones y red de apoyo."
-      }
-    ],
-    "referencias": [
-      "Ley 20.418",
-      "Guía práctica de consejería en salud sexual y reproductiva para adolescentes, MINSAL 2016"
-    ]
-  },
-  {
-    "id": "cons-03-diversidad-sexual",
-    "modulo": "Consejería",
-    "dificultad": "Media",
-    "titulo": "Adolescente que inicia relación con pareja del mismo sexo",
-    "vigneta": "Adolescente de 17 años acude a Espacio Amigable. Refiere que inició una relación afectiva y sexual con otra chica del liceo. Comenta que se siente confundida, teme ser juzgada y no sabe si 'también se puede contagiar de ITS'. En su familia hay comentarios homofóbicos. Viene sola a la consulta.",
-    "pasos": [
-      {
-        "id": "p1",
         "tipo": "mcq",
-        "enunciado": "Desde el enfoque de consejería en SSR, ¿cuál sería una respuesta INICIAL adecuada?",
+        "enunciado": "Carmen pide 'algo natural' primero. ¿Qué evidencia hay sobre Fitoestrógenos (Isoflavonas)?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Decirle que es 'una etapa' y que probablemente 'se le va a pasar'",
-            "esCorrecta": false,
-            "explicacion": "Desvaloriza su vivencia y no respeta su identidad ni orientación."
-          },
-          {
-            "id": "b",
-            "texto": "Validar sus sentimientos, garantizar un espacio libre de juicios y explorar sus dudas sobre salud sexual",
-            "esCorrecta": true,
-            "explicacion": "Responde a un enfoque de derechos, género y diversidad, favoreciendo la confianza para la consejería."
-          },
-          {
-            "id": "c",
-            "texto": "Centrarse sólo en anticoncepción porque 'no hay riesgo de ITS entre mujeres'",
-            "esCorrecta": false,
-            "explicacion": "Hay riesgo de ITS también en prácticas entre mujeres; se debe abordar prevención."
-          },
-          {
-            "id": "d",
-            "texto": "Sugerirle no contarle a nadie más y cambiar de liceo",
-            "esCorrecta": false,
-            "explicacion": "No promueve autonomía ni bienestar; refuerza el estigma."
-          }
-        ],
-        "feedbackDocente": "Entrena habilidades de acogida, validación emocional y enfoque de diversidad en consejería adolescente."
+          { "id": "a", "texto": "Son tan efectivos como la TRH convencional para bochornos severos.", "esCorrecta": false, "explicacion": "Falso. La evidencia muestra eficacia leve a moderada, inferior a la terapia hormonal." },
+          { "id": "b", "texto": "Pueden aliviar síntomas leves, pero no tienen respaldo fuerte para síntomas severos.", "esCorrecta": true, "explicacion": "Correcto. Se puede intentar, pero gestionando expectativas de que quizás no eliminen el insomnio severo." },
+          { "id": "c", "texto": "Están contraindicados porque dañan el hígado.", "esCorrecta": false, "explicacion": "Incorrecto. Son seguros en general." },
+          { "id": "d", "texto": "Reemplazan totalmente a los estrógenos protegiendo el hueso.", "esCorrecta": false, "explicacion": "Incorrecto. No tienen la potencia protectora ósea de la TRH." }
+        ]
       },
       {
-        "id": "p2",
-        "tipo": "short",
-        "enunciado": "Menciona 2 recomendaciones de salud sexual que podrías entregar, específicas para relaciones entre mujeres.",
-        "guia": "Considera barreras de látex, lubricantes, tamizaje de ITS, consentimiento en las prácticas."
-      }
-    ],
-    "referencias": [
-      "Orientaciones técnicas para control integral de adolescentes, MINSAL 2021",
-      "Guía de consejería en SSR para adolescentes, 2016"
-    ]
-  },
-  {
-    "id": "cons-04-baja-adherencia-aco-culpa",
-    "modulo": "Consejería",
-    "dificultad": "Media",
-    "titulo": "Adolescente con baja adherencia y sentimiento de culpa",
-    "vigneta": "Adolescente de 18 años, usuaria de ACO combinado, refiere múltiples olvidos y uso frecuente de AE. Dice sentirse 'irresponsable' y 'mala paciente', teme que el equipo de salud la juzgue. Viene a control porque teme estar embarazada nuevamente.",
-    "pasos": [
-      {
-        "id": "p1",
+        "id": "p3",
         "tipo": "mcq",
-        "enunciado": "Desde la entrevista motivacional, ¿qué respuesta favorece mejor el cambio de conducta?",
+        "enunciado": "Si decidiera usar Terapia de Reemplazo Hormonal (TRH). Al tener útero intacto, ¿qué esquema es OBLIGATORIO?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Decirle que efectivamente ha sido irresponsable y que debe 'madurar'",
-            "esCorrecta": false,
-            "explicacion": "Refuerza la culpa y dificulta el vínculo terapéutico."
-          },
-          {
-            "id": "b",
-            "texto": "Reconocer su esfuerzo por consultar y explorar con ella qué le dificulta la toma diaria",
-            "esCorrecta": true,
-            "explicacion": "Valida el paso positivo (consultar) y abre la puerta a identificar barreras y soluciones conjuntas."
-          },
-          {
-            "id": "c",
-            "texto": "Ignorar sus emociones y enfocarse sólo en hacer el test de embarazo",
-            "esCorrecta": false,
-            "explicacion": "Se pierde una oportunidad clave de intervención psicoeducativa."
-          },
-          {
-            "id": "d",
-            "texto": "Suspender todo método hasta que 'sea más ordenada'",
-            "esCorrecta": false,
-            "explicacion": "Aumenta el riesgo de embarazo no deseado."
-          }
-        ],
-        "feedbackDocente": "Entrena el uso de técnicas motivacionales y lenguaje no culpabilizante en SSR adolescente."
+          { "id": "a", "texto": "Estrógenos solos.", "esCorrecta": false, "explicacion": "Grave error. Estrógeno sin oposición en mujer con útero provoca proliferación descontrolada, hiperplasia y cáncer de endometrio." },
+          { "id": "b", "texto": "Estrógenos + Progestágeno.", "esCorrecta": true, "explicacion": "Correcto. El progestágeno es el 'freno' que protege el endometrio del efecto proliferativo del estrógeno." },
+          { "id": "c", "texto": "Progestágeno solo.", "esCorrecta": false, "explicacion": "Incorrecto. El progestágeno no alivia bien los bochornos (síntoma principal), se necesita el estrógeno." },
+          { "id": "d", "texto": "Testosterona + Estrógeno.", "esCorrecta": false, "explicacion": "Incorrecto. La testosterona es para deseo sexual hipoactivo, no es el esquema base obligatorio." }
+        ]
       },
       {
-        "id": "p2",
+        "id": "p4",
         "tipo": "short",
-        "enunciado": "Propón una frase de refuerzo positivo que podrías usar con ella para favorecer la autoeficacia.",
-        "guia": "Evita el juicio; destaca capacidades y pasos ya dados (consultar, preguntar, buscar alternativas)."
+        "enunciado": "Carmen pregunta por los riesgos. Redacta consejería sobre Cáncer de Mama y TRH.",
+        "guia": "• El riesgo absoluto es bajo en usuarias sanas al inicio de menopausia (ventana de oportunidad).\n• Aumenta levemente tras 5 años de uso combinado.\n• Se debe evaluar anualmente (Mamografía al día es requisito)."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Para su sequedad vaginal (atrofia genitourinaria), ¿cuál es la primera línea farmacológica específica?",
+        "opciones": [
+          { "id": "a", "texto": "Estriol (estrógeno) local (óvulos/crema).", "esCorrecta": true, "explicacion": "Correcto. Revierte la atrofia, mejora la lubricación y el pH con mínima absorción sistémica." },
+          { "id": "b", "texto": "Antibióticos profilácticos.", "esCorrecta": false, "explicacion": "Incorrecto. No trata la causa base (falta de estrógeno)." },
+          { "id": "c", "texto": "TRH Sistémica oral a dosis altas.", "esCorrecta": false, "explicacion": "Incorrecto. Si el síntoma es solo vaginal, se prefiere tratamiento local para minimizar riesgos." },
+          { "id": "d", "texto": "Jabón íntimo pH neutro.", "esCorrecta": false, "explicacion": "Incorrecto. Ayuda a la higiene, pero no revierte la atrofia celular." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Carmen tiene una hermana que tuvo cáncer de mama a los 50 años. ¿Contraindica esto el Estriol local?",
+        "opciones": [
+          { "id": "a", "texto": "Sí, absolutamente. Ninguna hormona.", "esCorrecta": false, "explicacion": "Incorrecto. El antecedente familiar (no personal) no es contraindicación absoluta para terapia local de baja dosis." },
+          { "id": "b", "texto": "No necesariamente, pero se prefiere hidratantes vaginales no hormonales primero.", "esCorrecta": true, "explicacion": "Correcto. Principio de precaución. Se prueban hidratantes con ácido hialurónico. Si fallan, se evalúa estriol con cautela." },
+          { "id": "c", "texto": "Sí, debe hacerse mastectomía profiláctica antes.", "esCorrecta": false, "explicacion": "Incorrecto. Absurdo." },
+          { "id": "d", "texto": "No, el riesgo es cero, puede usar lo que quiera.", "esCorrecta": false, "explicacion": "Incorrecto. Nunca el riesgo es cero, se debe evaluar individualmente." }
+        ]
       }
     ],
-    "referencias": [
-      "Guía práctica de consejería en SSR para adolescentes, MINSAL 2016",
-      "Modelo de atención integral con enfoque familiar y comunitario, MINSAL"
-    ]
+    "feedback_dinamico": {
+      "bajo": "Atención. Indicar 'Estrógenos solos' en una mujer con útero es una negligencia grave (riesgo oncológico). O no tratar la atrofia severa afecta la calidad de vida. Debes repasar las reglas básicas de la Terapia de Reemplazo Hormonal.",
+      "medio": "Bien. Conoces la fisiología y las opciones terapéuticas. Tuviste dudas quizás en el manejo de riesgos (Cáncer de mama) o en la potencia de los fitofármacos. El climaterio requiere balancear calidad de vida y seguridad.",
+      "alto": "¡Muy bien! 🌸 Manejas el climaterio con enfoque moderno: tratas el síntoma molesto respetando la seguridad oncológica (útero = combinado). Tu consejería empodera a la usuaria para tomar decisiones informadas."
+    },
+    "referencias": ["Orientaciones Técnicas Manejo Integral del Climaterio MINSAL", "IMS Guidelines"]
   },
+
   {
-    "id": "cons-05-adolescente-migrante",
-    "modulo": "Consejería",
+    "id": "mod-legal-01-violencia",
+    "modulo": "Legal/Normativa",
     "dificultad": "Alta",
-    "titulo": "Consejería en SSR en adolescente migrante con barrera idiomática",
-    "vigneta": "Adolescente de 15 años, migrante reciente, asiste con su tía al CESFAM. Comprende parcialmente el español; su lengua materna es otra. La tía responde por ella la mayor parte del tiempo. La adolescente refiere mediante frases cortas que en su país no hablaban de sexualidad y que le da vergüenza preguntar. El sector tiene alta población migrante y recursos limitados de traducción.",
+    "titulo": "Primera Acogida en Violencia Sexual",
+    "vigneta": "Andrea, 20 años. Llega al CESFAM en estado de shock. Refiere haber sido agredida sexualmente hace 4 horas por un conocido. No se ha aseado.",
     "pasos": [
       {
         "id": "p1",
         "tipo": "mcq",
-        "enunciado": "Desde el enfoque de interculturalidad y derechos, ¿qué acción es MÁS adecuada?",
+        "enunciado": "¿Cuál es el rol del CESFAM/Matrón(a) en la primera acogida según norma?",
         "opciones": [
-          {
-            "id": "a",
-            "texto": "Asumir que su cultura 'no permite hablar de sexo' y omitir el tema",
-            "esCorrecta": false,
-            "explicacion": "La SSR es un derecho; omitirla perpetúa inequidades."
-          },
-          {
-            "id": "b",
-            "texto": "Buscar estrategias para facilitar la comprensión (material visual, lenguaje simple) y explorar si se siente cómoda hablando a solas",
-            "esCorrecta": true,
-            "explicacion": "Adapta la consejería a su contexto lingüístico y cultural, respetando su autonomía progresiva."
-          },
-          {
-            "id": "c",
-            "texto": "Hablar sólo con la tía, ya que 'es quien entiende mejor el sistema'",
-            "esCorrecta": false,
-            "explicacion": "La usuaria directa es la adolescente; la tía es apoyo, no reemplazo."
-          },
-          {
-            "id": "d",
-            "texto": "Derivarla a otro centro sin intentar intervenir",
-            "esCorrecta": false,
-            "explicacion": "Se pierde oportunidad de atención y puede aumentar las barreras de acceso."
-          }
-        ],
-        "feedbackDocente": "Entrena la mirada intercultural y la adaptación de la consejería en SSR en contextos de migración."
+          { "id": "a", "texto": "Realizar peritaje sexológico forense inmediato para no perder pruebas.", "esCorrecta": false, "explicacion": "Incorrecto. APS no tiene kit ni cadena de custodia. Hacerlo sin competencia destruye evidencia legal. Se deriva." },
+          { "id": "b", "texto": "Contención emocional, constatación de lesiones generales y Derivación Inmediata a Urgencia Hospitalaria.", "esCorrecta": true, "explicacion": "Correcto. Somos la puerta de entrada. Acogemos, estabilizamos y derivamos protegida para peritaje y profilaxis." },
+          { "id": "c", "texto": "Llamar a Carabineros y esperar que ellos la lleven a constatar lesiones.", "esCorrecta": false, "explicacion": "Incorrecto. La prioridad es la salud. Nosotros gestionamos el traslado sanitario." },
+          { "id": "d", "texto": "Darle hora con psicólogo para la próxima semana.", "esCorrecta": false, "explicacion": "Incorrecto. Es una urgencia médica y legal." }
+        ]
       },
       {
         "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Andrea tiene miedo de denunciar. ¿Es requisito la denuncia para recibir profilaxis (VIH, ITS, Embarazo)?",
+        "opciones": [
+          { "id": "a", "texto": "Sí, es obligatorio mostrar el parte policial para activar el GES.", "esCorrecta": false, "explicacion": "Falso. Eso vulnera derechos humanos. La salud está primero y no se condiciona." },
+          { "id": "b", "texto": "No. La atención de salud y profilaxis está garantizada independiente de la denuncia.", "esCorrecta": true, "explicacion": "Correcto. El profesional tiene deber de denuncia (oficio), pero la víctima recibe tratamiento sí o sí." },
+          { "id": "c", "texto": "Solo si es menor de edad es gratis, si es mayor debe pagar o denunciar.", "esCorrecta": false, "explicacion": "Incorrecto. La atención es gratuita en el sistema público por ser violencia sexual (urgencia)." },
+          { "id": "d", "texto": "Sí, porque los medicamentos son peritaje forense.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Farmacología Profiláctica: ¿Qué debe recibir Andrea en el Hospital (Idealmente < 12 horas)?",
+        "opciones": [
+          { "id": "a", "texto": "Solo PAE (Levonorgestrel).", "esCorrecta": false, "explicacion": "Insuficiente. Evita embarazo, pero la deja expuesta a VIH, Hepatitis y otras ITS mortales." },
+          { "id": "b", "texto": "PAE + Profilaxis VIH (PEP) + Profilaxis ITS no virales + Vacuna VHB.", "esCorrecta": true, "explicacion": "Correcto. Es el 'Combo' completo de protección biológica. Se debe ofrecer todo." },
+          { "id": "c", "texto": "Solo Vacuna VHB y Tétanos.", "esCorrecta": false, "explicacion": "Incorrecto. Insuficiente." },
+          { "id": "d", "texto": "Lavado vaginal con antibióticos.", "esCorrecta": false, "explicacion": "Incorrecto. No sirve y destruye evidencia." }
+        ]
+      },
+      {
+        "id": "p4",
         "tipo": "short",
-        "enunciado": "Menciona 2 adaptaciones prácticas que podrías hacer en tu consejería para mejorar la comprensión de la adolescente.",
-        "guia": "Piensa en apoyo visual, ritmo de habla, comprobación de entendimiento, uso de palabras simples o traductor comunitario."
+        "enunciado": "Andrea te pregunta: '¿Usted le va a contar a Carabineros?'. Redacta tu respuesta ética y legal.",
+        "guia": "• Explicar el deber legal de denuncia del funcionario público (si aplica) o la obligación de protegerla.\n• Aclarar que la prioridad ahora es su salud.\n• Si es mayor de edad, respetar sus tiempos, pero informar la obligación funcionaria."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Seguimiento: Andrea inicia profilaxis VIH. A la semana refiere náuseas severas y quiere dejar las pastillas.",
+        "opciones": [
+          { "id": "a", "texto": "Suspender profilaxis inmediatamente.", "esCorrecta": false, "explicacion": "Peligroso. Riesgo de seroconversión a VIH si hubo exposición." },
+          { "id": "b", "texto": "Manejo sintomático (antieméticos) y refuerzo de adherencia/contención.", "esCorrecta": true, "explicacion": "Correcto. Hay que 'aguantar' los 28 días para asegurar la protección. Se apoya con fármacos para la náusea." },
+          { "id": "c", "texto": "Cambiar a medicina natural.", "esCorrecta": false, "explicacion": "Incorrecto." },
+          { "id": "d", "texto": "Reducir la dosis a la mitad.", "esCorrecta": false, "explicacion": "Incorrecto. Dosis subterapéutica genera resistencia y falla." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Complejidad: El agresor es su pareja actual (VIF).",
+        "opciones": [
+          { "id": "a", "texto": "Tratar el episodio agudo y dar el alta a domicilio.", "esCorrecta": false, "explicacion": "Negligente. Devolverla al hogar es devolverla al peligro de muerte." },
+          { "id": "b", "texto": "Activar red de protección VIF, constatar lesiones y evaluación de riesgo vital.", "esCorrecta": true, "explicacion": "Correcto. Evaluación de riesgo (Pauta VIF) es obligatoria para decidir si requiere casa de acogida." },
+          { "id": "c", "texto": "Llamar a la pareja para mediar el conflicto.", "esCorrecta": false, "explicacion": "Incorrecto. En VIF no se media (riesgo de agresión), se protege." },
+          { "id": "d", "texto": "Decirle que es un asunto privado de pareja.", "esCorrecta": false, "explicacion": "Incorrecto. La VIF es un problema de salud pública y delito." }
+        ]
+      },
+      {
+        "id": "p7",
+        "tipo": "mcq",
+        "enunciado": "Escenario Rural: No hay Carabineros cerca y el agresor está afuera del recinto esperando.",
+        "opciones": [
+          { "id": "a", "texto": "Pedirle a Andrea que salga por atrás discretamente.", "esCorrecta": false, "explicacion": "Inseguro. Si la encuentra, está desprotegida." },
+          { "id": "b", "texto": "Proteger a la víctima dentro del recinto, cerrar accesos y llamar a Carabineros de la localidad vecina.", "esCorrecta": true, "explicacion": "Correcto. La seguridad del recinto de salud es inviolable. Se protege a la víctima (Hospitalizar si es necesario) hasta que llegue apoyo policial." },
+          { "id": "c", "texto": "Salir a enfrentar al agresor.", "esCorrecta": false, "explicacion": "Incorrecto. Pone en riesgo al equipo de salud." },
+          { "id": "d", "texto": "No hacer nada.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
       }
     ],
-    "referencias": [
-      "Orientaciones técnicas para control de salud integral de adolescentes, MINSAL 2021",
-      "Enfoque de interculturalidad en salud, MINSAL"
-    ]
+    "feedback_dinamico": {
+      "bajo": "Crítico. Fallar en la primera acogida o condicionar la atención a la denuncia revictimiza gravemente. Además, errores en seguridad pueden poner en riesgo la vida de la paciente y del equipo. Es urgente que leas la 'Norma General Técnica de Atención a Víctimas de Violencia Sexual'.",
+      "medio": "Bien en lo clínico y profiláctico. Quizás te costó el manejo del dilema legal (denuncia) o la gestión de seguridad en crisis. Recuerda que en violencia sexual, lo psicosocial es tan importante como lo biológico.",
+      "alto": "¡Extraordinario! 💜 Has demostrado no solo conocimiento técnico de la profilaxis, sino una profunda ética humana y legal. Protegiste a la víctima, respetaste sus derechos y manejaste la crisis de seguridad. Eso es verdadera matronería."
+    },
+    "referencias": ["Norma General Técnica Atención Víctimas Violencia Sexual MINSAL", "Código Procesal Penal Chile"]
+  },
+
+  {
+    "id": "mod-climaterio-01-diagnostico",
+    "modulo": "Climaterio",
+    "dificultad": "Baja",
+    "titulo": "Diagnóstico de Menopausia y Sintomatología Vasomotora",
+    "vigneta": "Ana María, 51 años. Consulta en el CESFAM porque hace 14 meses que no tiene regla. Refiere bochornos diurnos y nocturnos que alteran su sueño y ánimo. Es sana, normopeso, no fuma. Mamografía y PAP vigentes y normales.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es el criterio clínico correcto para diagnosticar Menopausia en Ana María?",
+        "opciones": [
+          { "id": "a", "texto": "Solicitar perfil hormonal (FSH y Estradiol) para confirmar.", "esCorrecta": false, "explicacion": "Incorrecto. En mujeres >45 años con amenorrea >12 meses, el diagnóstico es CLÍNICO y retrospectivo. No se piden hormonas de rutina." },
+          { "id": "b", "texto": "Amenorrea de 12 meses consecutivos (retrospectivo) en ausencia de otras causas.", "esCorrecta": true, "explicacion": "Correcto. Esa es la definición clínica estándar de menopausia natural." },
+          { "id": "c", "texto": "La presencia de bochornos confirma el diagnóstico independientemente de la regla.", "esCorrecta": false, "explicacion": "Incorrecto. Los bochornos pueden aparecer en la perimenopausia aun menstruando." },
+          { "id": "d", "texto": "Realizar ecografía transvaginal para medir folículos.", "esCorrecta": false, "explicacion": "Incorrecto. No es un criterio diagnóstico." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Ana María desea tratamiento para los bochornos. ¿Cuál es la primera línea farmacológica (Gold Standard) en su caso?",
+        "opciones": [
+          { "id": "a", "texto": "Paroxetina (ISRS).", "esCorrecta": false, "explicacion": "Incorrecto. Es alternativa no hormonal, pero menos efectiva que la TRH para síntomas vasomotores severos en mujer sana." },
+          { "id": "b", "texto": "Terapia de Reemplazo Hormonal (TRH) combinada (Estrógeno + Progestágeno).", "esCorrecta": true, "explicacion": "Correcto. En mujer sana, sintomática, <60 años y con útero, la TRH combinada es la elección más efectiva." },
+          { "id": "c", "texto": "Estrógenos solos.", "esCorrecta": false, "explicacion": "Incorrecto. Tiene útero. El estrógeno sin oposición causa hiperplasia endometrial." },
+          { "id": "d", "texto": "Fitoestrógenos y medidas conductuales exclusivamente.", "esCorrecta": false, "explicacion": "Incorrecto. Si la calidad de vida está muy alterada (insomnio), las medidas naturales suelen ser insuficientes." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "¿Por qué vía de administración optarías preferentemente para el estrógeno en APS?",
+        "opciones": [
+          { "id": "a", "texto": "Oral, por comodidad y costo.", "esCorrecta": true, "explicacion": "Correcto. En mujeres sanas, normopeso, sin riesgo cardiovascular ni trombótico, la vía oral es segura y accesible en APS." },
+          { "id": "b", "texto": "Transdérmica, porque la oral está prohibida en todas las pacientes.", "esCorrecta": false, "explicacion": "Incorrecto. La transdérmica es ideal (evita paso hepático), pero la oral no está prohibida en pacientes de bajo riesgo." },
+          { "id": "c", "texto": "Vaginal.", "esCorrecta": false, "explicacion": "Incorrecto. La vía vaginal trata la atrofia local, no los bochornos sistémicos." },
+          { "id": "d", "texto": "Inyectable mensual.", "esCorrecta": false, "explicacion": "Incorrecto. Dosis suprafisiológicas no recomendadas en menopausia." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Redacta la consejería sobre 'Estilos de Vida' que debe acompañar la receta.",
+        "guia": "• Alimentación rica en Calcio y Vitamina D (prevención osteoporosis).\n• Ejercicio físico de fuerza/impacto (salud ósea y muscular).\n• Cese de tabaco y alcohol (gatillantes de bochornos y riesgo óseo)."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Ana María pregunta: '¿Y cuándo dejo de tomar esto?'. ¿Cuál es la recomendación actual?",
+        "opciones": [
+          { "id": "a", "texto": "Máximo 1 año, luego es peligroso.", "esCorrecta": false, "explicacion": "Incorrecto. No hay un límite fijo arbitrario." },
+          { "id": "b", "texto": "Se evalúa anualmente (riesgo/beneficio). Se busca la dosis mínima efectiva por el tiempo necesario.", "esCorrecta": true, "explicacion": "Correcto. No hay 'fecha de vencimiento', pero se debe re-evaluar cada año si persiste la necesidad y seguridad." },
+          { "id": "c", "texto": "De por vida, para prevenir infartos.", "esCorrecta": false, "explicacion": "Incorrecto. La TRH NO se indica para prevención cardiovascular primaria o secundaria." },
+          { "id": "d", "texto": "Hasta los 65 años obligatoriamente.", "esCorrecta": false, "explicacion": "Incorrecto. Se intenta suspender cuando los síntomas cedan." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Atención. El diagnóstico de menopausia es clínico, no de laboratorio. Pedir exámenes innecesarios gasta recursos. Además, recuerda la regla de oro: Útero presente = Estrógeno + Progestágeno. Revisa las 'Orientaciones Técnicas de Climaterio MINSAL'.",
+      "medio": "Bien. Manejas el diagnóstico y la indicación general. Quizás dudaste en la vía de administración o la duración de la terapia. Recuerda que en APS debemos ser costo-efectivos y basarnos en el perfil de riesgo de la paciente.",
+      "alto": "¡Excelente! 🌟 Manejo impecable del climaterio fisiológico. Diagnosticaste sin exámenes innecesarios e indicaste la terapia correcta considerando la presencia del útero y la calidad de vida. ¡Muy profesional!"
+    },
+    "referencias": ["Orientaciones Técnicas Manejo Integral del Climaterio MINSAL", "Guías IMS (International Menopause Society)"]
+  },
+
+  {
+    "id": "mod-climaterio-02-sgu",
+    "modulo": "Climaterio",
+    "dificultad": "Media",
+    "titulo": "Síndrome Genitourinario de la Menopausia (SGU)",
+    "vigneta": "Rosa, 62 años. Menopausia hace 10 años. Consulta por 'infecciones urinarias a repetición' y dolor al tener relaciones sexuales. Trae 3 urocultivos del último año: todos negativos. Al examen: Genitales externos pálidos, sequedad de mucosa, introito estrecho.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es el diagnóstico más probable considerando la clínica y exámenes?",
+        "opciones": [
+          { "id": "a", "texto": "Cistitis intersticial.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque da dolor, la atrofia visible y la dispareunia apuntan al hipoestrogenismo." },
+          { "id": "b", "texto": "Síndrome Genitourinario de la Menopausia (Atrofia Vulvovaginal).", "esCorrecta": true, "explicacion": "Correcto. El hipoestrogenismo adelgaza la mucosa, altera el pH y causa síntomas urinarios (disuria, urgencia) sin infección bacteriana real." },
+          { "id": "c", "texto": "Infección micótica crónica.", "esCorrecta": false, "explicacion": "Incorrecto. La palidez sugiere atrofia, no inflamación fúngica (que suele ser roja/eritematosa)." },
+          { "id": "d", "texto": "Liquen Escleroso.", "esCorrecta": false, "explicacion": "Incorrecto. El liquen presenta placas blancas nacaradas y cambios anatómicos distintos, aunque entra en el diferencial." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Rosa no quiere tomar hormonas orales por miedo. ¿Cuál es el manejo de primera línea (No hormonal)?",
+        "opciones": [
+          { "id": "a", "texto": "Antibióticos profilácticos (Nitrofurantoína).", "esCorrecta": false, "explicacion": "Incorrecto. Los urocultivos son negativos. No hay infección." },
+          { "id": "b", "texto": "Hidratantes vaginales (uso regular) y lubricantes (durante coito).", "esCorrecta": true, "explicacion": "Correcto. Mejoran la humedad y el pH. Es el primer paso antes de usar fármacos." },
+          { "id": "c", "texto": "Lavados con bicarbonato.", "esCorrecta": false, "explicacion": "Incorrecto. Altera más el pH." },
+          { "id": "d", "texto": "Ejercicios de Kegel solamente.", "esCorrecta": false, "explicacion": "Incorrecto. Ayudan al piso pélvico, pero no resuelven la atrofia mucosa." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Tras 3 meses con hidratantes, persiste con molestias. Se decide iniciar Estriol Local (Óvulos/Crema). ¿Qué debes explicar sobre seguridad?",
+        "opciones": [
+          { "id": "a", "texto": "Que igual aumenta el riesgo de cáncer de mama y trombosis.", "esCorrecta": false, "explicacion": "Incorrecto. La absorción sistémica del estriol local es mínima y no eleva significativamente el riesgo oncológico o trombótico." },
+          { "id": "b", "texto": "Que es seguro, actúa solo en la zona y no requiere agregar progestágenos.", "esCorrecta": true, "explicacion": "Correcto. La terapia local a dosis bajas no estimula el endometrio, por lo que no obliga a usar progestágenos sistémicos." },
+          { "id": "c", "texto": "Que debe tomar progestágenos orales obligatoriamente para proteger el útero.", "esCorrecta": false, "explicacion": "Incorrecto. En terapia LOCAL estricta de baja dosis, no es obligatorio." },
+          { "id": "d", "texto": "Que debe suspenderlo si tiene relaciones sexuales.", "esCorrecta": false, "explicacion": "Incorrecto. Se recomienda usarlo en noche sin actividad o separado del coito, pero el objetivo es retomar la vida sexual." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Rosa comenta: 'Doctora/Matrona, ¿esto se me va a pasar y luego dejo la crema?'. Redacta tu respuesta educativa.",
+        "guia": "• Cronicidad: El SGU es una condición crónica, si deja el tratamiento, la atrofia vuelve.\n• Adherencia: El tratamiento es de mantención (ej: 2 veces por semana) a largo plazo.\n• Calidad de vida: El objetivo es recuperar la función y evitar molestias urinarias."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Factor extra: Rosa tuvo Cáncer de Mama hace 15 años (Receptores Hormonales Positivos), tratada y de alta. ¿Puede usar Estriol Local?",
+        "opciones": [
+          { "id": "a", "texto": "Sí, sin restricción.", "esCorrecta": false, "explicacion": "Imprudente. Requiere evaluación." },
+          { "id": "b", "texto": "Contraindicado absolutamente.", "esCorrecta": false, "explicacion": "Incorrecto. No es absoluto, depende de la severidad de síntomas." },
+          { "id": "c", "texto": "Se debe consultar con su oncólogo, pero generalmente se permite si fallaron los no hormonales.", "esCorrecta": true, "explicacion": "Correcto. El consenso actual permite estrógenos locales en sobrevivientes de cáncer si la calidad de vida está muy afectada y previa anuencia oncológica." },
+          { "id": "d", "texto": "Solo si se hace una mastectomía bilateral.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Rosa pregunta si esto sirve para que no se le 'caiga la vejiga' (Prolapso).",
+        "opciones": [
+          { "id": "a", "texto": "Sí, el estrógeno fortalece los ligamentos y sube la vejiga.", "esCorrecta": false, "explicacion": "Incorrecto. El estrógeno mejora la mucosa, pero no repara el daño estructural de soporte (fascias/ligamentos)." },
+          { "id": "b", "texto": "No, el prolapso es un problema anatómico de soporte, el estrógeno mejora la 'piel' (mucosa) pero no corrige el bulto.", "esCorrecta": true, "explicacion": "Correcto. Es importante manejar expectativas. Mejora síntomas, no anatomía." },
+          { "id": "c", "texto": "Solo si lo combina con ejercicios hipopresivos.", "esCorrecta": false, "explicacion": "Incorrecto." },
+          { "id": "d", "texto": "Sí, revierte el prolapso grado I.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Cuidado. No reconocer el Síndrome Genitourinario lleva a sobre-tratar con antibióticos por falsas infecciones urinarias. Además, confundir terapia local con sistémica genera miedos innecesarios en la paciente. Repasa la fisiología del hipoestrogenismo urogenital.",
+      "medio": "Bien. Diagnosticas correctamente el SGU y conoces el tratamiento escalonado. Ojo con el manejo en pacientes con antecedentes de cáncer de mama; no es un 'No' rotundo, es una decisión compartida y consultada.",
+      "alto": "¡Excelente! 💧 Manejas el SGU con pericia, diferenciando infección de atrofia. Tu enfoque escalonado (hidratantes -> estriol) y la educación sobre la cronicidad del tratamiento garantizan una mejor calidad de vida sexual y urinaria para Rosa."
+    },
+    "referencias": ["Consenso SGU NAMS 2020", "Orientaciones Técnicas Climaterio MINSAL"]
+  },
+
+  {
+    "id": "mod-climaterio-03-fop",
+    "modulo": "Climaterio",
+    "dificultad": "Alta",
+    "titulo": "Falla Ovárica Prematura (Menopausia Precoz)",
+    "vigneta": "Carolina, 32 años. Nuligesta. Consulta por amenorrea de 6 meses y bochornos intensos. Test de embarazo negativo. Refiere que su madre tuvo menopausia a los 35 años. Se ve angustiada porque quería tener hijos.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es el examen inicial indispensable para confirmar sospecha de Insuficiencia Ovárica Prematura (IOP)?",
+        "opciones": [
+          { "id": "a", "texto": "Ecografía ginecológica para ver grosor endometrial.", "esCorrecta": false, "explicacion": "Incorrecto. Ayuda, pero no hace el diagnóstico de función ovárica." },
+          { "id": "b", "texto": "Niveles de FSH solicitados en dos oportunidades, separados por 4-6 semanas.", "esCorrecta": true, "explicacion": "Correcto. Una FSH > 25-40 mUI/mL (según lab) confirmada en dos tomas define la falla ovárica." },
+          { "id": "c", "texto": "Prolactina y TSH solamente.", "esCorrecta": false, "explicacion": "Incorrecto. Son para descartar otras causas de amenorrea, pero no confirman IOP." },
+          { "id": "d", "texto": "Cariotipo.", "esCorrecta": false, "explicacion": "Incorrecto. Eso es parte del estudio etiológico posterior, no del diagnóstico inicial." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "La FSH resulta elevada (60 mUI/mL) en ambas muestras. ¿Cuál es la conducta terapéutica hormonal obligatoria en Carolina?",
+        "opciones": [
+          { "id": "a", "texto": "No dar tratamiento si ella tolera los bochornos.", "esCorrecta": false, "explicacion": "Grave error. En IOP (<40 años), la TRH es OBLIGATORIA (salvo contraindicación) para proteger hueso y corazón, no solo por síntomas." },
+          { "id": "b", "texto": "Iniciar Terapia de Reemplazo Hormonal (TRH) a dosis estándar de menopausia hasta la edad fisiológica (50 años).", "esCorrecta": true, "explicacion": "Correcto. Debe recibir sustitución estrogénica hasta la edad promedio de menopausia natural para evitar morbilidad a largo plazo." },
+          { "id": "c", "texto": "Dar solo Calcio y Vitamina D.", "esCorrecta": false, "explicacion": "Incorrecto. Insuficiente para prevenir la pérdida ósea acelerada por hipoestrogenismo precoz." },
+          { "id": "d", "texto": "Usar anticonceptivos orales de muy baja dosis.", "esCorrecta": false, "explicacion": "Incorrecto. A menudo requieren dosis mayores que la TRH estándar o ACO combinados estándar para lograr niveles fisiológicos de mujer joven." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "Carolina pregunta por su fertilidad. ¿Qué debes informarle con honestidad y empatía?",
+        "opciones": [
+          { "id": "a", "texto": "Que es imposible que se embarace de forma natural.", "esCorrecta": false, "explicacion": "Incorrecto. Existe una tasa de ovulación esporádica y embarazo espontáneo del 5-10%, aunque impredecible." },
+          { "id": "b", "texto": "Que la probabilidad es muy baja (<5-10%), y su mejor opción es la ovodonación.", "esCorrecta": true, "explicacion": "Correcto. Es el gold standard en fertilidad para IOP. Hay que derivar a especialista en fertilidad si desea embarazo." },
+          { "id": "c", "texto": "Que tomando la TRH sus ovarios volverán a funcionar.", "esCorrecta": false, "explicacion": "Falso. La TRH solo suple la hormona, no 'despierta' los folículos agotados." },
+          { "id": "d", "texto": "Que debe adoptar.", "esCorrecta": false, "explicacion": "Incorrecto. Existen opciones reproductivas médicas (Ovodonación)." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Redacta una nota de derivación/interconsulta para Carolina considerando sus necesidades integrales.",
+        "guia": "• Motivo: Insuficiencia Ovárica Prematura Confirmada.\n• Especialidades: Ginecología (Endocrinología) + Salud Mental (Duelo reproductivo) + Nutricionista (Riesgo CV/Óseo).\n• Énfasis: Deseo de paridad y prevención secundaria."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Se debe estudiar la causa. Además de autoinmunidad, ¿qué estudio genético es clave en mujeres jóvenes con IOP?",
+        "opciones": [
+          { "id": "a", "texto": "BRCA 1 y 2.", "esCorrecta": false, "explicacion": "Incorrecto. Eso es para riesgo de cáncer." },
+          { "id": "b", "texto": "Cariotipo y premutación del gen FMR1 (X Frágil).", "esCorrecta": true, "explicacion": "Correcto. El Síndrome de X Frágil y anomalías del cromosoma X (Turner mosaico) son causas frecuentes." },
+          { "id": "c", "texto": "Factor V Leiden.", "esCorrecta": false, "explicacion": "Incorrecto. Eso es para trombofilias." },
+          { "id": "d", "texto": "PCR de Clamidia.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Carolina fuma. ¿Cómo impacta esto en su condición?",
+        "opciones": [
+          { "id": "a", "texto": "No impacta, el daño ovárico ya está hecho.", "esCorrecta": false, "explicacion": "Incorrecto. Aumenta brutalmente el riesgo de osteoporosis y cardiovascular, que ya es alto por la IOP." },
+          { "id": "b", "texto": "Es una contraindicación absoluta para la TRH que necesita.", "esCorrecta": false, "explicacion": "Incorrecto. No es absoluta, pero obliga a usar vía transdérmica y dejar de fumar es prioritario." },
+          { "id": "c", "texto": "El tabaco es tóxico ovárico y acelera la pérdida ósea. Empeora el pronóstico global.", "esCorrecta": true, "explicacion": "Correcto. La consejería de cese tabáquico es vital en IOP." },
+          { "id": "d", "texto": "Ayuda a mantener el peso.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p7",
+        "tipo": "mcq",
+        "enunciado": "Carolina inicia TRH. ¿Necesita usar método anticonceptivo si no quiere embarazarse ahora?",
+        "opciones": [
+          { "id": "a", "texto": "No, es estéril.", "esCorrecta": false, "explicacion": "Peligroso. Existe riesgo de ovulación espontánea (5-10%)." },
+          { "id": "b", "texto": "Sí. La TRH no es anticonceptiva (dosis bajas). Si no desea embarazo, requiere MAC (ej: DIU o ACO).", "esCorrecta": true, "explicacion": "Correcto. La TRH estándar no bloquea la ovulación esporádica. Se debe cubrir el riesgo si no hay deseo de embarazo." },
+          { "id": "c", "texto": "La TRH sirve de anticonceptivo.", "esCorrecta": false, "explicacion": "Incorrecto. Las dosis de sustitución no siempre inhiben el eje." },
+          { "id": "d", "texto": "Solo condón en días fértiles.", "esCorrecta": false, "explicacion": "Incorrecto. Los ciclos son impredecibles." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Cuidado. La IOP no es una 'menopausia normal'. Es una patología con graves consecuencias a largo plazo si no se trata. Negar TRH a una mujer de 32 años es condenarla a osteoporosis precoz. Revisa el manejo de la Falla Ovárica Prematura.",
+      "medio": "Bien, identificas el diagnóstico. Pero ojo con el manejo de fertilidad y anticoncepción. Recuerda que la IOP tiene ovulaciones 'fantasma' y riesgo de embarazo no planificado. El manejo debe ser integral y agresivo en protección ósea.",
+      "alto": "¡Sobresaliente! 🧬 Comprendes la complejidad de la IOP. No solo manejaste lo hormonal, sino también lo genético, reproductivo y preventivo. Entiendes que en menores de 40 años, la TRH es medicina preventiva obligatoria. ¡Gran criterio!"
+    },
+    "referencias": ["Guía ESHRE: Management of women with Premature Ovarian Insufficiency", "Orientaciones Técnicas Climaterio MINSAL"]
+  },
+
+  {
+    "id": "mod-climaterio-04-sangrado",
+    "modulo": "Climaterio",
+    "dificultad": "Alta",
+    "titulo": "Sangrado Postmenopáusico (La Bandera Roja)",
+    "vigneta": "Sonia, 64 años. Menopausia a los 50. Obesa (IMC 34), Hipertensa. Consulta en el SOME pidiendo hora porque ayer manchó el calzón con sangre roja rutilante. No usa hormonas. Su vecina le dijo que es 'la última regla de despedida'.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "¿Cuál es la conducta administrativa y clínica INMEDIATA en el SOME/Triage?",
+        "opciones": [
+          { "id": "a", "texto": "Dar hora para control crónico el próximo mes.", "esCorrecta": false, "explicacion": "Negligencia. El sangrado postmenopáusico es Cáncer de Endometrio hasta demostrar lo contrario. Requiere prioridad." },
+          { "id": "b", "texto": "Gestionar hora médica/matrona prioritaria (Urgencia diferida o < 1 semana).", "esCorrecta": true, "explicacion": "Correcto. Es un signo de alarma oncológico. No puede esperar." },
+          { "id": "c", "texto": "Decirle que es normal por la atrofia y que observe.", "esCorrecta": false, "explicacion": "Incorrecto. Aunque la atrofia es la causa más frecuente, NUNCA se asume sin descartar cáncer." },
+          { "id": "d", "texto": "Derivar al Hospital sin verla.", "esCorrecta": false, "explicacion": "Incorrecto. Requiere evaluación inicial y solicitud de examen en APS para derivar con fundamento." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "Atiendes a Sonia. ¿Qué factor de riesgo en su historia es el más preocupante para Cáncer de Endometrio?",
+        "opciones": [
+          { "id": "a", "texto": "Hipertensión.", "esCorrecta": false, "explicacion": "Incorrecto. Es comorbilidad, pero no causa directa." },
+          { "id": "b", "texto": "Obesidad.", "esCorrecta": true, "explicacion": "Correcto. El tejido adiposo convierte andrógenos en estrógenos (aromatización periférica). El estrógeno sin oposición estimula el endometrio." },
+          { "id": "c", "texto": "Edad de menopausia (50 años).", "esCorrecta": false, "explicacion": "Incorrecto. Es una edad normal." },
+          { "id": "d", "texto": "No usar hormonas.", "esCorrecta": false, "explicacion": "Incorrecto. No es factor de riesgo per se." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "¿Qué examen solicitas como primera aproximación diagnóstica?",
+        "opciones": [
+          { "id": "a", "texto": "PAP.", "esCorrecta": false, "explicacion": "Incorrecto. El PAP es para cáncer de cérvix, tiene muy baja sensibilidad para endometrio." },
+          { "id": "b", "texto": "Ecografía Transvaginal (Eco TV) para medir grosor endometrial.", "esCorrecta": true, "explicacion": "Correcto. Es el filtro inicial. Permite seleccionar quién va a biopsia." },
+          { "id": "c", "texto": "Scanner de Pelvis.", "esCorrecta": false, "explicacion": "Incorrecto. Costoso y menos específico para la mucosa endometrial inicial." },
+          { "id": "d", "texto": "Niveles de Estradiol.", "esCorrecta": false, "explicacion": "Incorrecto. No aporta al diagnóstico anatómico." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Llega la Eco TV. Informa: 'Endometrio engrosado de 12 mm, heterogéneo'. ¿Cuál es tu acción y justificación?",
+        "guia": "• Criterio: En postmenopausia, endometrio > 4 mm (o 5 mm según centro) es patológico.\n• Acción: Derivación a Ginecología/Patología Cervical para Biopsia Endometrial.\n• Urgencia: Sospecha fundada de neoplasia."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Sonia tiene miedo. Te pregunta si esto podría ser otra cosa que no sea cáncer.",
+        "opciones": [
+          { "id": "a", "texto": "No, con ese grosor es cáncer seguro.", "esCorrecta": false, "explicacion": "Incorrecto. Falta de ética y precisión. Puede ser hiperplasia o pólipos." },
+          { "id": "b", "texto": "Sí, podría ser un pólipo endometrial o hiperplasia, pero la biopsia es la única forma de saberlo.", "esCorrecta": true, "explicacion": "Correcto. Los pólipos son frecuentes y benignos, pero dan la misma imagen y síntoma. Hay que investigar." },
+          { "id": "c", "texto": "Sí, probablemente son miomas.", "esCorrecta": false, "explicacion": "Incorrecto. Los miomas no suelen causar sangrado postmenopáusico (se atrofian)." },
+          { "id": "d", "texto": "Sí, es por la obesidad.", "esCorrecta": false, "explicacion": "Vago. La obesidad causa la patología, no es el diagnóstico histológico." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Mientras espera la hora al hospital, ¿qué indicación farmacológica le dejas?",
+        "opciones": [
+          { "id": "a", "texto": "Ácido Tranexámico para cortar el sangrado.", "esCorrecta": false, "explicacion": "Incorrecto. No queremos enmascarar el síntoma, queremos diagnóstico." },
+          { "id": "b", "texto": "Progestágenos para atrofiar el endometrio.", "esCorrecta": false, "explicacion": "Incorrecto. Alteraría la histología de la biopsia. NO dar hormonas antes de la toma de muestra." },
+          { "id": "c", "texto": "Ninguna medicación hormonal, solo analgesia si hay dolor y agilizar la interconsulta.", "esCorrecta": true, "explicacion": "Correcto. No intervenir hormonalmente hasta tener diagnóstico histológico." },
+          { "id": "d", "texto": "Antibióticos.", "esCorrecta": false, "explicacion": "Incorrecto." }
+        ]
+      },
+      {
+        "id": "p7",
+        "tipo": "mcq",
+        "enunciado": "Complejidad: La biopsia confirma Cáncer de Endometrio Tipo 1. ¿Cuál fue el factor protector que Sonia NO tuvo?",
+        "opciones": [
+          { "id": "a", "texto": "Multiparidad.", "esCorrecta": true, "explicacion": "Correcto (indirectamente). La nuliparidad es riesgo. El uso de ACO o multiparidad protegen (menos exposición estrogénica pura)." },
+          { "id": "b", "texto": "Uso de DIU de Cobre.", "esCorrecta": false, "explicacion": "Incorrecto. No protege endometrio. El DIU con Levonorgestrel sí protege." },
+          { "id": "c", "texto": "Mantener un peso saludable.", "esCorrecta": true, "explicacion": "Correcto. La obesidad es el factor de riesgo modificable #1. Haber sido normopeso habría bajado su riesgo drásticamente." },
+          { "id": "d", "texto": "Fumar.", "esCorrecta": false, "explicacion": "Curiosamente, fumar baja el riesgo de Ca Endometrio (antiestrogénico), pero aumenta todos los otros cánceres. No es un factor protector clínico deseable." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Peligro. Subestimar un sangrado postmenopáusico es un error que cuesta vidas. Creer que es 'normal' o 'una despedida' retrasa el diagnóstico de cáncer. Graba esto: Sangrado en menopausia = Eco TV + Biopsia urgente.",
+      "medio": "Bien. Identificas la señal de alarma y la necesidad de derivar. Ojo con el manejo de la paciente obesa y la interpretación de la Eco TV. Recuerda el punto de corte: >4 mm requiere estudio.",
+      "alto": "¡Excelente ojo clínico! 🕵️‍♀️ Identificaste la bandera roja oncológica inmediatamente. Conoces el algoritmo (Eco TV -> Biopsia) y la fisiopatología (Obesidad -> Estrógenos). Tu gestión rápida mejora el pronóstico de supervivencia de Sonia."
+    },
+    "referencias": ["Guía Clínica Cáncer de Endometrio MINSAL", "ACOG Committee Opinion: Postmenopausal Bleeding"]
+  },
+
+  {
+    "id": "mod-climaterio-05-osteoporosis",
+    "modulo": "Climaterio",
+    "dificultad": "Media",
+    "titulo": "Salud Ósea y Prevención de Osteoporosis",
+    "vigneta": "Marta, 67 años. Menopausia a los 48. Muy delgada (IMC 19). Fumadora activa. Refiere dolor de espalda crónico. Nunca ha usado TRH. Su madre tuvo fractura de cadera.",
+    "pasos": [
+      {
+        "id": "p1",
+        "tipo": "mcq",
+        "enunciado": "Identifica los factores de riesgo MAYORES para osteoporosis en Marta.",
+        "opciones": [
+          { "id": "a", "texto": "Solo la edad.", "esCorrecta": false, "explicacion": "Incompleto." },
+          { "id": "b", "texto": "Edad >65, Bajo peso (IMC <20), Tabaquismo y Antecedente materno de fractura de cadera.", "esCorrecta": true, "explicacion": "Correcto. Tiene múltiples factores de riesgo mayores que obligan a estudiar." },
+          { "id": "c", "texto": "No haber usado TRH.", "esCorrecta": false, "explicacion": "Incorrecto. Es un factor, pero el bajo peso y tabaquismo pesan más." },
+          { "id": "d", "texto": "Dolor de espalda.", "esCorrecta": false, "explicacion": "Incorrecto. El dolor puede ser por fractura vertebral, pero es consecuencia, no factor de riesgo." }
+        ]
+      },
+      {
+        "id": "p2",
+        "tipo": "mcq",
+        "enunciado": "¿Qué examen es el Gold Standard para diagnóstico en este momento?",
+        "opciones": [
+          { "id": "a", "texto": "Radiografía de columna total.", "esCorrecta": false, "explicacion": "Incorrecto. Útil para ver fracturas, pero no mide densidad mineral ósea con precisión." },
+          { "id": "b", "texto": "Densitometría Ósea (DXA) de Columna y Cadera.", "esCorrecta": true, "explicacion": "Correcto. Es el examen estándar para diagnosticar osteopenia/osteoporosis." },
+          { "id": "c", "texto": "Niveles de Calcio en sangre.", "esCorrecta": false, "explicacion": "Incorrecto. El calcio plasmático suele ser normal incluso en osteoporosis severa." },
+          { "id": "d", "texto": "Resonancia Magnética.", "esCorrecta": false, "explicacion": "Incorrecto. Costoso e innecesario." }
+        ]
+      },
+      {
+        "id": "p3",
+        "tipo": "mcq",
+        "enunciado": "La DXA informa T-Score -2.8 en cuello femoral. ¿Diagnóstico?",
+        "opciones": [
+          { "id": "a", "texto": "Normal.", "esCorrecta": false, "explicacion": "Incorrecto. Normal es > -1.0." },
+          { "id": "b", "texto": "Osteopenia.", "esCorrecta": false, "explicacion": "Incorrecto. Osteopenia es entre -1.0 y -2.5." },
+          { "id": "c", "texto": "Osteoporosis.", "esCorrecta": true, "explicacion": "Correcto. T-Score menor o igual a -2.5 define Osteoporosis." },
+          { "id": "d", "texto": "Osteoporosis Severa.", "esCorrecta": false, "explicacion": "Incorrecto. Severa implica tener -2.5 MÁS una fractura por fragilidad (aunque sospechamos de su espalda, no está confirmada)." }
+        ]
+      },
+      {
+        "id": "p4",
+        "tipo": "short",
+        "enunciado": "Consejería: Marta cree que tomando leche se soluciona. Explica el manejo integral (No farmacológico + Farmacológico).",
+        "guia": "• Calcio + Vitamina D: La dieta sola suele no bastar en osteoporosis, requiere suplemento.\n• Tratamiento activo: Necesita bifosfonatos (ej: Alendronato) para 'fijar' el calcio.\n• Hábito: Dejar de fumar es crítico (tabaco 'come' hueso)."
+      },
+      {
+        "id": "p5",
+        "tipo": "mcq",
+        "enunciado": "Se indica Alendronato 70mg semanal. ¿Cuál es la instrucción CLAVE de administración para evitar esofagitis?",
+        "opciones": [
+          { "id": "a", "texto": "Tomar con leche antes de dormir.", "esCorrecta": false, "explicacion": "Incorrecto. La leche bloquea la absorción. Acostarse provoca reflujo ácido severo." },
+          { "id": "b", "texto": "Tomar con estómago lleno después de almuerzo.", "esCorrecta": false, "explicacion": "Incorrecto. Los alimentos bloquean la absorción del bifosfonato." },
+          { "id": "c", "texto": "Tomar en ayunas, con vaso de agua grande y permanecer de pie/sentada (sin acostarse) por 30-60 min.", "esCorrecta": true, "explicacion": "Correcto. Maximiza absorción y evita el reflujo corrosivo en esófago." },
+          { "id": "d", "texto": "Moler la pastilla y mezclar con yogur.", "esCorrecta": false, "explicacion": "Incorrecto. Inactiva el fármaco." }
+        ]
+      },
+      {
+        "id": "p6",
+        "tipo": "mcq",
+        "enunciado": "Prevención de caídas (EMPAM). ¿Qué recomendación práctica le das para su hogar?",
+        "opciones": [
+          { "id": "a", "texto": "Usar pantuflas de lana.", "esCorrecta": false, "explicacion": "Peligroso. Resbalan." },
+          { "id": "b", "texto": "Retirar alfombras sueltas, iluminar pasillos y usar calzado cerrado con goma.", "esCorrecta": true, "explicacion": "Correcto. Medidas básicas del EMPAM para evitar fractura de cadera." },
+          { "id": "c", "texto": "Encerar el piso.", "esCorrecta": false, "explicacion": "Peligroso." },
+          { "id": "d", "texto": "Evitar caminar.", "esCorrecta": false, "explicacion": "Incorrecto. El sedentarismo empeora el hueso y músculo (sarcopenia)." }
+        ]
+      }
+    ],
+    "feedback_dinamico": {
+      "bajo": "Atención. La osteoporosis es una enfermedad silenciosa pero mortal (por fractura de cadera). No conocer los criterios diagnósticos (T-Score) o dar mal las indicaciones del Alendronato (causando úlceras esofágicas) son errores graves. Estudia 'Salud Ósea en el Climaterio'.",
+      "medio": "Bien. Identificas los factores de riesgo y el diagnóstico. Ojo con las indicaciones farmacológicas precisas (ayuno, posición) y la importancia de la vitamina D. Tratar el hueso requiere adherencia estricta.",
+      "alto": "¡Muy bien! 🦴 Manejo integral de la salud ósea. No te quedaste solo en el calcio, abordaste el tabaquismo, la prevención de caídas y el uso correcto de bifosfonatos. Estás previniendo la fractura de cadera eficazmente."
+    },
+    "referencias": ["Guía Clínica Osteoporosis MINSAL", "IOF (International Osteoporosis Foundation) Guidelines"]
   }
 ]
+
+
+
