@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { auth } from '@clerk/nextjs/server';
 
 export default async function HomePage() {
-  const { userId } = auth();
+  const { userId } = await auth();
   const forceRedirect = process.env.NODE_ENV === 'production' || process.env.FORCE_REDIRECT_TO_CASOS === 'true';
   if (forceRedirect && userId) redirect('/casos');
 
