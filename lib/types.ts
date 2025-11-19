@@ -28,17 +28,27 @@ export type ShortPaso = {
 // Union type: un Paso puede ser MCQ o Short
 export type Paso = McqPaso | ShortPaso;
 
+// --- Feedback Adaptativo (Nueva estructura) ---
+
+export type FeedbackDinamico = {
+  bajo?: string;    // 0-30% correctas
+  medio?: string;   // 31-60% correctas
+  alto?: string;    // 61-100% correctas
+};
+
 // --- Definición del Caso Completo (Cliente) ---
 
 export type CasoClient = {
   id: string;
   titulo: string;
-  area: string;
-  dificultad: number;
+  modulo?: string;           // Nuevo: Anticoncepción, ITS, Consejería, Climaterio
+  area?: string;             // Legacy, mantener compatibilidad
+  dificultad: string | number; // Nuevo: "Baja"/"Media"/"Alta" o número legacy
   vigneta?: string | null;
   pasos: Paso[];
   referencias?: string[];
   debrief?: string;
+  feedback_dinamico?: FeedbackDinamico; // Nuevo: feedback por porcentaje
 };
 
 // --- Definición de las Respuestas del Usuario ---

@@ -8,19 +8,36 @@ import Badge from '@/app/components/ui/Badge';
 export default function CasosPageClient({ data }: { data: CasoListItem[] }) {
 
   const [q, setQ] = useState('');
-  const [area, setArea] = useState('all');
+  const [modulo, setModulo] = useState('all');
   const [difficulty, setDifficulty] = useState('all');
 
-  const areas = useMemo(() => ['all', ...Array.from(new Set(data.map(d => d.area).filter((a): a is string => !!a)))], [data]);
+  // Extraer módulos únicos (soportando tanto 'area' como 'modulo')
+  const modulos = useMemo(() => {
+    const uniqueModulos = new Set<string>();
+    data.forEach(d => {
+      const mod = (d as any).modulo || d.area;
+      if (mod) uniqueModulos.add(mod);
+    });
+    return ['all', ...Array.from(uniqueModulos)];
+  }, [data]);
 
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase();
-    return data.filter(d =>
-      (area === 'all' || d.area === area) && // Filter by area
-      (difficulty === 'all' || String(d.difficulty) === difficulty) &&
-      (!s || d.title.toLowerCase().includes(s) || (d.summary ?? '').toLowerCase().includes(s))
-    );
-  }, [data, q, area, difficulty]);
+    return data.filter(d => {
+      const moduloActual = (d as any).modulo || d.area;
+      const dificultadActual = String((d as any).dificultad || d.difficulty);
+      
+      return (
+        (modulo === 'all' || moduloActual === modulo) &&
+        (difficulty === 'all' || dificultadActual === difficulty || 
+         (difficulty === 'Baja' && (dificultadActual === '1' || dificultadActual === 'Baja')) ||
+         (difficulty === 'Media' && (dificultadActual === '2' || dificultadActual === 'Media')) ||
+         (difficulty === 'Alta' && (dificultadActual === '3' || dificultadActual === 'Alta'))
+        ) &&
+        (!s || d.title.toLowerCase().includes(s) || (d.summary ?? '').toLowerCase().includes(s))
+      );
+    });
+  }, [data, q, modulo, difficulty]);
 
   return (
     <div className="container py-8">
@@ -34,12 +51,12 @@ export default function CasosPageClient({ data }: { data: CasoListItem[] }) {
             aria-label="Buscar casos"
           />
           <select
-            value={area}
-            onChange={(e)=>setArea(e.target.value)}
+            value={modulo}
+            onChange={(e)=>setModulo(e.target.value)}
             className="rounded-lg px-3 py-2 text-sm outline-none transition"
-            aria-label="Filtrar por área"
+            aria-label="Filtrar por módulo"
           >
-            {areas.map(a => <option key={a} value={a}>{a === 'all' ? 'Todas las áreas' : a}</option>)}
+            {modulos.map(m => <option key={m} value={m}>{m === 'all' ? 'Todos los módulos' : m}</option>)}
           </select>
 
           <select
@@ -49,9 +66,12 @@ export default function CasosPageClient({ data }: { data: CasoListItem[] }) {
             aria-label="Filtrar por dificultad"
           >
             <option value="all">Todas las dificultades</option>
-            <option value="1">Fácil</option>
-            <option value="2">Medio</option>
-            <option value="3">Difícil</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+            <option value="1">Fácil (Legacy)</option>
+            <option value="2">Medio (Legacy)</option>
+            <option value="3">Difícil (Legacy)</option>
           </select>
 
           <div className="ml-auto text-xs text-[var(--km-text-700)]"><Badge>{filtered.length}</Badge> {filtered.length === 1 ? 'resultado' : 'resultados'}</div>

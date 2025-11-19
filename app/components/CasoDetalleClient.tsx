@@ -26,6 +26,27 @@ export default function CasoDetalleClient() {
 
   // --- 1. PANTALLA DE FINALIZADO ---
   if (isCompleted) {
+    // Calcular el porcentaje de correctas para el feedback adaptativo
+    const respuestasCorrectas = caso.pasos.filter((_, idx) => {
+      const resp = caso.pasos[idx];
+      // Aquí necesitarías acceder al estado de respuestas del usuario
+      // Por ahora, lo dejamos preparado para cuando implementes el tracking
+      return false; // Placeholder
+    }).length;
+    
+    const porcentaje = (respuestasCorrectas / totalPasos) * 100;
+    
+    let feedbackAdaptativo = '';
+    if (caso.feedback_dinamico) {
+      if (porcentaje <= 30 && caso.feedback_dinamico.bajo) {
+        feedbackAdaptativo = caso.feedback_dinamico.bajo;
+      } else if (porcentaje <= 60 && caso.feedback_dinamico.medio) {
+        feedbackAdaptativo = caso.feedback_dinamico.medio;
+      } else if (caso.feedback_dinamico.alto) {
+        feedbackAdaptativo = caso.feedback_dinamico.alto;
+      }
+    }
+
     return (
       <div className="card p-6 md:p-8 animate-fade-in">
         <h1 className="text-xl md:text-3xl font-extrabold mb-4 
@@ -37,6 +58,12 @@ export default function CasoDetalleClient() {
           <p className="text-success-700 text-sm md:text-base mt-1">Has revisado todo el caso.</p>
         </div>
         <div className="prose prose-sm md:prose-base prose-neutral max-w-none">
+            {feedbackAdaptativo && (
+              <div className="mt-4 p-4 rounded-md bg-brand-50 border-l-4 border-brand-500">
+                <h3 className="text-lg font-semibold text-brand-900 mb-2">Feedback</h3>
+                <p className="text-brand-800 whitespace-pre-wrap">{feedbackAdaptativo}</p>
+              </div>
+            )}
             { (caso.debrief || caso.pasos.some(p => p.feedbackDocente)) && (
               <div className="mt-4 p-4 rounded-md bg-[var(--km-surface-2)] border border-neutral-100">
                 <h3 className="text-lg font-semibold" style={{ color: 'var(--km-deep)' }}>Feedback Docente</h3>

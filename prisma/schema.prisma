@@ -23,11 +23,14 @@ model User {
 model Case {
   id         String       @id @default(cuid())
   title      String
-  area       String
-  difficulty Int
+  area       String       // Legacy: mantener para compatibilidad
+  modulo     String?      // Nuevo: Anticoncepción, ITS, Consejería, Climaterio
+  difficulty Int          // Legacy: 1, 2, 3
+  dificultad String?      // Nuevo: "Baja", "Media", "Alta"
   summary    String?
   isPublic   Boolean      @default(false)
   vignette   String?
+  feedbackDinamico Json?  @map("feedback_dinamico") // { bajo, medio, alto }
   createdAt  DateTime     @default(now()) @map("created_at")
   updatedAt  DateTime     @updatedAt @map("updated_at")
   questions  Question[]   @relation("CaseQuestions")

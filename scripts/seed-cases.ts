@@ -64,10 +64,14 @@ function mapDifficulty(d) {
 async function upsertCase(caseObj) {
   const caseId = caseObj.id || undefined;
   const title = caseObj.titulo || caseObj.title || 'Sin título';
-  const area = caseObj.modulo || caseObj.modulo || caseObj.area || 'General';
+  const modulo = caseObj.modulo || caseObj.area || 'General';
+  const area = caseObj.area || caseObj.modulo || 'General';
   const difficulty = mapDifficulty(caseObj.dificultad || caseObj.difficulty);
   const vignette = caseObj.vigneta || caseObj.vignette || '';
   const summary = caseObj.resumen || caseObj.summary || '';
+  
+  // Nuevo: Guardar el feedback dinámico como JSON
+  const feedback_dinamico = caseObj.feedback_dinamico || null;
 
   // Prepare questions data
   const pasos = Array.isArray(caseObj.pasos) ? caseObj.pasos : [];
@@ -75,7 +79,7 @@ async function upsertCase(caseObj) {
     const qText = p.enunciado || p.text || `Paso ${idx + 1}`;
     const qOrder = idx + 1;
     const options = Array.isArray(p.opciones) ? p.opciones.map((opt) => {
-      const text = opt.texto || opt.text || opt.texto || '';
+      const text = opt.texto || opt.text || '';
       const feedback = opt.explicacion || opt.feedback || '';
       const isCorrect = Boolean(opt.esCorrecta ?? opt.isCorrect ?? false);
       return { text, feedback, isCorrect };
@@ -138,9 +142,12 @@ async function upsertCase(caseObj) {
       data: {
         title,
         area,
+        modulo,
         difficulty,
+        dificultad: caseObj.dificultad || null,
         summary,
         vignette,
+        feedbackDinamico: feedback_dinamico,
         isPublic: true,
         questions: { create: questionsCreate },
         norms: normConnect.length > 0 ? { set: [], connect: normConnect } : undefined,
@@ -153,9 +160,12 @@ async function upsertCase(caseObj) {
         id: caseId,
         title,
         area,
+        modulo,
         difficulty,
+        dificultad: caseObj.dificultad || null,
         summary,
         vignette,
+        feedbackDinamico: feedback_dinamico,
         isPublic: true,
         questions: { create: questionsCreate },
         norms: normConnect.length > 0 ? { connect: normConnect } : undefined,
@@ -165,26 +175,55 @@ async function upsertCase(caseObj) {
 }
 
 async function main() {
-  const filePath = path.resolve(__dirname, '..', 'prisma', 'cases.json5');
-  if (!fs.existsSync(filePath)) {
-    console.error('No se encontró prisma/cases.json5');
+  let allCases = [];
+  
+  // 1. Cargar casos desde prisma/cases.json5 (archivo principal legacy)
+  const mainFilePath = path.resolve(__dirname, '..', 'prisma', 'cases.json5');
+  if (fs.existsSync(mainFilePath)) {
+    console.log('📥 Cargando casos desde prisma/cases.json5...');
+    const raw = fs.readFileSync(mainFilePath, 'utf8');
+    const arr = JSON5.parse(raw);
+    if (Array.isArray(arr)) {
+      allCases = allCases.concat(arr);
+      console.log(`   ✓ ${arr.length} casos cargados desde archivo principal`);
+    }
+  }
+  
+  // 2. Cargar casos desde prisma/cases/*.json5 (archivos por módulo)
+  const casesDir = path.resolve(__dirname, '..', 'prisma', 'cases');
+  if (fs.existsSync(casesDir)) {
+    const files = fs.readdirSync(casesDir).filter(f => f.endsWith('.json5'));
+    
+    for (const file of files) {
+      const moduleName = path.basename(file, '.json5');
+      console.log(`📚 Cargando módulo: ${moduleName.toUpperCase()}`);
+      
+      const filePath = path.join(casesDir, file);
+      const raw = fs.readFileSync(filePath, 'utf8');
+      const cases = JSON5.parse(raw);
+      
+      if (!Array.isArray(cases)) {
+        console.warn(`   ⚠️  ${file} no contiene un array, saltando...`);
+        continue;
+      }
+      
+      allCases = allCases.concat(cases);
+      console.log(`   ✓ ${cases.length} casos cargados desde ${file}`);
+    }
+  }
+
+  if (allCases.length === 0) {
+    console.error('❌ No se encontraron casos para importar.');
     process.exit(1);
   }
 
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const arr = JSON5.parse(raw);
-  if (!Array.isArray(arr)) {
-    console.error('El archivo no contiene un array de casos.');
-    process.exit(1);
-  }
-
-  console.log(`📥 Cargando ${arr.length} casos desde prisma/cases.json5`);
+  console.log(`\n📊 Total de casos a procesar: ${allCases.length}\n`);
 
   let created = 0;
   let updated = 0;
   let errors = 0;
 
-  for (const c of arr) {
+  for (const c of allCases) {
     try {
       const before = await prisma.case.findUnique({ where: { id: c.id || undefined } });
       await upsertCase(c);
@@ -193,11 +232,14 @@ async function main() {
       else if (!before && after) created++;
     } catch (err) {
       errors++;
-      console.error(`Error procesando caso ${c.id ?? c.titulo}:`, err);
+      console.error(`❌ Error procesando caso ${c.id ?? c.titulo}:`, err);
     }
   }
 
-  console.log(`✅ Importación finalizada. Creado: ${created}, Actualizado: ${updated}, Errores: ${errors}`);
+  console.log(`\n✅ Importación finalizada.`);
+  console.log(`   Creados: ${created}`);
+  console.log(`   Actualizados: ${updated}`);
+  console.log(`   Errores: ${errors}`);
 }
 
 main()

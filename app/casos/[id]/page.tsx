@@ -34,7 +34,7 @@ function normalizarDatosDelCaso(casoDesdeDB: any): CasoClient | null {
         const opciones = Array.isArray(q.options)
           ? q.options.map((opt: any) => ({
               id: opt.id,
-              texto: opt.text || opt.texto || opt.texto || '',
+              texto: opt.text || opt.texto || '',
               esCorrecta: !!opt.isCorrect || !!opt.esCorrecta || false,
               explicacion: opt.feedback || opt.explicacion || '',
             }))
@@ -62,12 +62,14 @@ function normalizarDatosDelCaso(casoDesdeDB: any): CasoClient | null {
     return {
       id: casoDesdeDB.id,
       titulo: casoDesdeDB.title || casoDesdeDB.titulo || '',
+      modulo: casoDesdeDB.modulo || casoDesdeDB.area || undefined,
       area: casoDesdeDB.area || casoDesdeDB.modulo || '',
-      dificultad: casoDesdeDB.difficulty ?? casoDesdeDB.dificultad ?? 2,
+      dificultad: casoDesdeDB.dificultad || casoDesdeDB.difficulty || 2,
       vigneta: casoDesdeDB.vignette || casoDesdeDB.vigneta || null,
       pasos: pasosNormalizados,
       referencias: (casoDesdeDB.norms || []).map((n: any) => n.name || n.code || ''),
       debrief: casoDesdeDB.summary || casoDesdeDB.debrief || null,
+      feedback_dinamico: casoDesdeDB.feedback_dinamico || undefined,
     };
   }
 
@@ -79,6 +81,43 @@ function normalizarDatosDelCaso(casoDesdeDB: any): CasoClient | null {
         const opciones: McqOpcion[] = (paso.opciones || []).map((opt: any, optIndex: number) => ({
           id: opt.id || `opt-${index}-${optIndex}`,
           texto: opt.texto || '',
+          esCorrecta: !!opt.esCorrecta,
+          explicacion: opt.explicacion || '',
+        }));
+        return {
+          id: paso.id || `paso-${index}`,
+          tipo: 'mcq',
+          enunciado: paso.enunciado || '',
+          opciones: opciones,
+          feedbackDocente: paso.feedbackDocente,
+        };
+      } else {
+        return {
+          id: paso.id || `paso-${index}`,
+          tipo: 'short',
+          enunciado: paso.enunciado || '',
+          guia: paso.guia,
+          feedbackDocente: paso.feedbackDocente,
+        };
+      }
+    });
+
+    return {
+      id: casoDesdeDB.id,
+      titulo: casoDesdeDB.titulo || casoDesdeDB.title || '',
+      modulo: contenido.modulo || casoDesdeDB.modulo || undefined,
+      area: casoDesdeDB.area || contenido.modulo || '',
+      dificultad: contenido.dificultad || casoDesdeDB.dificultad || casoDesdeDB.difficulty || 2,
+      vigneta: contenido.vigneta || null,
+      pasos: pasosNormalizados,
+      referencias: contenido.referencias || [],
+      debrief: contenido.debrief || null,
+      feedback_dinamico: contenido.feedback_dinamico || undefined,
+    };
+  }
+
+  return null;
+}
           esCorrecta: !!opt.esCorrecta,
           explicacion: opt.explicacion || '',
         }));
