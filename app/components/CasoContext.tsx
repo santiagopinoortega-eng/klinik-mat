@@ -2,11 +2,11 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode, useMemo, useCallback } from 'react';
-import type { CasoClient, McqOpcion as Opcion, Respuesta } from '@/lib/types';
+import type { CasoClient, McqOpcion, Respuesta } from '@/lib/types';
 
 interface CasoContextType {
   caso: CasoClient; currentStep: number; respuestas: Respuesta[];
-  handleSelect: (pasoId: string, opcion: Opcion, opts?: { skipAdvance?: boolean }) => void;
+  handleSelect: (pasoId: string, opcion: McqOpcion | any, opts?: { skipAdvance?: boolean }) => void;
   handleNavigate: (stepIndex: number) => void;
   goToNextStep: () => void; // <-- LO VOLVEMOS A EXPONER
 }
@@ -37,7 +37,7 @@ export function CasoProvider({ caso, children }: { caso: CasoClient; children: R
   // --- RE-EXPUESTO PARA EL BOTÓN "COMENZAR" ---
   const goToNextStep = useCallback(() => handleNavigate(currentStep + 1), [currentStep, handleNavigate]);
 
-  const handleSelect = useCallback((pasoId: string, opcion: Opcion, opts?: { skipAdvance?: boolean }) => {
+  const handleSelect = useCallback((pasoId: string, opcion: McqOpcion | any, opts?: { skipAdvance?: boolean }) => {
     // Si la respuesta ya existe y solo queremos actualizar puntos
     const existingRespuestaIndex = respuestas.findIndex(r => r.pasoId === pasoId);
     
@@ -58,7 +58,7 @@ export function CasoProvider({ caso, children }: { caso: CasoClient; children: R
       opcionId: opcion.id,
       esCorrecta: opcion.esCorrecta,
       ...(opcion.texto && { respuestaTexto: opcion.texto }),
-      ...(typeof opcion.puntos === 'number' && { puntos: opcion.puntos })
+      ...('puntos' in opcion && typeof opcion.puntos === 'number' && { puntos: opcion.puntos })
     };
     
     setRespuestas(prev => [...prev, nuevaRespuesta]);
