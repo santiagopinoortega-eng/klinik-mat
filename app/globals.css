@@ -9,45 +9,46 @@
     
     /* 🔴 PALETA KLINIK-MAT: Identidad Obstetricia Chilena */
     /* Primarios - Rojo médico profesional */
-    --km-crimson: #C41E3A;      /* Rojo sangre/útero - Principal */
-    --km-cardinal: #8B0000;     /* Rojo oscuro - Títulos y énfasis */
-    --km-rose: #E63946;         /* Rojo vibrante - CTAs y acciones */
+    --km-crimson: #DC2626;      /* Rojo vibrante - Principal */
+    --km-cardinal: #991B1B;     /* Rojo oscuro - Títulos y énfasis */
+    --km-rose: #F87171;         /* Rojo coral - CTAs y acciones */
     
     /* Secundarios - Tonos orgánicos/cálidos */
-    --km-terracotta: #D4756F;   /* Terracota suave - Acentos */
-    --km-blush: #FFE5E5;        /* Rosa pálido - Fondos suaves */
-    --km-cream: #FFF8F5;        /* Crema cálido - Fondo principal */
+    --km-terracotta: #FB923C;   /* Naranja coral - Acentos */
+    --km-blush: #FEF2F2;        /* Rosa pálido - Fondos suaves */
+    --km-cream: #FFFBEB;        /* Crema cálido - Fondo principal */
     
     /* Acentos clínicos */
-    --km-teal: #0D9488;         /* Verde azulado médico - Info/success */
-    --km-navy: #1E3A5F;         /* Azul marino - Texto oscuro profesional */
+    --km-teal: #14B8A6;         /* Verde azulado - Info/success */
+    --km-navy: #1E293B;         /* Azul marino - Texto oscuro profesional */
     
     /* Neutrales refinados */
-    --km-text-900: #1A1A1A;     /* Negro suave - Texto principal */
-    --km-text-700: #4A5568;     /* Gris medio - Texto secundario */
-    --km-text-500: #718096;     /* Gris claro - Texto terciario */
+    --km-text-900: #0F172A;     /* Negro suave - Texto principal */
+    --km-text-700: #334155;     /* Gris medio - Texto secundario */
+    --km-text-500: #64748B;     /* Gris claro - Texto terciario */
     
     /* Superficies */
     --km-surface-1: #FFFFFF;    /* Blanco puro - Cards */
-    --km-surface-2: #FFF8F5;    /* Crema - Fondo página */
-    --km-surface-3: #FFE5E5;    /* Rosa pálido - Destacados */
+    --km-surface-2: #FEF2F2;    /* Rosa pálido - Fondo página */
+    --km-surface-3: #FECACA;    /* Rosa vibrante - Destacados */
     
     /* Sistema de sombras */
-    --km-shadow-sm: 0 2px 8px rgba(196, 30, 58, 0.08);
-    --km-shadow-md: 0 4px 16px rgba(196, 30, 58, 0.12);
-    --km-shadow-lg: 0 12px 32px rgba(196, 30, 58, 0.16);
-    --km-shadow-xl: 0 20px 48px rgba(196, 30, 58, 0.2);
+    --km-shadow-sm: 0 2px 8px rgba(220, 38, 38, 0.12);
+    --km-shadow-md: 0 4px 16px rgba(220, 38, 38, 0.15);
+    --km-shadow-lg: 0 12px 32px rgba(220, 38, 38, 0.20);
+    --km-shadow-xl: 0 20px 48px rgba(220, 38, 38, 0.25);
     
     /* Bordes y radios */
-    --km-radius-sm: 8px;
-    --km-radius: 12px;
-    --km-radius-lg: 16px;
-    --km-radius-xl: 24px;
+    --km-radius-sm: 10px;
+    --km-radius: 14px;
+    --km-radius-lg: 18px;
+    --km-radius-xl: 28px;
     
     /* Gradientes branded */
-    --km-gradient-primary: linear-gradient(135deg, #C41E3A 0%, #E63946 100%);
-    --km-gradient-warm: linear-gradient(135deg, #D4756F 0%, #FFE5E5 100%);
-    --km-gradient-hero: linear-gradient(135deg, rgba(196,30,58,0.95) 0%, rgba(139,0,0,0.85) 100%);
+    --km-gradient-primary: linear-gradient(135deg, #DC2626 0%, #F87171 100%);
+    --km-gradient-warm: linear-gradient(135deg, #FB923C 0%, #FEF2F2 100%);
+    --km-gradient-hero: linear-gradient(135deg, rgba(220,38,38,0.95) 0%, rgba(153,27,27,0.9) 100%);
+    --km-gradient-success: linear-gradient(135deg, #14B8A6 0%, #5EEAD4 100%);
   }
 
   html, body {
@@ -181,4 +182,21 @@
 @layer utilities {
   .animate-fade-in { animation: fade-in 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
   @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  
+  /* Animaciones para el progreso del caso */
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+  }
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-slide {
+    animation: slide 2s infinite linear;
+  }
+  @keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+  }
 }

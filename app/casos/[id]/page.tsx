@@ -118,41 +118,6 @@ function normalizarDatosDelCaso(casoDesdeDB: any): CasoClient | null {
 
   return null;
 }
-          esCorrecta: !!opt.esCorrecta,
-          explicacion: opt.explicacion || '',
-        }));
-        return {
-          id: paso.id || `paso-${index}`,
-          tipo: 'mcq',
-          enunciado: paso.enunciado || '',
-          opciones: opciones,
-          feedbackDocente: paso.feedbackDocente,
-        };
-      } else {
-        return {
-          id: paso.id || `paso-${index}`,
-          tipo: 'short',
-          enunciado: paso.enunciado || '',
-          guia: paso.guia,
-          feedbackDocente: paso.feedbackDocente,
-        };
-      }
-    });
-
-    return {
-      id: casoDesdeDB.id,
-      titulo: casoDesdeDB.titulo || casoDesdeDB.title || '',
-      area: casoDesdeDB.area || casoDesdeDB.modulo || '',
-      dificultad: casoDesdeDB.dificultad || casoDesdeDB.difficulty || 2,
-      vigneta: contenido.vigneta || null,
-      pasos: pasosNormalizados,
-      referencias: contenido.referencias || [],
-      debrief: contenido.debrief || null,
-    };
-  }
-
-  return null;
-}
 
 export default async function CasoPage({ params }: PageProps) {
   const casoDesdeDB = await prismaRO.case.findUnique({

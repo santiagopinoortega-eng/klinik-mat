@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function CasoDetalleClient() {
   // Traemos 'goToNextStep' del contexto para el botón "Comenzar Caso"
-  const { caso, currentStep, handleSelect, handleNavigate, goToNextStep } = useCaso();
+  const { caso, currentStep, respuestas, handleSelect, handleNavigate, goToNextStep } = useCaso();
   const [showContent, setShowContent] = useState(false);
   const [started, setStarted] = useState(false);
 
@@ -51,32 +51,30 @@ export default function CasoDetalleClient() {
 
     const porcentaje = puntosMaximos > 0 ? Math.round((puntosObtenidos / puntosMaximos) * 100) : 0;
 
-    // Determinar nivel de desempeño
+    // Determinar nivel de desempeño y obtener feedback dinámico
     let nivel = '';
     let emoji = '';
     let badgeColor = '';
-    let mensaje = '';
+    let feedbackMessage = '';
 
-    if (porcentaje >= 90) {
+    // Usar feedbackDinamico del caso si existe
+    const feedbackDinamico = caso.feedback_dinamico;
+    
+    if (porcentaje >= 61) {
       nivel = 'Excelente';
       emoji = '🏆';
-      badgeColor = 'bg-yellow-100 text-yellow-800 border-yellow-300';
-      mensaje = 'Dominas los conceptos clave del caso. ¡Felicitaciones!';
-    } else if (porcentaje >= 70) {
-      nivel = 'Muy Bien';
-      emoji = '⭐';
-      badgeColor = 'bg-blue-100 text-blue-800 border-blue-300';
-      mensaje = 'Buen desempeño. Refuerza algunos detalles para alcanzar la excelencia.';
-    } else if (porcentaje >= 50) {
+      badgeColor = 'bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-900 border-yellow-400';
+      feedbackMessage = feedbackDinamico?.alto || 'Dominas los conceptos clave del caso. ¡Felicitaciones!';
+    } else if (porcentaje >= 31) {
       nivel = 'Bien';
       emoji = '✓';
-      badgeColor = 'bg-green-100 text-green-800 border-green-300';
-      mensaje = 'Comprensión aceptable. Revisa los puntos con dificultad.';
+      badgeColor = 'bg-gradient-to-r from-blue-100 to-blue-200 text-blue-900 border-blue-400';
+      feedbackMessage = feedbackDinamico?.medio || 'Buen desempeño. Refuerza algunos detalles para alcanzar la excelencia.';
     } else {
       nivel = 'Necesitas Revisar';
       emoji = '📝';
-      badgeColor = 'bg-orange-100 text-orange-800 border-orange-300';
-      mensaje = 'Repasa los conceptos fundamentales y vuelve a intentarlo.';
+      badgeColor = 'bg-gradient-to-r from-orange-100 to-orange-200 text-orange-900 border-orange-400';
+      feedbackMessage = feedbackDinamico?.bajo || 'Repasa los conceptos fundamentales y vuelve a intentarlo.';
     }
 
     return (
@@ -113,12 +111,31 @@ export default function CasoDetalleClient() {
           {/* Barra de progreso */}
           <div className="w-full bg-neutral-200 rounded-full h-3 mb-3">
             <div 
-              className="bg-[var(--km-primary)] h-3 rounded-full transition-all duration-500"
+              className="bg-gradient-to-r from-[var(--km-primary)] to-[var(--km-coral)] h-3 rounded-full transition-all duration-500 shadow-sm"
               style={{ width: `${porcentaje}%` }}
             />
           </div>
 
-          <p className="text-sm text-neutral-700 text-center">{mensaje}</p>
+          {/* Feedback dinámico adaptativo */}
+          <div className="p-4 rounded-lg bg-white border border-neutral-200 mt-4">
+            <p className="text-sm md:text-base text-neutral-800 leading-relaxed">{feedbackMessage}</p>
+          </div>
+        </div>
+
+        {/* Botones de acción finales */}
+        <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <button 
+            onClick={() => window.location.reload()} 
+            className="btn btn-primary flex-1 flex items-center justify-center gap-2"
+          >
+            🔄 Reintentar caso
+          </button>
+          <a 
+            href="/casos" 
+            className="btn btn-secondary flex-1 flex items-center justify-center gap-2"
+          >
+            ← Volver a casos
+          </a>
         </div>
 
         <div className="prose prose-sm md:prose-base prose-neutral max-w-none">
@@ -161,18 +178,68 @@ export default function CasoDetalleClient() {
   if (!started) {
     return (
       <div className="card p-6 md:p-8 animate-fade-in">
-        <h1 className="text-xl md:text-3xl font-extrabold mb-6 text-[var(--km-text-900)]">
-          {caso.titulo}
-        </h1>
+        {/* Instrucciones claras sin repetir el título */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500 rounded-lg p-5 mb-6">
+          <h2 className="text-lg font-bold text-blue-900 mb-2 flex items-center gap-2">
+            <span className="text-2xl">📋</span>
+            Instrucciones del Caso Clínico
+          </h2>
+          <ul className="space-y-2 text-sm text-blue-800">
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500 mt-0.5">1.</span>
+              <span>Lee atentamente la <strong>viñeta clínica</strong> que aparece en el panel izquierdo</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500 mt-0.5">2.</span>
+              <span>Analiza los <strong>datos relevantes</strong> del paciente y el contexto clínico</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500 mt-0.5">3.</span>
+              <span>Responde las preguntas a tu <strong>propio ritmo</strong> usando los botones de navegación</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500 mt-0.5">4.</span>
+              <span>Revisa el <strong>feedback dinámico</strong> al finalizar para reforzar tu aprendizaje</span>
+            </li>
+          </ul>
+        </div>
 
-        <p className="text-sm text-[var(--km-text-700)] mb-6">Lee atentamente la historia clínica en la columna izquierda y cuando estés listo, comienza con las preguntas.</p>
+        {/* Información del caso */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          <div className="bg-neutral-50 rounded-lg p-4 text-center border border-neutral-200">
+            <div className="text-xl font-bold text-[var(--km-primary)] break-words">{caso.pasos.length}</div>
+            <div className="text-xs text-neutral-600 mt-1">Preguntas</div>
+          </div>
+          <div className="bg-neutral-50 rounded-lg p-4 text-center border border-neutral-200">
+            <div className="text-sm font-bold text-purple-600 break-words leading-tight">{caso.modulo || 'General'}</div>
+            <div className="text-xs text-neutral-600 mt-1">Módulo</div>
+          </div>
+          <div className={`rounded-lg p-4 text-center border sm:col-span-2 md:col-span-1 ${
+            caso.dificultad === 'BAJA' ? 'bg-green-50 border-green-300' :
+            caso.dificultad === 'MEDIA' ? 'bg-yellow-50 border-yellow-300' :
+            caso.dificultad === 'ALTA' ? 'bg-red-50 border-red-300' :
+            'bg-neutral-50 border-neutral-200'
+          }`}>
+            <div className={`text-sm font-bold break-words leading-tight ${
+              caso.dificultad === 'BAJA' ? 'text-green-700' :
+              caso.dificultad === 'MEDIA' ? 'text-yellow-700' :
+              caso.dificultad === 'ALTA' ? 'text-red-700' :
+              'text-neutral-700'
+            }`}>
+              {caso.dificultad || 'MEDIA'}
+            </div>
+            <div className="text-xs text-neutral-600 mt-1">Dificultad</div>
+          </div>
+        </div>
 
         {/* Botón para comenzar las preguntas */}
         <button 
           onClick={() => { setStarted(true); handleNavigate(0); }} 
-          className="btn btn-primary btn-lg w-full md:w-auto flex items-center justify-center gap-2"
+          className="btn btn-primary btn-lg w-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
         >
-          Comenzar Preguntas →
+          <span className="text-xl">🚀</span>
+          Comenzar Caso Clínico
+          <span className="text-xl">→</span>
         </button>
       </div>
     );

@@ -40,50 +40,118 @@ export default function CasosPageClient({ data }: { data: CasoListItem[] }) {
   }, [data, q, modulo, difficulty]);
 
   return (
-    <div className="container py-8">
-      <div className="mb-4">
-        <div className="filters-bar">
-          <input
-            value={q}
-            onChange={(e)=>setQ(e.target.value)}
-            placeholder="Buscar por título o resumen…"
-            className="w-full sm:w-72 rounded-lg px-3 py-2 text-sm outline-none transition"
-            aria-label="Buscar casos"
-          />
-          <select
-            value={modulo}
-            onChange={(e)=>setModulo(e.target.value)}
-            className="rounded-lg px-3 py-2 text-sm outline-none transition"
-            aria-label="Filtrar por módulo"
-          >
-            {modulos.map(m => <option key={m} value={m}>{m === 'all' ? 'Todos los módulos' : m}</option>)}
-          </select>
+    <div className="container mx-auto max-w-7xl py-8 px-4">
+      {/* Header con título */}
+      <div className="text-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{color: 'var(--km-cardinal)'}}>
+          Casos Clínicos
+        </h1>
+        <p className="text-sm" style={{color: 'var(--km-text-500)'}}>Selecciona un caso para comenzar tu práctica</p>
+      </div>
 
-          <select
-            value={difficulty}
-            onChange={(e)=>setDifficulty(e.target.value)}
-            className="rounded-lg px-3 py-2 text-sm outline-none transition"
-            aria-label="Filtrar por dificultad"
-          >
-            <option value="all">Todas las dificultades</option>
-            <option value="Baja">Baja</option>
-            <option value="Media">Media</option>
-            <option value="Alta">Alta</option>
-            <option value="1">Fácil (Legacy)</option>
-            <option value="2">Medio (Legacy)</option>
-            <option value="3">Difícil (Legacy)</option>
-          </select>
+      {/* Filtros mejorados con diseño de cards */}
+      <div className="mb-8">
+        <div className="bg-white rounded-xl border border-[rgba(196,30,58,0.1)] p-6 shadow-[var(--km-shadow-sm)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Buscador */}
+            <div className="md:col-span-3">
+              <label className="flex items-center gap-2 text-xs font-semibold mb-2" style={{color: 'var(--km-text-700)'}}>
+                <span className="text-lg">🔍</span>
+                Buscar casos
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <svg className="h-5 w-5" style={{color: 'var(--km-text-500)'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  value={q}
+                  onChange={(e)=>setQ(e.target.value)}
+                  placeholder="Buscar por título o resumen…"
+                  className="w-full pl-12 pr-4 py-3 rounded-lg border-2 text-sm outline-none transition-all"
+                  style={{
+                    borderColor: 'rgba(196,30,58,0.15)',
+                    backgroundColor: 'var(--km-blush)'
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--km-crimson)'}
+                  onBlur={(e) => e.target.style.borderColor = 'rgba(196,30,58,0.15)'}
+                  aria-label="Buscar casos"
+                />
+              </div>
+            </div>
 
-          <div className="ml-auto text-xs text-[var(--km-text-700)]"><Badge>{filtered.length}</Badge> {filtered.length === 1 ? 'resultado' : 'resultados'}</div>
+            {/* Filtro módulo */}
+            <div>
+              <label className="flex items-center gap-2 text-xs font-semibold mb-2" style={{color: 'var(--km-text-700)'}}>
+                <span className="text-lg">📚</span>
+                Módulo
+              </label>
+              <select
+                value={modulo}
+                onChange={(e)=>setModulo(e.target.value)}
+                className="w-full rounded-lg px-4 py-3 text-sm font-medium outline-none cursor-pointer transition-all border-2"
+                style={{
+                  borderColor: 'rgba(196,30,58,0.15)',
+                  backgroundColor: 'var(--km-blush)',
+                  color: 'var(--km-text-900)'
+                }}
+                aria-label="Filtrar por módulo"
+              >
+                {modulos.map(m => <option key={m} value={m}>{m === 'all' ? 'Todos los módulos' : m}</option>)}
+              </select>
+            </div>
+
+            {/* Filtro dificultad */}
+            <div>
+              <label className="flex items-center gap-2 text-xs font-semibold mb-2" style={{color: 'var(--km-text-700)'}}>
+                <span className="text-lg">🎯</span>
+                Dificultad
+              </label>
+              <select
+                value={difficulty}
+                onChange={(e)=>setDifficulty(e.target.value)}
+                className="w-full rounded-lg px-4 py-3 text-sm font-medium outline-none cursor-pointer transition-all border-2"
+                style={{
+                  borderColor: 'rgba(196,30,58,0.15)',
+                  backgroundColor: 'var(--km-blush)',
+                  color: 'var(--km-text-900)'
+                }}
+                aria-label="Filtrar por dificultad"
+              >
+                <option value="all">Todas las dificultades</option>
+                <option value="Baja">🟢 Baja</option>
+                <option value="Media">🟡 Media</option>
+                <option value="Alta">🔴 Alta</option>
+              </select>
+            </div>
+
+            {/* Contador de resultados */}
+            <div className="flex flex-col justify-center items-center bg-gradient-to-br from-[var(--km-blush)] to-white rounded-lg border-2 p-4" style={{borderColor: 'var(--km-rose)'}}>
+              <div className="text-3xl font-bold" style={{color: 'var(--km-crimson)'}}>
+                {filtered.length}
+              </div>
+              <div className="text-xs font-medium" style={{color: 'var(--km-text-600)'}}>
+                {filtered.length === 1 ? 'caso encontrado' : 'casos encontrados'}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
+      {/* Resultados */}
       {filtered.length === 0 ? (
-        <p className="rounded border border-amber-200 bg-amber-50 p-3 text-amber-800 text-sm">
-          No hay resultados para <b>{q || '(vacío)'}</b>.
-        </p>
+        <div className="text-center py-12">
+          <div className="text-6xl mb-4">🔍</div>
+          <p className="text-neutral-600 text-lg font-medium mb-2">
+            No se encontraron casos
+          </p>
+          <p className="text-neutral-500 text-sm">
+            Intenta ajustar los filtros o la búsqueda
+          </p>
+        </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {filtered.map(c => (
             <CaseCard key={c.id} {...c} />
           ))}

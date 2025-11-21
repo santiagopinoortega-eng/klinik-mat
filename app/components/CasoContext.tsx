@@ -63,12 +63,12 @@ export function CasoProvider({ caso, children }: { caso: CasoClient; children: R
     
     setRespuestas(prev => [...prev, nuevaRespuesta]);
     
-    // Si no se indica skipAdvance, avanzamos automáticamente (útil para MCQ)
-    if (!opts?.skipAdvance) {
-      setTimeout(() => {
-        setCurrentStep(curr => (curr < caso.pasos.length ? curr + 1 : curr));
-      }, 700);
-    }
+    // CAMBIO: Ya no avanzamos automáticamente, el usuario controla con botones
+    // if (!opts?.skipAdvance) {
+    //   setTimeout(() => {
+    //     setCurrentStep(curr => (curr < caso.pasos.length ? curr + 1 : curr));
+    //   }, 700);
+    // }
   }, [caso.pasos.length, respuestas]);
 
   const value = useMemo(() => ({ 

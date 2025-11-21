@@ -2,7 +2,7 @@
 "use client";
 
 import { isMcq, isShort, McqOpcion, Paso } from "@/lib/types";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import { useCaso } from "./CasoContext";
 import cx from "clsx";
 
@@ -66,7 +66,26 @@ export default function PasoRenderer({ pasoId, onAnswer }: Props) {
     if (porcentaje >= 0.7) return puntosMax; // 70%+ = puntaje completo
     if (porcentaje >= 0.4) return Math.floor(puntosMax / 2); // 40-69% = mitad
     return 0; // <40% = 0 puntos
-  }, []);  useEffect(() => {
+  }, []);
+
+  // Handler para enviar respuesta Short - DEBE estar en nivel superior
+  const handleSubmitShort = useCallback(() => {
+    if (!stepData || !isShort(stepData)) return;
+    
+    const puntosMaximos = stepData.puntosMaximos || 2;
+    const criterios = stepData.criteriosEvaluacion || [];
+    const puntosObtenidos = evaluateShortAnswer(shortAnswer, criterios, puntosMaximos);
+    
+    setShortScore(puntosObtenidos);
+    onAnswer(pasoId, { 
+      id: 'dev', 
+      texto: shortAnswer, 
+      esCorrecta: true,
+      puntos: puntosObtenidos 
+    }, { skipAdvance: true });
+  }, [shortAnswer, stepData, pasoId, onAnswer, evaluateShortAnswer]);
+
+  useEffect(() => {
     setSelectedOption(null);
     setShortAnswer("");
     setShortScore(null);
@@ -104,18 +123,6 @@ export default function PasoRenderer({ pasoId, onAnswer }: Props) {
   if (isShort(stepData)) {
     const puntosMaximos = stepData.puntosMaximos || 2;
     const criterios = stepData.criteriosEvaluacion || [];
-    
-    // Evaluar automáticamente al enviar
-    const handleSubmitShort = useCallback(() => {
-      const puntosObtenidos = evaluateShortAnswer(shortAnswer, criterios, puntosMaximos);
-      setShortScore(puntosObtenidos);
-      onAnswer(pasoId, { 
-        id: 'dev', 
-        texto: shortAnswer, 
-        esCorrecta: true,
-        puntos: puntosObtenidos 
-      }, { skipAdvance: true });
-    }, [shortAnswer, criterios, puntosMaximos, pasoId, onAnswer, evaluateShortAnswer]);
     
     return (
       <div className="mt-4 md:mt-6 animate-fade-in"> 
@@ -240,6 +247,19 @@ export default function PasoRenderer({ pasoId, onAnswer }: Props) {
             );
           })}
         </div>
+          
+          {/* Botón de navegación para MCQ */}
+          {respuestaUsuario && (
+            <div className="mt-4">
+              <button 
+                onClick={() => goToNextStep()} 
+                className="btn btn-primary w-full md:w-auto"
+              >
+                Siguiente pregunta →
+              </button>
+            </div>
+          )}
+
           {/* Feedback docente general para la pregunta */}
           {respuestaUsuario && stepData.feedbackDocente && (
             <div className="mt-4 p-3 rounded-lg bg-[var(--km-surface-1)] border border-neutral-200 text-sm">

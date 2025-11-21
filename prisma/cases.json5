@@ -2406,7 +2406,7 @@
 },
 {
   id: "clim-media-sequedad-vaginal-lubricantes",
-  modulo: "Climaterio / Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Media",
   titulo: "Síndrome genitourinario en climaterio: manejo inicial y consejería en APS",
   vigneta:
@@ -2580,7 +2580,7 @@
 },
 {
   id: "clim-alta-aco-riesgo-cv-hormonal",
-  modulo: "Climaterio / Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Alta",
   titulo: "Manejo de síntomas vasomotores en mujer perimenopáusica con riesgo cardiovascular",
   vigneta:
@@ -3918,7 +3918,7 @@
 },
 {
   id: "clim-baja-sintomas-perimenopausia",
-  modulo: "Climaterio / Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Baja",
   titulo: "Reconociendo síntomas típicos de la perimenopausia en APS",
   vigneta: "Mujer de 46 años consulta en APS por bochornos nocturnos, insomnio y cambios de ánimo ocasionales. Ciclos irregulares los últimos 8 meses. Dice sentirse 'desordenada' y teme que tenga una enfermedad grave. No comorbilidades, no tabaquismo. Busca orientación clara y tranquilizadora.",
@@ -3996,7 +3996,7 @@
 },
 {
   id: "clim-media-dispareunia-sequedad",
-  modulo: "Climaterio / Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Media",
   titulo: "Sequedad vaginal y molestias sexuales en el climaterio",
   vigneta: "Mujer de 51 años, menopausia confirmada hace 14 meses. Consulta por sequedad vaginal, ardor y dolor leve en relaciones. Señala que evita el contacto sexual por temor al dolor. No TH. No antecedentes mórbidos. Busca una solución que no sea invasiva y que le permita retomar su vida sexual sin vergüenza.",
@@ -4085,7 +4085,7 @@
 },
 {
   id: "clim-alta-th-evaluacion-riesgo",
-  modulo: "Climaterio / Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Alta",
   titulo: "Evaluación de riesgo para terapia hormonal en la transición menopáusica",
   vigneta: "Mujer de 52 años, menopausia hace 10 meses, consulta por sofocos intensos que afectan su sueño y trabajo. IMC 30. HTA controlada en tratamiento. Madre con antecedente de cardiopatía coronaria a los 55. Solicita 'algo fuerte' porque las medidas no farmacológicas ya no ayudan. No fumadora.",
@@ -5340,7 +5340,7 @@
 },
 {
   id: "clima-baja-sequedad-vaginal",
-  modulo: "Climaterio/Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Baja",
   titulo: "Sequedad vaginal en climaterio: manejo inicial en APS",
 
@@ -5508,7 +5508,7 @@
 
 {
   id: "clima-media-sofocos-insomnio",
-  modulo: "Climaterio/Menopausia",
+  modulo: "Climaterio y Menopausia",
   dificultad: "Media",
   titulo: "Climaterio con síntomas vasomotores intensos: manejo inicial en APS",
 
