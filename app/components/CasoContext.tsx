@@ -41,10 +41,10 @@ export function CasoProvider({ caso, children }: { caso: CasoClient; children: R
     // Si la respuesta ya existe y solo queremos actualizar puntos
     const existingRespuestaIndex = respuestas.findIndex(r => r.pasoId === pasoId);
     
-    if (existingRespuestaIndex !== -1 && 'puntos' in opcion) {
+    if (existingRespuestaIndex !== -1 && 'puntos' in opcion && typeof opcion.puntos === 'number') {
       // Actualizar puntos de una respuesta existente
       setRespuestas(prev => prev.map((r, idx) => 
-        idx === existingRespuestaIndex ? { ...r, puntos: opcion.puntos } : r
+        idx === existingRespuestaIndex ? { ...r, puntos: opcion.puntos as number } : r
       ));
       return;
     }
